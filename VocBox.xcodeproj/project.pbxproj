@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		750D26AD2ABE8E1D00300914 /* CreateFirstVocabCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750D26AC2ABE8E1D00300914 /* CreateFirstVocabCard.swift */; };
+		75621A672ABFDC4F00B407A9 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75621A662ABFDC4F00B407A9 /* Animation.swift */; };
+		75621A6B2AC2606B00B407A9 /* Vocab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75621A6A2AC2606B00B407A9 /* Vocab.swift */; };
+		75621A6D2AC28D3600B407A9 /* Pronunciation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75621A6C2AC28D3600B407A9 /* Pronunciation.swift */; };
+		75621A702AC3A72000B407A9 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 75621A6F2AC3A72000B407A9 /* ConfettiSwiftUI */; };
+		75621A722AC3A7C300B407A9 /* Confetti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75621A712AC3A7C300B407A9 /* Confetti.swift */; };
+		75621A742AC3B27200B407A9 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75621A732AC3B27200B407A9 /* Alert.swift */; };
+		8304D7E12AB3DC2D00C9A9B1 /* VocBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304D7E02AB3DC2D00C9A9B1 /* VocBoxApp.swift */; };
+		8304D7E32AB3DC2D00C9A9B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304D7E22AB3DC2D00C9A9B1 /* ContentView.swift */; };
+		8304D7E52AB3DC2F00C9A9B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8304D7E42AB3DC2F00C9A9B1 /* Assets.xcassets */; };
+		8304D7E82AB3DC2F00C9A9B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8304D7E72AB3DC2F00C9A9B1 /* Preview Assets.xcassets */; };
+		8304D7F52AB3DD6500C9A9B1 /* AddVocView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304D7F42AB3DD6500C9A9B1 /* AddVocView.swift */; };
+		8304D7F82AB3DD8A00C9A9B1 /* EditVocView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304D7F72AB3DD8A00C9A9B1 /* EditVocView.swift */; };
+		8304D7FB2AB3DDD400C9A9B1 /* RecallVocView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304D7FA2AB3DDD400C9A9B1 /* RecallVocView.swift */; };
+		8304D7FE2AB3DE0700C9A9B1 /* AnalyticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304D7FD2AB3DE0700C9A9B1 /* AnalyticView.swift */; };
+		83E34A882AB677B600350CF7 /* SmallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E34A872AB677B600350CF7 /* SmallButton.swift */; };
+		83E590BD2AB3E81F002ABD04 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83E590BB2AB3E81F002ABD04 /* DataModel.xcdatamodeld */; };
+		83E590BF2AB3E9D7002ABD04 /* CoredataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E590BE2AB3E9D7002ABD04 /* CoredataController.swift */; };
+		83E590C12AB3E9FF002ABD04 /* EntityExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E590C02AB3E9FF002ABD04 /* EntityExtentions.swift */; };
+		83E590C42AB51D07002ABD04 /* FetchPhonetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E590C32AB51D07002ABD04 /* FetchPhonetic.swift */; };
+		83E590C62AB51F9C002ABD04 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E590C52AB51F9C002ABD04 /* HomeView.swift */; };
+		83E590C92AB52695002ABD04 /* Extentions .swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E590C82AB52695002ABD04 /* Extentions .swift */; };
+		83E590CB2AB527FC002ABD04 /* ReviewVocView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E590CA2AB527FC002ABD04 /* ReviewVocView.swift */; };
+		83E590D02AB52962002ABD04 /* VocabCardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E590CF2AB52962002ABD04 /* VocabCardRow.swift */; };
+		83E590D22AB571ED002ABD04 /* PartOfSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E590D12AB571ED002ABD04 /* PartOfSpeech.swift */; };
+		83E5AA542ABA8AB100136C34 /* TimeCalculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E5AA532ABA8AB100136C34 /* TimeCalculate.swift */; };
+		83E5AA562ABBD8BC00136C34 /* RecallVocViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E5AA552ABBD8BC00136C34 /* RecallVocViewModel.swift */; };
+		83E5AA592ABBF98800136C34 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E5AA582ABBF98800136C34 /* SettingView.swift */; };
+		83E5AA5D2ABCAC8000136C34 /* AddVocViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E5AA5C2ABCAC8000136C34 /* AddVocViewModel.swift */; };
+		83E5AA5F2ABCAEE300136C34 /* TrimString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E5AA5E2ABCAEE300136C34 /* TrimString.swift */; };
+		83E5AA612ABD2C9A00136C34 /* RecallProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E5AA602ABD2C9A00136C34 /* RecallProgressView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		750D26AC2ABE8E1D00300914 /* CreateFirstVocabCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFirstVocabCard.swift; sourceTree = "<group>"; };
+		75621A662ABFDC4F00B407A9 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		75621A6A2AC2606B00B407A9 /* Vocab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vocab.swift; sourceTree = "<group>"; };
+		75621A6C2AC28D3600B407A9 /* Pronunciation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pronunciation.swift; sourceTree = "<group>"; };
+		75621A712AC3A7C300B407A9 /* Confetti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Confetti.swift; sourceTree = "<group>"; };
+		75621A732AC3B27200B407A9 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		8304D7DD2AB3DC2D00C9A9B1 /* VocBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8304D7E02AB3DC2D00C9A9B1 /* VocBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocBoxApp.swift; sourceTree = "<group>"; };
+		8304D7E22AB3DC2D00C9A9B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8304D7E42AB3DC2F00C9A9B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8304D7E72AB3DC2F00C9A9B1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8304D7F42AB3DD6500C9A9B1 /* AddVocView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVocView.swift; sourceTree = "<group>"; };
+		8304D7F72AB3DD8A00C9A9B1 /* EditVocView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVocView.swift; sourceTree = "<group>"; };
+		8304D7FA2AB3DDD400C9A9B1 /* RecallVocView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecallVocView.swift; sourceTree = "<group>"; };
+		8304D7FD2AB3DE0700C9A9B1 /* AnalyticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticView.swift; sourceTree = "<group>"; };
+		83E34A872AB677B600350CF7 /* SmallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallButton.swift; sourceTree = "<group>"; };
+		83E590BC2AB3E81F002ABD04 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		83E590BE2AB3E9D7002ABD04 /* CoredataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoredataController.swift; sourceTree = "<group>"; };
+		83E590C02AB3E9FF002ABD04 /* EntityExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityExtentions.swift; sourceTree = "<group>"; };
+		83E590C32AB51D07002ABD04 /* FetchPhonetic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPhonetic.swift; sourceTree = "<group>"; };
+		83E590C52AB51F9C002ABD04 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		83E590C82AB52695002ABD04 /* Extentions .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extentions .swift"; sourceTree = "<group>"; };
+		83E590CA2AB527FC002ABD04 /* ReviewVocView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVocView.swift; sourceTree = "<group>"; };
+		83E590CF2AB52962002ABD04 /* VocabCardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabCardRow.swift; sourceTree = "<group>"; };
+		83E590D12AB571ED002ABD04 /* PartOfSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartOfSpeech.swift; sourceTree = "<group>"; };
+		83E5AA532ABA8AB100136C34 /* TimeCalculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCalculate.swift; sourceTree = "<group>"; };
+		83E5AA552ABBD8BC00136C34 /* RecallVocViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecallVocViewModel.swift; sourceTree = "<group>"; };
+		83E5AA582ABBF98800136C34 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		83E5AA5C2ABCAC8000136C34 /* AddVocViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddVocViewModel.swift; sourceTree = "<group>"; };
+		83E5AA5E2ABCAEE300136C34 /* TrimString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrimString.swift; sourceTree = "<group>"; };
+		83E5AA602ABD2C9A00136C34 /* RecallProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecallProgressView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8304D7DA2AB3DC2D00C9A9B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75621A702AC3A72000B407A9 /* ConfettiSwiftUI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		75621A652ABFDC2F00B407A9 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				75621A662ABFDC4F00B407A9 /* Animation.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		8304D7D42AB3DC2D00C9A9B1 = {
+			isa = PBXGroup;
+			children = (
+				8304D7DF2AB3DC2D00C9A9B1 /* VocBox */,
+				8304D7DE2AB3DC2D00C9A9B1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8304D7DE2AB3DC2D00C9A9B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8304D7DD2AB3DC2D00C9A9B1 /* VocBox.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8304D7DF2AB3DC2D00C9A9B1 /* VocBox */ = {
+			isa = PBXGroup;
+			children = (
+				8304D7E02AB3DC2D00C9A9B1 /* VocBoxApp.swift */,
+				75621A652ABFDC2F00B407A9 /* Animation */,
+				8304D7EE2AB3DC4500C9A9B1 /* Core */,
+				83E590C22AB51CBA002ABD04 /* Services */,
+				8304D7F02AB3DC8400C9A9B1 /* Models */,
+				83E590C72AB52677002ABD04 /* Helpers */,
+				8304D7E42AB3DC2F00C9A9B1 /* Assets.xcassets */,
+				8304D7E62AB3DC2F00C9A9B1 /* Preview Content */,
+			);
+			path = VocBox;
+			sourceTree = "<group>";
+		};
+		8304D7E62AB3DC2F00C9A9B1 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8304D7E72AB3DC2F00C9A9B1 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8304D7EE2AB3DC4500C9A9B1 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				83E590CA2AB527FC002ABD04 /* ReviewVocView.swift */,
+				8304D7E22AB3DC2D00C9A9B1 /* ContentView.swift */,
+				83E5AA572ABBF97600136C34 /* Setting */,
+				8304D7F32AB3DD4B00C9A9B1 /* AddVoc */,
+				8304D7FC2AB3DDE600C9A9B1 /* Analytic */,
+				83E590CE2AB52912002ABD04 /* Components */,
+				8304D7F62AB3DD7000C9A9B1 /* EditVoc */,
+				8304D7F12AB3DCB400C9A9B1 /* Homepage */,
+				8304D7F92AB3DD9A00C9A9B1 /* RecallVoc */,
+				83E590CC2AB52811002ABD04 /* ReviewVoc */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8304D7F02AB3DC8400C9A9B1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				83E590BB2AB3E81F002ABD04 /* DataModel.xcdatamodeld */,
+				83E590BE2AB3E9D7002ABD04 /* CoredataController.swift */,
+				83E590C02AB3E9FF002ABD04 /* EntityExtentions.swift */,
+				75621A6A2AC2606B00B407A9 /* Vocab.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8304D7F12AB3DCB400C9A9B1 /* Homepage */ = {
+			isa = PBXGroup;
+			children = (
+				83E590C52AB51F9C002ABD04 /* HomeView.swift */,
+			);
+			path = Homepage;
+			sourceTree = "<group>";
+		};
+		8304D7F32AB3DD4B00C9A9B1 /* AddVoc */ = {
+			isa = PBXGroup;
+			children = (
+				8304D7F42AB3DD6500C9A9B1 /* AddVocView.swift */,
+				83E590D12AB571ED002ABD04 /* PartOfSpeech.swift */,
+				83E5AA5C2ABCAC8000136C34 /* AddVocViewModel.swift */,
+			);
+			path = AddVoc;
+			sourceTree = "<group>";
+		};
+		8304D7F62AB3DD7000C9A9B1 /* EditVoc */ = {
+			isa = PBXGroup;
+			children = (
+				8304D7F72AB3DD8A00C9A9B1 /* EditVocView.swift */,
+			);
+			path = EditVoc;
+			sourceTree = "<group>";
+		};
+		8304D7F92AB3DD9A00C9A9B1 /* RecallVoc */ = {
+			isa = PBXGroup;
+			children = (
+				8304D7FA2AB3DDD400C9A9B1 /* RecallVocView.swift */,
+				83E5AA552ABBD8BC00136C34 /* RecallVocViewModel.swift */,
+				83E5AA602ABD2C9A00136C34 /* RecallProgressView.swift */,
+			);
+			path = RecallVoc;
+			sourceTree = "<group>";
+		};
+		8304D7FC2AB3DDE600C9A9B1 /* Analytic */ = {
+			isa = PBXGroup;
+			children = (
+				8304D7FD2AB3DE0700C9A9B1 /* AnalyticView.swift */,
+			);
+			path = Analytic;
+			sourceTree = "<group>";
+		};
+		83E590C22AB51CBA002ABD04 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				83E590C32AB51D07002ABD04 /* FetchPhonetic.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		83E590C72AB52677002ABD04 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				83E590C82AB52695002ABD04 /* Extentions .swift */,
+				83E5AA532ABA8AB100136C34 /* TimeCalculate.swift */,
+				83E5AA5E2ABCAEE300136C34 /* TrimString.swift */,
+				75621A6C2AC28D3600B407A9 /* Pronunciation.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		83E590CC2AB52811002ABD04 /* ReviewVoc */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReviewVoc;
+			sourceTree = "<group>";
+		};
+		83E590CE2AB52912002ABD04 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				75621A712AC3A7C300B407A9 /* Confetti.swift */,
+				83E590CF2AB52962002ABD04 /* VocabCardRow.swift */,
+				83E34A872AB677B600350CF7 /* SmallButton.swift */,
+				750D26AC2ABE8E1D00300914 /* CreateFirstVocabCard.swift */,
+				75621A732AC3B27200B407A9 /* Alert.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		83E5AA572ABBF97600136C34 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				83E5AA582ABBF98800136C34 /* SettingView.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8304D7DC2AB3DC2D00C9A9B1 /* VocBox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8304D7EB2AB3DC2F00C9A9B1 /* Build configuration list for PBXNativeTarget "VocBox" */;
+			buildPhases = (
+				8304D7D92AB3DC2D00C9A9B1 /* Sources */,
+				8304D7DA2AB3DC2D00C9A9B1 /* Frameworks */,
+				8304D7DB2AB3DC2D00C9A9B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VocBox;
+			packageProductDependencies = (
+				75621A6F2AC3A72000B407A9 /* ConfettiSwiftUI */,
+			);
+			productName = VocBox;
+			productReference = 8304D7DD2AB3DC2D00C9A9B1 /* VocBox.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8304D7D52AB3DC2D00C9A9B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					8304D7DC2AB3DC2D00C9A9B1 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 8304D7D82AB3DC2D00C9A9B1 /* Build configuration list for PBXProject "VocBox" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8304D7D42AB3DC2D00C9A9B1;
+			packageReferences = (
+				75621A6E2AC3A72000B407A9 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+			);
+			productRefGroup = 8304D7DE2AB3DC2D00C9A9B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8304D7DC2AB3DC2D00C9A9B1 /* VocBox */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8304D7DB2AB3DC2D00C9A9B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8304D7E82AB3DC2F00C9A9B1 /* Preview Assets.xcassets in Resources */,
+				8304D7E52AB3DC2F00C9A9B1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8304D7D92AB3DC2D00C9A9B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83E5AA612ABD2C9A00136C34 /* RecallProgressView.swift in Sources */,
+				8304D7E32AB3DC2D00C9A9B1 /* ContentView.swift in Sources */,
+				83E5AA5F2ABCAEE300136C34 /* TrimString.swift in Sources */,
+				83E34A882AB677B600350CF7 /* SmallButton.swift in Sources */,
+				8304D7F82AB3DD8A00C9A9B1 /* EditVocView.swift in Sources */,
+				83E590D02AB52962002ABD04 /* VocabCardRow.swift in Sources */,
+				75621A742AC3B27200B407A9 /* Alert.swift in Sources */,
+				83E590BF2AB3E9D7002ABD04 /* CoredataController.swift in Sources */,
+				75621A6D2AC28D3600B407A9 /* Pronunciation.swift in Sources */,
+				83E590D22AB571ED002ABD04 /* PartOfSpeech.swift in Sources */,
+				83E5AA562ABBD8BC00136C34 /* RecallVocViewModel.swift in Sources */,
+				8304D7F52AB3DD6500C9A9B1 /* AddVocView.swift in Sources */,
+				75621A672ABFDC4F00B407A9 /* Animation.swift in Sources */,
+				75621A6B2AC2606B00B407A9 /* Vocab.swift in Sources */,
+				83E590C42AB51D07002ABD04 /* FetchPhonetic.swift in Sources */,
+				83E590CB2AB527FC002ABD04 /* ReviewVocView.swift in Sources */,
+				83E5AA592ABBF98800136C34 /* SettingView.swift in Sources */,
+				83E590C62AB51F9C002ABD04 /* HomeView.swift in Sources */,
+				83E590BD2AB3E81F002ABD04 /* DataModel.xcdatamodeld in Sources */,
+				8304D7E12AB3DC2D00C9A9B1 /* VocBoxApp.swift in Sources */,
+				83E590C12AB3E9FF002ABD04 /* EntityExtentions.swift in Sources */,
+				83E590C92AB52695002ABD04 /* Extentions .swift in Sources */,
+				8304D7FB2AB3DDD400C9A9B1 /* RecallVocView.swift in Sources */,
+				75621A722AC3A7C300B407A9 /* Confetti.swift in Sources */,
+				750D26AD2ABE8E1D00300914 /* CreateFirstVocabCard.swift in Sources */,
+				83E5AA5D2ABCAC8000136C34 /* AddVocViewModel.swift in Sources */,
+				8304D7FE2AB3DE0700C9A9B1 /* AnalyticView.swift in Sources */,
+				83E5AA542ABA8AB100136C34 /* TimeCalculate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8304D7E92AB3DC2F00C9A9B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8304D7EA2AB3DC2F00C9A9B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8304D7EC2AB3DC2F00C9A9B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VocBox/Preview Content\"";
+				DEVELOPMENT_TEAM = M538P8S5RA;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jessie.VocBox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8304D7ED2AB3DC2F00C9A9B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"VocBox/Preview Content\"";
+				DEVELOPMENT_TEAM = M538P8S5RA;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jessie.VocBox;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8304D7D82AB3DC2D00C9A9B1 /* Build configuration list for PBXProject "VocBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8304D7E92AB3DC2F00C9A9B1 /* Debug */,
+				8304D7EA2AB3DC2F00C9A9B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8304D7EB2AB3DC2F00C9A9B1 /* Build configuration list for PBXNativeTarget "VocBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8304D7EC2AB3DC2F00C9A9B1 /* Debug */,
+				8304D7ED2AB3DC2F00C9A9B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		75621A6E2AC3A72000B407A9 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		75621A6F2AC3A72000B407A9 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 75621A6E2AC3A72000B407A9 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		83E590BB2AB3E81F002ABD04 /* DataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				83E590BC2AB3E81F002ABD04 /* DataModel.xcdatamodel */,
+			);
+			currentVersion = 83E590BC2AB3E81F002ABD04 /* DataModel.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8304D7D52AB3DC2D00C9A9B1 /* Project object */;
+}
