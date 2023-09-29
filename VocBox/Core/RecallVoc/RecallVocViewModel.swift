@@ -6,15 +6,24 @@
 //
 
 import Foundation
+import CoreData
+
 class RecallVocViewModel: ObservableObject {
+     
     
+      
+   
     @Published var percentage = ""
+    @Published var vocabRecall: Int64 = 0
+    @Published var vocab = ""
+    
     
     func vocabExistInCoreData(text: String, vocabs: [Vocab]) -> Bool {
         for item in vocabs {
             if text == item.viewVocab {
                 //add score to vocab that got recalled
-                item.recall += 1
+                self.vocabRecall = item.recall + 1
+                
                 return true
             }
         }
@@ -28,12 +37,12 @@ class RecallVocViewModel: ObservableObject {
     }
     
     
-    func userScorePercentage(vocabs: [Vocab], userScore: Int ) -> Double {
+    func userScorePercentage(vocabs: [Vocab], userScore: Int ) -> String {
         let userScore = Double(userScore)
         let allVocab = Double(vocabs.count)
         let percentage = (userScore / allVocab) * Double(100)
         self.percentage = String(format: "%.0f", percentage)
-        return percentage
+        return self.percentage
     }
     
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct VocBoxApp: App {
     var body: some Scene {
         WindowGroup {
-            ReviewVocView(scrollToTop: .constant(true))
+            ReviewVocView()
                 .environment(\.managedObjectContext,CoreDataController().container.viewContext)
             
             

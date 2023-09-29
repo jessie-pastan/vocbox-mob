@@ -13,6 +13,8 @@ struct EditVocView: View {
     @Environment(\.managedObjectContext) var moc
     @Environment(\.dismiss) var dismiss
     
+    
+    
     @State  var vocab = ""
     @State  var partOfSpeech: PartOfSpeechType = PartOfSpeechType.types.first!
     @State  var definition = ""
@@ -82,7 +84,8 @@ struct EditVocView: View {
                     
                     //MARK: Save button
                     Button {
-                        CoreDataController().editVocab(item: item, vocab: vocab, favourite: false, definition: definition, phonetic: phonetic, type: partOfSpeech.acronym, context: moc)
+                        
+                        CoreDataController().editVocab(item: item, vocab: vocab, favourite: false, definition: definition, phonetic: item.viewPhonetic, type: partOfSpeech.acronym, context: moc)
                         
                         dismiss()
                     } label: {

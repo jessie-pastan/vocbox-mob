@@ -33,18 +33,20 @@ class CoreDataController: ObservableObject {
     
     
     func addUserScore(allVocabAmount: Int, userScore: Int, context: NSManagedObjectContext) {
-        var percentage: Double {
+        
+        var scorePercentage: Double {
             let userScore = Double(userScore)
             let allVocab = Double(allVocabAmount)
             let percentage = (userScore / allVocab ) * Double(100)
             return percentage
         }
         
+        
         let score = Score(context: context)
         score.date = Date()
         score.vocabAmount = Int64(allVocabAmount)
         score.score = Int64(userScore)
-        score.percentage = percentage
+        score.percentage = scorePercentage
         
         save(context: context)
         
@@ -63,6 +65,19 @@ class CoreDataController: ObservableObject {
         
         
         save(context: context)
+    }
+    
+    
+    func updateVocabRecall(vocabs: FetchedResults<Vocab>, item: String, score: Int64, context: NSManagedObjectContext) {
+        
+        for vocabulary in vocabs {
+            if let v = vocabulary.vocab {
+                if v == item {
+                    vocabulary.recall += score
+                    save(context: context)
+                }
+            }
+        }
     }
     
     func deleteVocab(item: Vocab, context: NSManagedObjectContext) {

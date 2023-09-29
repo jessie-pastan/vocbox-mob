@@ -16,14 +16,13 @@ struct ReviewVocView: View {
     
     @State private var text = ""
     @State private var isShowFavourite = false
+
     
-    @Binding var scrollToTop: Bool
-    @State private var scrollProxy: ScrollViewProxy? = nil
-    
+    let position = UUID()
     
     var body: some View {
         NavigationStack{
-            //GeometryReader {_ in
+           
                 VStack {
                     Spacer()
                     if vocabs.isEmpty {
@@ -43,34 +42,21 @@ struct ReviewVocView: View {
                             
                             
                             LazyVStack{
-                                ForEach(vocabs) { vocab in
+                                ForEach(0..<vocabs.count, id: \.self) { index in
                                     GeometryReader { proxy in
-                                        VocabCardRow(vocab: vocab)
+                                        VocabCardRow(vocab: vocabs[index])
                                     }
                                     .frame(maxWidth: .infinity)
                                     .frame(height: 200)
                                     .padding(.horizontal)
+                                    //force view to update after editing instanlty
+                                    .id(index)
                                 }
                             }
-                            //force view to update after editing instanlty
-                            .id(UUID())
-                            
-                            
                         }
-                        .background(
-                            GeometryReader { geometry in
-                                Color.clear.onAppear {
-                                    if scrollToTop {
-                                        proxy.scrollTo(0, anchor: .top)
-                                        scrollToTop = false
-                                    }
-                                }
-                            }
-                        )
                         .onAppear {
-                            scrollProxy = proxy
+                            proxy.scrollTo(0)
                         }
-                        
                     }
                     
                     Spacer()
@@ -160,7 +146,7 @@ struct ReviewVocView: View {
                 }
             }
             
-        //}
+       
     
         
         
@@ -170,6 +156,6 @@ struct ReviewVocView: View {
 
 struct ReviewVocView_Previews: PreviewProvider {
     static var previews: some View {
-        ReviewVocView(scrollToTop: .constant(true))
+        ReviewVocView()
     }
 }

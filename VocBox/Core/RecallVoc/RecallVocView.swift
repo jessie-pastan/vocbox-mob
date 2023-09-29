@@ -11,13 +11,12 @@ import ConfettiSwiftUI
 struct RecallVocView: View {
     
     @FetchRequest(sortDescriptors: [SortDescriptor(\.createDate, order: .reverse)]) private var vocabs: FetchedResults<Vocab>
-    
+    @ObservedObject var vm = RecallVocViewModel()
     @Environment(\.managedObjectContext) var moc
     @Environment(\.horizontalSizeClass) var sizeClass
     
     @Environment(\.dismiss) var dismiss
     
-    @ObservedObject var vm = RecallVocViewModel()
     
     @State private var text = ""
     @State private var currentScore = 0
@@ -31,11 +30,10 @@ struct RecallVocView: View {
     @State private var counter = 0
     @State private var showAlert1 = false
     @State private var showAlert2 = false
-
-    
+    @State private var scorePercentage = ""
     
     var body: some View {
-        
+      
         GeometryReader { proxy in
             VStack(alignment: .leading) {
                 //MARK: Wording
@@ -100,7 +98,6 @@ struct RecallVocView: View {
                     else if  vm.vocabExistInCoreData(text: trimmedText, vocabs: arrayOfVocab) {
                         currentScore += 1
                         
-                        
                         arrayOfRecalledVocab.append(trimmedText)
                         
                         if let feedbackWord = compliments.randomElement() {
@@ -115,11 +112,12 @@ struct RecallVocView: View {
                         //MARK: Trigger Confetti
                         if progress > 99 {
                             counter += 1
+                            //MARK: UpdateVocabRecallScore in core data
+                            CoreDataController().updateVocabRecall(vocabs: vocabs, item: trimmedText, score: vm.vocabRecall, context: moc)
                             //MARK: Trigger Alert
                             showAlert1 = true
                             //MARK: Save score in coreData
-                            CoreDataController().addUserScore(allVocabAmount: arrayOfVocab.count, userScore: currentScore, context: moc)
-                            
+                            //CoreDataController().addUserScore(allVocabAmount: arrayOfVocab.count, userScore: currentScore, context: moc)
                         }
                         print(progress)
                         print(increasedBy)
@@ -163,7 +161,8 @@ struct RecallVocView: View {
                     //MARK: Calculate user score and save in coredata
                     let arrayOfVocab = arrayOfVocab()
                     CoreDataController().addUserScore(allVocabAmount: arrayOfVocab.count, userScore: currentScore, context: moc)
-                    vm.userScorePercentage(vocabs: arrayOfVocab, userScore: currentScore)
+                    //calculate for displaying in UI
+                    scorePercentage = vm.userScorePercentage(vocabs: arrayOfVocab, userScore: currentScore)
                     //MARK: Trigger Alert
                     showAlert2 = true
                 } label: {
@@ -185,7 +184,7 @@ struct RecallVocView: View {
                                 dismiss()
                            }
                     } message: {
-                        Text("You got \(vm.percentage)% Score of all Vocab. Keep it up:)")
+                           Text("You got \(scorePercentage)% Score of all Vocab. Keep it up:)")
                     }
                     
                 }
