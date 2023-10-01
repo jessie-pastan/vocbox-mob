@@ -37,3 +37,14 @@ extension Vocab {
     
     
 }
+
+extension Score {
+    var viewDate: String {
+        let today = Date()
+        return date?.formatted(date: .abbreviated, time: .shortened) ?? today.formatted(date: .abbreviated, time: .shortened)
+        
+    }
+    
+    
+    
+}

@@ -12,7 +12,7 @@ import SwiftUI
 class CoreDataController: ObservableObject {
     let container: NSPersistentContainer
     init() {
-        //create container with file name when app start 
+        //create container with file name when app start
         container = NSPersistentContainer(name:"DataModel")
         container.loadPersistentStores { description, error in
             if let error = error {
@@ -63,29 +63,31 @@ class CoreDataController: ObservableObject {
         newWord.phonetic = phonetic
         newWord.favourite = favourite
         
-        
         save(context: context)
     }
     
-    
-    func updateVocabRecall(vocabs: FetchedResults<Vocab>, item: String, score: Int64, context: NSManagedObjectContext) {
-        
-        for vocabulary in vocabs {
-            if let v = vocabulary.vocab {
-                if v == item {
-                    vocabulary.recall += score
-                    save(context: context)
-                }
+    func updateVocabRecall(vocabs: FetchedResults<Vocab> ,successfullRecalledVocab: String, context: NSManagedObjectContext) {
+        for item in vocabs {
+            print("DeBUG: \(item)")
+            //Verify which object is recalled by user
+            if item.vocab  == successfullRecalledVocab {
+                // Perform your edits recall property
+                item.recall += 1
+                //print("\(type(of: item.recall))")
+                //print("item new recall = \(item.recall)")
+                // Save the changes back to Core Data
+                save(context: context)
             }
         }
     }
     
+    
     func deleteVocab(item: Vocab, context: NSManagedObjectContext) {
-           withAnimation {
-               context.delete(item)
-               save(context: context)
-           }
-       }
+        withAnimation {
+            context.delete(item)
+            save(context: context)
+        }
+    }
     
     func editVocab(item: Vocab, vocab: String, favourite: Bool, definition: String, phonetic: String, type: String, context: NSManagedObjectContext) {
         item.vocab = vocab
@@ -93,7 +95,7 @@ class CoreDataController: ObservableObject {
         item.phonetic = phonetic
         item.type = type
         item.definition = definition
-
+        
         save(context: context)
     }
     

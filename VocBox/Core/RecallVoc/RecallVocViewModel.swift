@@ -14,16 +14,13 @@ class RecallVocViewModel: ObservableObject {
       
    
     @Published var percentage = ""
-    @Published var vocabRecall: Int64 = 0
+    @Published var vocabRecall: Int = 0
     @Published var vocab = ""
     
     
     func vocabExistInCoreData(text: String, vocabs: [Vocab]) -> Bool {
         for item in vocabs {
             if text == item.viewVocab {
-                //add score to vocab that got recalled
-                self.vocabRecall = item.recall + 1
-                
                 return true
             }
         }

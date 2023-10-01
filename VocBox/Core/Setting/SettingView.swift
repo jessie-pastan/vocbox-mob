@@ -13,36 +13,47 @@ struct SettingView: View {
     
     @Environment(\.managedObjectContext) var moc
     
+    @ObservedObject var vm = AnalyticViewModel()
+    
     var body: some View {
-        ForEach(vocabs) { item in
-            VStack{
-                Text("Vocab")
-                HStack{
-                    Text(item.viewVocab)
-                    Text(String(item.viewRecall))
+        
+        ScrollView{
+            //let heighestScore = vm.findHighestPercentage(scores: Scores, context: moc)
+            Text("Total recalled = \(vm.totalRecalledString)")
+            HStack{
+                Text("Heighest Score = \(vm.heighestPercentage)")
+                Text("Date = \(vm.heighestDate)")
+                //Text("Lastest Score = \(lastedScore)")
+            }
+            ForEach(vocabs) { item in
+                VStack{
+                   
+                    HStack{
+                        Text(item.viewVocab)
+                        Text(String(item.viewRecall))
+                        
+                        
+                    }
                 }
-               
+            }
+            
+            
+            ForEach(Scores) { item in
+                VStack{
+                    Text("Challenge Scores")
+                    HStack{
+                        Text(item.viewDate)
+                        Text(String(item.percentage))
+                    }
+                }
             }
         }
-        
-        
-        ForEach(Scores) { item in
-            VStack{
-                Text("Challenge Scores")
-                HStack{
-                    
-                    Text(String(item.percentage))
-                    
-                }
-            }
+        .onAppear{
+            vm.calculateSuccessRecalledVocab(vocabs: vocabs)
+            vm.findHighestPercentage(scores: Scores, context: moc)
         }
-        
         
     }
 }
 
-struct SettingView_Previews: PreviewProvider {
-    static var previews: some View {
-        SettingView()
-    }
-}
+

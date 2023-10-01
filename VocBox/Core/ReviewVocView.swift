@@ -54,6 +54,7 @@ struct ReviewVocView: View {
                                 }
                             }
                         }
+                        //Programatically scroll to the top when added new word
                         .onAppear {
                             proxy.scrollTo(0)
                         }

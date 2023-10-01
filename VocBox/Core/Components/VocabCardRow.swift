@@ -75,9 +75,9 @@ struct VocabCardRow: View {
                         
                         
                         
-                    //MARK Pronunciation
+                    //MARK: Pronunciation speaker
                         Button {
-                            // pronoun
+                            // pronounce word when user tap
                         } label: {
                             Image(systemName: "speaker.wave.2.fill")
                             

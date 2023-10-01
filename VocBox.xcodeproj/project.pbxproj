@@ -14,6 +14,9 @@
 		75621A702AC3A72000B407A9 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 75621A6F2AC3A72000B407A9 /* ConfettiSwiftUI */; };
 		75621A722AC3A7C300B407A9 /* Confetti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75621A712AC3A7C300B407A9 /* Confetti.swift */; };
 		75621A742AC3B27200B407A9 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75621A732AC3B27200B407A9 /* Alert.swift */; };
+		75621A782AC7AB4800B407A9 /* AnalyticCardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75621A772AC7AB4800B407A9 /* AnalyticCardRow.swift */; };
+		75621A7A2AC8D35A00B407A9 /* AnalyticViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75621A792AC8D35A00B407A9 /* AnalyticViewModel.swift */; };
+		75621A7C2AC8D9BB00B407A9 /* MockScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75621A7B2AC8D9BB00B407A9 /* MockScore.swift */; };
 		8304D7E12AB3DC2D00C9A9B1 /* VocBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304D7E02AB3DC2D00C9A9B1 /* VocBoxApp.swift */; };
 		8304D7E32AB3DC2D00C9A9B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304D7E22AB3DC2D00C9A9B1 /* ContentView.swift */; };
 		8304D7E52AB3DC2F00C9A9B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8304D7E42AB3DC2F00C9A9B1 /* Assets.xcassets */; };
@@ -47,6 +50,9 @@
 		75621A6C2AC28D3600B407A9 /* Pronunciation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pronunciation.swift; sourceTree = "<group>"; };
 		75621A712AC3A7C300B407A9 /* Confetti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Confetti.swift; sourceTree = "<group>"; };
 		75621A732AC3B27200B407A9 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		75621A772AC7AB4800B407A9 /* AnalyticCardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticCardRow.swift; sourceTree = "<group>"; };
+		75621A792AC8D35A00B407A9 /* AnalyticViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticViewModel.swift; sourceTree = "<group>"; };
+		75621A7B2AC8D9BB00B407A9 /* MockScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockScore.swift; sourceTree = "<group>"; };
 		8304D7DD2AB3DC2D00C9A9B1 /* VocBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8304D7E02AB3DC2D00C9A9B1 /* VocBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocBoxApp.swift; sourceTree = "<group>"; };
 		8304D7E22AB3DC2D00C9A9B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -201,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				8304D7FD2AB3DE0700C9A9B1 /* AnalyticView.swift */,
+				75621A792AC8D35A00B407A9 /* AnalyticViewModel.swift */,
 			);
 			path = Analytic;
 			sourceTree = "<group>";
@@ -220,6 +227,7 @@
 				83E5AA532ABA8AB100136C34 /* TimeCalculate.swift */,
 				83E5AA5E2ABCAEE300136C34 /* TrimString.swift */,
 				75621A6C2AC28D3600B407A9 /* Pronunciation.swift */,
+				75621A7B2AC8D9BB00B407A9 /* MockScore.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -239,6 +247,7 @@
 				83E34A872AB677B600350CF7 /* SmallButton.swift */,
 				750D26AC2ABE8E1D00300914 /* CreateFirstVocabCard.swift */,
 				75621A732AC3B27200B407A9 /* Alert.swift */,
+				75621A772AC7AB4800B407A9 /* AnalyticCardRow.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -348,7 +357,10 @@
 				83E590BD2AB3E81F002ABD04 /* DataModel.xcdatamodeld in Sources */,
 				8304D7E12AB3DC2D00C9A9B1 /* VocBoxApp.swift in Sources */,
 				83E590C12AB3E9FF002ABD04 /* EntityExtentions.swift in Sources */,
+				75621A7A2AC8D35A00B407A9 /* AnalyticViewModel.swift in Sources */,
 				83E590C92AB52695002ABD04 /* Extentions .swift in Sources */,
+				75621A782AC7AB4800B407A9 /* AnalyticCardRow.swift in Sources */,
+				75621A7C2AC8D9BB00B407A9 /* MockScore.swift in Sources */,
 				8304D7FB2AB3DDD400C9A9B1 /* RecallVocView.swift in Sources */,
 				75621A722AC3A7C300B407A9 /* Confetti.swift in Sources */,
 				750D26AD2ABE8E1D00300914 /* CreateFirstVocabCard.swift in Sources */,

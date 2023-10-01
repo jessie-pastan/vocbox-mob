@@ -18,7 +18,6 @@ struct Phonetic : Codable {
 }
 
 
-
 extension Phonetic {
     static var MOCKPhonetic: [Phonetic] {
         [.init(text: "həˈləʊ", audio:  "//ssl.gstatic.com/dictionary/static/sounds/20200429/hello--_gb_1.mp3")]
