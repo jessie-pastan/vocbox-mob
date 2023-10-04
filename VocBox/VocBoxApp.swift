@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct VocBoxApp: App {
+        struct VocBoxApp: App {
     var body: some Scene {
         WindowGroup {
             ReviewVocView()
