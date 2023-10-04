@@ -7,22 +7,18 @@
 
 import SwiftUI
 
-struct AnalyticCardRow: View {
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.date, order: .reverse)]) private var Scores: FetchedResults<Score>
+struct StatisticsCardRow: View {
     
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.createDate, order: .reverse)]) private var vocabs: FetchedResults<Vocab>
+    var vocabs: FetchedResults<Vocab>
+    var scores: FetchedResults<Score>
+   
+    @ObservedObject var vm = StatisticsViewModel()
     
-    @ObservedObject var vm = AnalyticViewModel()
-    
-    @Environment(\.managedObjectContext) var moc
-    
-    @State private var word = ""
-  
     var body: some View {
         
         ZStack{
             Rectangle()
-            VStack{
+            VStack(alignment: .leading){
                 Text("Highest Score")
                 HStack{
                     Text("\(vm.heighestDate)")
@@ -37,24 +33,14 @@ struct AnalyticCardRow: View {
                     
                 }
                 
-                Text("Total Successfull recall \(vm.totalRecalled) words")
+                Text("Total Successfull recall : \(vm.totalRecalledString)")
             }
             .padding(.horizontal)
             .foregroundColor(Color.text)
         }
         .foregroundColor(Color.card)
         .cornerRadius(10)
-        .onAppear{
-            vm.calculateSuccessRecalledVocab(vocabs: vocabs)
-            vm.findHighestPercentage(scores: Scores, context: moc)
-            vm.findLastestPercentage(scores: Scores, context: moc)
-            
-        }
-    }
-}
-
-struct AnalyticCardRow_Previews: PreviewProvider {
-    static var previews: some View {
-        AnalyticCardRow()
+        
+         
     }
 }

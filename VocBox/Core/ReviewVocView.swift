@@ -17,6 +17,9 @@ struct ReviewVocView: View {
     @State private var text = ""
     @State private var isShowFavourite = false
 
+    @State private var statisticsIsShow = false
+    @State private var widgetSettingIsShow = false
+    @State private var alarmSettingIsShow = false
     
     let position = UUID()
     
@@ -95,13 +98,45 @@ struct ReviewVocView: View {
                 .background(Color.background)
                 //MARK: Right toolbar for setting profile
                 .toolbar {
-                    NavigationLink {
-                        //TODO: navigate to setting view
-                        SettingView()
-                    } label: {
-                        Image(systemName: "gearshape.fill")
-                            .foregroundColor(Color.text)
+                    ToolbarItem {
+                        Menu {
+                            //MARK: Statistic
+                           Button("Statistic") {
+                                // action: navigate to statictics screen
+                               statisticsIsShow =  true
+                            }
+                            
+                            
+                            //MARK: Widget Setting
+                            Button("Widget") {
+                                // action: navigate to widget setting screen
+                                widgetSettingIsShow = true
+                            }
+                            
+                            //MARK: Alarm Setting
+                            Button("Alarm") {
+                                // action: sort A-Z Vocab
+                                alarmSettingIsShow = true
+                            }
+                        
+                            
+                        } label: {
+                            Image(systemName: "person.crop.circle")
+                                .foregroundColor(Color.text)
+                        }
+                        .navigationDestination(isPresented: $statisticsIsShow) {
+                            StatisticsView()
+                        }
+                        .navigationDestination(isPresented: $widgetSettingIsShow) {
+                            WidgetSettingView()
+                        }
+                        .navigationDestination(isPresented: $alarmSettingIsShow) {
+                            AlarmSettingView()
+                        }
+                        
                     }
+                    
+                
                 }
                 //MARK: Left toolbar for filtering vocabulary
                 .toolbar {
