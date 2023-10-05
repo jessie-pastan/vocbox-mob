@@ -29,28 +29,25 @@ struct StatisticsView: View {
     @ObservedObject var vm = StatisticsViewModel()
     
     var body: some View {
+        
         VStack(alignment: .leading){
             
             ScrollView{
                 
-                
-                StatisticsCardRow(vocabs: vocabs, scores:scores, vm: vm)
-                
-                MostRecallVocabRow(recalls: mostRecalls, vm: vm)
-                
-                LeastRecallVocabRow(recalls: leastRecalls, vm: vm)
-                
-                
-                ForEach(vocabs) { item in
+                GeometryReader { proxy in
                     VStack{
-                        HStack{
-                            Text(item.viewVocab)
-                            Text(String(item.viewRecall))
-    
-                        }
+                        StatisticsCardRow(vocabs: vocabs, scores:scores, vm: vm)
+                        
+                        MostRecallVocabRow(recalls: mostRecalls, vm: vm)
+                        
+                        LeastRecallVocabRow(recalls: leastRecalls, vm: vm)
+                        
+                        TotalVocabRow(vocabs: vocabs, vm: vm)
                     }
                 }
-                
+                .frame(maxWidth: .infinity)
+                .frame(height:500)
+                .padding(.horizontal)
     
             }
             .onAppear{

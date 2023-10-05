@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 
 struct ReviewVocView: View {
-
+    
     @FetchRequest(sortDescriptors: [SortDescriptor(\.createDate, order: .reverse)]) private var vocabs: FetchedResults<Vocab>
     
     @Environment(\.managedObjectContext) var moc
@@ -20,6 +20,7 @@ struct ReviewVocView: View {
     @State private var statisticsIsShow = false
     @State private var widgetSettingIsShow = false
     @State private var alarmSettingIsShow = false
+    @State private var profileViewIsShow = false
     
     let position = UUID()
     
@@ -36,14 +37,10 @@ struct ReviewVocView: View {
                         .frame(height: 500)
                         .padding(.horizontal,40)
                         .padding([.top, .bottom], 60)
-                        
-                        
                     }
                     //MARK: All vocabulary
                     ScrollViewReader { proxy in
                         ScrollView {
-                            
-                            
                             LazyVStack{
                                 ForEach(0..<vocabs.count, id: \.self) { index in
                                     GeometryReader { proxy in
@@ -83,7 +80,7 @@ struct ReviewVocView: View {
                             RecallVocView()
                         } label: {
                             GeometryReader { proxy in
-                                SmallButton(title: "Brain Challenge")
+                                SmallButton(title: "Recall Challenge")
                             }
                             .frame(height: 44)
                         }
@@ -97,47 +94,22 @@ struct ReviewVocView: View {
                 .padding(.leading, 2)
                 .background(Color.background)
                 //MARK: Right toolbar for setting profile
+            /*
                 .toolbar {
                     ToolbarItem {
-                        Menu {
-                            //MARK: Statistic
-                           Button("Statistic") {
-                                // action: navigate to statictics screen
-                               statisticsIsShow =  true
-                            }
-                            
-                            
-                            //MARK: Widget Setting
-                            Button("Widget") {
-                                // action: navigate to widget setting screen
-                                widgetSettingIsShow = true
-                            }
-                            
-                            //MARK: Alarm Setting
-                            Button("Alarm") {
-                                // action: sort A-Z Vocab
-                                alarmSettingIsShow = true
-                            }
-                        
-                            
-                        } label: {
+                        Button {
+                            profileViewIsShow  = true
+                        }label: {
                             Image(systemName: "person.crop.circle")
-                                .foregroundColor(Color.text)
+                                .foregroundColor(Color(UIColor.label))
                         }
-                        .navigationDestination(isPresented: $statisticsIsShow) {
-                            StatisticsView()
+                        .navigationDestination(isPresented: $profileViewIsShow) {
+                           ProfileView()
                         }
-                        .navigationDestination(isPresented: $widgetSettingIsShow) {
-                            WidgetSettingView()
-                        }
-                        .navigationDestination(isPresented: $alarmSettingIsShow) {
-                            AlarmSettingView()
-                        }
-                        
                     }
-                    
-                
                 }
+             */
+        
                 //MARK: Left toolbar for filtering vocabulary
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading){
@@ -175,12 +147,12 @@ struct ReviewVocView: View {
                             
                         } label: {
                             Image(systemName: "line.3.horizontal")
-                                .foregroundColor(Color.text)
+                                .foregroundColor(Color(UIColor.label))
                         }
                         
                     }
                 }
-            }
+        }.tint(Color(UIColor.label))
             
        
     

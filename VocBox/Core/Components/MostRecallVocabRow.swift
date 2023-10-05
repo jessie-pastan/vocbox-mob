@@ -18,18 +18,18 @@ struct MostRecallVocabRow: View {
             Rectangle()
             VStack(alignment: .center){
                 
-                Text("Most Recalled Vocabulary")
+                Text("Most Recalled")
                 ForEach(vm.mostRecalledArray, id: \.0){ vocab in
                     HStack{
                         Text("\(vocab.0) : \(vocab.1)")
-                        Text(vocab.1 <= 1 ? "Time" : "Times")
+                        Text(vocab.1 <= 1 ? "time" : "times")
                     }
                 }
             }
             .padding(.horizontal)
             .foregroundColor(Color.text)
         }
-        .foregroundColor(Color.card)
+        .foregroundColor(Color.button)
         .cornerRadius(10)
     }
         

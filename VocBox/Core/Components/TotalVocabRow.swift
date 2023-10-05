@@ -8,11 +8,27 @@
 import SwiftUI
 
 struct TotalVocabRow: View {
+    
+    
+    var vocabs: FetchedResults<Vocab>
+    
+    @ObservedObject var vm = StatisticsViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        ZStack{
+            Rectangle()
+            VStack(alignment: .center){
+                Text("\(vocabs.count) Voc in the box")
+                
+                Text("Total Successfull recall : \(vm.totalRecalledString)")
+            }
+            .padding(.horizontal)
+            .foregroundColor(Color.text)
+        }
+        .foregroundColor(Color.button)
+        .cornerRadius(10)
     }
-}
-
-#Preview {
-    TotalVocabRow()
+    
+    
 }

@@ -22,7 +22,7 @@ struct RecallProgressView: View {
         ZStack(alignment: .leading) {
             ZStack{
             
-                Capsule().fill(Color.black.opacity(0.07))
+                Capsule().fill(Color.gray)
                     .frame(height: height)
             }
             Capsule()

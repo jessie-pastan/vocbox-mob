@@ -8,10 +8,13 @@
 import SwiftUI
 
 @main
-        struct VocBoxApp: App {
+struct VocBoxApp: App {
+    
+    
     var body: some Scene {
         WindowGroup {
             ReviewVocView()
+                .modifier(DarkModeViewModifier())
                 .environment(\.managedObjectContext,CoreDataController().container.viewContext)
             
             
