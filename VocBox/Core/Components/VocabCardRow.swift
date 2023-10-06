@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(iOS 17.0, *)
 struct VocabCardRow: View {
     @Environment(\.managedObjectContext) var moc
    
@@ -17,6 +18,7 @@ struct VocabCardRow: View {
     var definition = "Definition"
     
     @State private var isfavourite: Bool = false
+    @State private var trigger = 0
     
     var body: some View {
         
@@ -90,12 +92,14 @@ struct VocabCardRow: View {
                         
                         //MARK: Favourite word
                         Button {
+                            trigger += 1
                             isfavourite = vocab.favourite
                             isfavourite.toggle()
                             CoreDataController().toggleFavouriteVocab(item: vocab, favourite: vocab.favourite, context: moc)
                         } label: {
                             Image(systemName: vocab.favourite ? "heart.fill" : "heart" )
                                 .foregroundColor(vocab.favourite ? .red : .black)
+                                .symbolEffect(.bounce, value: trigger)
                         }
                         .onChange(of: isfavourite) { newValue in
                            vocab.favourite = newValue

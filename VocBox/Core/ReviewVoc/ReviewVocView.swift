@@ -8,6 +8,7 @@
 import SwiftUI
 import CoreData
 
+@available(iOS 17.0, *)
 struct ReviewVocView: View {
     
     @FetchRequest(sortDescriptors: [SortDescriptor(\.createDate, order: .reverse)]) private var vocabs: FetchedResults<Vocab>
@@ -120,9 +121,8 @@ struct ReviewVocView: View {
                            
                             Button("All") {
                                 // action: sort Vocab by recently added
-                                isShowAll = true
+                                isShowAll.toggle()
                                 vocabs.nsPredicate = isShowAll ? NSPredicate(value: true) : NSPredicate(value: true)
-                                vocabs.sortDescriptors = [SortDescriptor(\.createDate, order: .reverse)]
                             }
                             
                             
@@ -130,7 +130,7 @@ struct ReviewVocView: View {
                             Button("Favourite") {
                                 // action: fetch favourite vocabulary
                                 isShowFavourite = true
-                                vocabs.nsPredicate = isShowFavourite ?  NSPredicate(format: "favourite = 1") : nil //NSPredicate(value: true)
+                                vocabs.nsPredicate = isShowFavourite ?  NSPredicate(format: "favourite = 1") : nil
                             }
                             
                             
@@ -168,6 +168,7 @@ struct ReviewVocView: View {
     }
 }
 
+@available(iOS 17.0, *)
 struct ReviewVocView_Previews: PreviewProvider {
     static var previews: some View {
         ReviewVocView()
