@@ -90,14 +90,15 @@ struct VocabCardRow: View {
                         
                         //MARK: Favourite word
                         Button {
+                            isfavourite = vocab.favourite
                             isfavourite.toggle()
-                            CoreDataController().toggleFavouriteVocab(item: vocab, favourite: isfavourite, context: moc)
+                            CoreDataController().toggleFavouriteVocab(item: vocab, favourite: vocab.favourite, context: moc)
                         } label: {
                             Image(systemName: vocab.favourite ? "heart.fill" : "heart" )
-                                .foregroundColor(vocab.favourite || isfavourite ? .red : .black)
+                                .foregroundColor(vocab.favourite ? .red : .black)
                         }
                         .onChange(of: isfavourite) { newValue in
-                            vocab.favourite = newValue
+                           vocab.favourite = newValue
                         }
                         
                     }

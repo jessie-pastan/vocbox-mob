@@ -11,12 +11,7 @@ import CoreData
 struct ReviewVocView: View {
     
     @FetchRequest(sortDescriptors: [SortDescriptor(\.createDate, order: .reverse)]) private var vocabs: FetchedResults<Vocab>
-    
-    @FetchRequest(sortDescriptors: [
-        SortDescriptor(\.vocab)
-    ]) var ascendingVocabs: FetchedResults<Vocab>
-    
-    
+
     
     @Environment(\.managedObjectContext) var moc
     
@@ -26,9 +21,6 @@ struct ReviewVocView: View {
     @State private var isShowAscending = false
     @State private var isShowDescending = false
 
-    @State private var statisticsIsShow = false
-    @State private var widgetSettingIsShow = false
-    @State private var alarmSettingIsShow = false
     @State private var profileViewIsShow = false
     
     let position = UUID()
