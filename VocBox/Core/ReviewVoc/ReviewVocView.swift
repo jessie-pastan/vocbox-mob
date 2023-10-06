@@ -12,10 +12,19 @@ struct ReviewVocView: View {
     
     @FetchRequest(sortDescriptors: [SortDescriptor(\.createDate, order: .reverse)]) private var vocabs: FetchedResults<Vocab>
     
+    @FetchRequest(sortDescriptors: [
+        SortDescriptor(\.vocab)
+    ]) var ascendingVocabs: FetchedResults<Vocab>
+    
+    
+    
     @Environment(\.managedObjectContext) var moc
     
     @State private var text = ""
     @State private var isShowFavourite = false
+    @State private var isShowAll = false
+    @State private var isShowAscending = false
+    @State private var isShowDescending = false
 
     @State private var statisticsIsShow = false
     @State private var widgetSettingIsShow = false
@@ -93,8 +102,9 @@ struct ReviewVocView: View {
                 .padding(.bottom,30)
                 .padding(.leading, 2)
                 .background(Color.background)
+            
                 //MARK: Right toolbar for setting profile
-            /*
+            
                 .toolbar {
                     ToolbarItem {
                         Button {
@@ -108,17 +118,18 @@ struct ReviewVocView: View {
                         }
                     }
                 }
-             */
+             
         
                 //MARK: Left toolbar for filtering vocabulary
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading){
                         Menu {
                             //MARK: All Vocab
+                           
                             Button("All") {
                                 // action: sort Vocab by recently added
-                                isShowFavourite = false
-                                vocabs.nsPredicate = isShowFavourite ? NSPredicate(value: true) : NSPredicate(value: true)
+                                isShowAll = true
+                                vocabs.nsPredicate = isShowAll ? NSPredicate(value: true) : NSPredicate(value: true)
                                 vocabs.sortDescriptors = [SortDescriptor(\.createDate, order: .reverse)]
                             }
                             
@@ -127,21 +138,24 @@ struct ReviewVocView: View {
                             Button("Favourite") {
                                 // action: fetch favourite vocabulary
                                 isShowFavourite = true
-                                vocabs.nsPredicate = isShowFavourite ?  NSPredicate(format: "favourite == 1") : NSPredicate(value: true)
+                                vocabs.nsPredicate = isShowFavourite ?  NSPredicate(format: "favourite = 1") : nil //NSPredicate(value: true)
                             }
+                            
                             
                             //MARK: sort A-Z Order
                             Button("A-Z") {
                                 // action: sort A-Z Vocab
-                                isShowFavourite = false
-                                vocabs.nsPredicate = isShowFavourite ? NSPredicate(value: true) : NSPredicate(value: true)
-                                vocabs.sortDescriptors = [SortDescriptor(\.vocab, order: .forward)]
+                               isShowAscending = true
+                                
+                                vocabs.nsPredicate = isShowAscending ? NSPredicate(value: true) : NSPredicate(value: true)
+                                vocabs.sortDescriptors = [SortDescriptor(\.vocab)]
+                               
                             }
                             //MARK: sort Z-A Order
                             Button("Z-A") {
                                 // action: sort Z-A Vocab
-                                isShowFavourite = false
-                                vocabs.nsPredicate = isShowFavourite ? NSPredicate(value: true) : NSPredicate(value: true)
+                               isShowDescending = true
+                                vocabs.nsPredicate = isShowDescending ? NSPredicate(value: true) : NSPredicate(value: true)
                                 vocabs.sortDescriptors = [SortDescriptor(\.vocab, order: .reverse)]
                             }
                             

@@ -20,7 +20,9 @@ struct VocabCardRow: View {
     
     var body: some View {
         
-            ZStack{
+        
+        
+        ZStack{
                 Rectangle()
                 HStack{
                     Spacer()
@@ -92,7 +94,10 @@ struct VocabCardRow: View {
                             CoreDataController().toggleFavouriteVocab(item: vocab, favourite: isfavourite, context: moc)
                         } label: {
                             Image(systemName: vocab.favourite ? "heart.fill" : "heart" )
-                                .foregroundColor(vocab.favourite ? .red : .black)
+                                .foregroundColor(vocab.favourite || isfavourite ? .red : .black)
+                        }
+                        .onChange(of: isfavourite) { newValue in
+                            vocab.favourite = newValue
                         }
                         
                     }
