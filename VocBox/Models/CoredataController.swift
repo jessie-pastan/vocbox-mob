@@ -84,6 +84,7 @@ class CoreDataController: ObservableObject {
     
     func toggleFavouriteVocab(item: Vocab, favourite: Bool, context: NSManagedObjectContext) {
         item.favourite = !item.favourite
+
         save(context: context)
     }
     

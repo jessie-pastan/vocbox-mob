@@ -14,6 +14,7 @@
 		75621A702AC3A72000B407A9 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 75621A6F2AC3A72000B407A9 /* ConfettiSwiftUI */; };
 		75621A722AC3A7C300B407A9 /* Confetti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75621A712AC3A7C300B407A9 /* Confetti.swift */; };
 		75621A742AC3B27200B407A9 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75621A732AC3B27200B407A9 /* Alert.swift */; };
+		75BF2CC82ACF7D1F003A32E6 /* MockScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CC72ACF7D1F003A32E6 /* MockScore.swift */; };
 		8304D7E12AB3DC2D00C9A9B1 /* VocBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304D7E02AB3DC2D00C9A9B1 /* VocBoxApp.swift */; };
 		8304D7E32AB3DC2D00C9A9B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304D7E22AB3DC2D00C9A9B1 /* ContentView.swift */; };
 		8304D7E52AB3DC2F00C9A9B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8304D7E42AB3DC2F00C9A9B1 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		75621A6C2AC28D3600B407A9 /* Pronunciation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pronunciation.swift; sourceTree = "<group>"; };
 		75621A712AC3A7C300B407A9 /* Confetti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Confetti.swift; sourceTree = "<group>"; };
 		75621A732AC3B27200B407A9 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		75BF2CC72ACF7D1F003A32E6 /* MockScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockScore.swift; sourceTree = "<group>"; };
 		8304D7DD2AB3DC2D00C9A9B1 /* VocBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8304D7E02AB3DC2D00C9A9B1 /* VocBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocBoxApp.swift; sourceTree = "<group>"; };
 		8304D7E22AB3DC2D00C9A9B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				83E5AA532ABA8AB100136C34 /* TimeCalculate.swift */,
 				83E5AA5E2ABCAEE300136C34 /* TrimString.swift */,
 				75621A6C2AC28D3600B407A9 /* Pronunciation.swift */,
+				75BF2CC72ACF7D1F003A32E6 /* MockScore.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				83E590D02AB52962002ABD04 /* VocabCardRow.swift in Sources */,
 				75621A742AC3B27200B407A9 /* Alert.swift in Sources */,
 				83E590BF2AB3E9D7002ABD04 /* CoredataController.swift in Sources */,
+				75BF2CC82ACF7D1F003A32E6 /* MockScore.swift in Sources */,
 				75621A6D2AC28D3600B407A9 /* Pronunciation.swift in Sources */,
 				83E590D22AB571ED002ABD04 /* PartOfSpeech.swift in Sources */,
 				83E5AA562ABBD8BC00136C34 /* RecallVocViewModel.swift in Sources */,
@@ -411,7 +415,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -465,7 +469,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -16,9 +16,13 @@ struct ReviewVocView: View {
     
     @State private var text = ""
     @State private var isShowFavourite = false
+    @State private var isShowAll = false
+    @State private var isShowAscending = false
+    @State private var isShowDescending = false
     
     @Binding var scrollToTop: Bool
     @State private var scrollProxy: ScrollViewProxy? = nil
+    @State private var trigger = 0
     
     
     var body: some View {
@@ -119,12 +123,18 @@ struct ReviewVocView: View {
                 //MARK: Left toolbar for filtering vocabulary
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading){
-                        Menu {
+                        
+                        Button {
+                            isShowFavourite.toggle()
+                            trigger += 1
+                            vocabs.nsPredicate = isShowFavourite ?  NSPredicate(format: "favourite == 1") : NSPredicate(value: true)
+
+                            /*
                             //MARK: All Vocab
                             Button("All") {
                                 // action: sort Vocab by recently added
-                                isShowFavourite = false
-                                vocabs.nsPredicate = isShowFavourite ? NSPredicate(value: true) : NSPredicate(value: true)
+                                isShowAll = true
+                                vocabs.nsPredicate = isShowAll ? NSPredicate(value: true) : NSPredicate(value: true)
                                 vocabs.sortDescriptors = [SortDescriptor(\.createDate, order: .reverse)]
                             }
                             
@@ -150,11 +160,14 @@ struct ReviewVocView: View {
                                 vocabs.nsPredicate = isShowFavourite ? NSPredicate(value: true) : NSPredicate(value: true)
                                 vocabs.sortDescriptors = [SortDescriptor(\.vocab, order: .reverse)]
                             }
-                            
+                            */
                         } label: {
-                            Image(systemName: "line.3.horizontal")
-                                .foregroundColor(Color.text)
+                            Image(systemName: isShowFavourite ? "heart.circle.fill" : "heart.circle" )
+                                .foregroundColor(isShowFavourite ? .red : .black)
+                                .symbolEffect(.bounce, value: trigger)
                         }
+                            
+                             
                         
                     }
                 }
