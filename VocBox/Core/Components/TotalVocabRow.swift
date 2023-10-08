@@ -23,10 +23,13 @@ struct TotalVocabRow: View {
                 
                 Text("Total Successfull recall : \(vm.totalRecalledString)")
             }
+            
+            .padding([.bottom, .top])
             .padding(.horizontal)
             .foregroundColor(Color.text)
         }
-        .foregroundColor(Color.button)
+       
+        .foregroundColor(Color.card)
         .cornerRadius(10)
     }
     

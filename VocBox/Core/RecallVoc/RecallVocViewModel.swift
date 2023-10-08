@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreData
+import SwiftUI
 
 class RecallVocViewModel: ObservableObject {
      
@@ -16,6 +17,8 @@ class RecallVocViewModel: ObservableObject {
     @Published var percentage = ""
     @Published var vocabRecall: Int = 0
     @Published var vocab = ""
+    
+    var DefinitionHints = [String]()
     
     
     func vocabExistInCoreData(text: String, vocabs: [Vocab]) -> Bool {
@@ -40,6 +43,18 @@ class RecallVocViewModel: ObservableObject {
         let percentage = (userScore / allVocab) * Double(100)
         self.percentage = String(format: "%.0f", percentage)
         return self.percentage
+    }
+    
+    func randomHint(vocabs: FetchedResults<Vocab>) -> String {
+        for vocab in vocabs {
+            DefinitionHints.append(vocab.viewDefinition)
+        }
+        let hint = DefinitionHints.randomElement() ?? "Please add a word definition"
+        
+        if hint.isEmpty {
+            return "Please add a word definition, then we can give you a hint!"
+        }
+        return hint
     }
     
 }

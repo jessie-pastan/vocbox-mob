@@ -84,6 +84,7 @@ struct AddVocView: View {
                         Task{
                             //fetch phonetic from api
                             self.phonetic = try await vm.fetchPhonetic(vocab: trimmedString)
+                            //self.phonetic = try await vm.fetchPronunciation(vocab: trimmedString, vocabType: partOfSpeech.title)
                             
                             // save in coreData
                             CoreDataController().addVocab(definition: definition, favourite: false, phonetic: phonetic, type: partOfSpeech.acronym, word: trimmedString.capitalized, context: moc)

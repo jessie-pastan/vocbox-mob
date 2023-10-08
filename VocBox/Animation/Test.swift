@@ -8,10 +8,64 @@
 import SwiftUI
 
 struct Test: View {
+    @State var text = ""
+    let colours = [
+        Color.blue,
+        Color.green,
+        Color.red,
+        Color.yellow,
+        Color.pink
+    ]
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+           
+                List {
+                    
+                    ForEach(0..<20, id: \.self) { index in
+                        Text("Item \(index)")
+                    }
+                    
+                }
+                //.scrollContentBackground(.hidden)
+                .listStyle(GroupedListStyle()) // Optional list style
+                .searchable(text: $text, placement: .navigationBarDrawer(displayMode: .always))
+           
+                .scrollContentBackground(.hidden)
+        }
     }
+    
 }
+        
+        
+        /*
+        //GeometryReader { proxy in
+        VStack{
+            ScrollView {
+                VStack{
+                    ForEach(0..<colours.count, id: \.self) { index in
+                        Section {
+                            Text("View \(index)")
+                        } header: {
+                            HStack{
+                                Text("Section \(index)")
+                                Spacer()
+                            }
+                        }
+                        .frame(maxWidth: .infinity)
+                        //.padding(.horizontal, max(proxy.safeAreaInsets.leading, proxy.safeAreaInsets.trailing))
+                        .background(colours[index])
+                    }
+                }
+                
+                }
+            }
+            .background(Color.background)
+            .searchable(text: $text)
+            //.edgesIgnoringSafeArea(.horizontal)
+        //}
+    }
+         */
+
 
 #Preview {
     Test()

@@ -32,6 +32,8 @@ struct RecallVocView: View {
     @State private var showAlert2 = false
     @State private var scorePercentage = ""
     
+    @State private var hint = ""
+    
     var body: some View {
         let trimmedText = TrimString.trimString(input: text)
 
@@ -60,7 +62,8 @@ struct RecallVocView: View {
                     }
                 }
                 .padding()
-                
+                //MARK: Display hint to user
+                //Text("\(hint)").multilineTextAlignment(.center)
                 //MARK: Current Score
                 VStack(alignment: .center){
                     HStack{
@@ -160,6 +163,30 @@ struct RecallVocView: View {
             }
             .fontWeight(.bold)
             .padding()
+            /*
+            //MARK: Hint tool bar
+            .toolbar(content: {
+                Button {
+                    //show hint on UI
+                    hint = vm.randomHint(vocabs: vocabs)
+                } label: {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 120)
+                            .frame(height: 20)
+                            .foregroundColor(Color.button)
+                        Text("Hint!")
+                            .padding()
+                            .bold()
+                            .foregroundColor(Color.text)
+                    }
+                    .background(Rectangle().frame(height: 20).foregroundColor(.textField).cornerRadius(120).offset(x: 2, y: 2))
+                    .padding(.top, 5)
+                    .padding(.leading, -5)
+                }
+
+            })
+            */
+            
             .toolbar {
                 Button {
                     

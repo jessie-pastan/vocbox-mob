@@ -39,10 +39,12 @@ struct StatisticsCardRow: View {
                 Spacer()
                 
             }
+            .padding([.bottom, .top])
             .padding(.horizontal)
             .foregroundColor(Color.text)
         }
-        .foregroundColor(Color.button)
+   
+        .foregroundColor(Color.card)
         .cornerRadius(10)
         
          

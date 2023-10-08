@@ -10,8 +10,9 @@ import SwiftUI
 struct ProfileView: View {
     
    @AppStorage("isDarkMode") var isDarkMode = false
-   
-
+    
+   @Environment(\.managedObjectContext) var moc
+    
     var body: some View {
         
         VStack(alignment: .leading) {

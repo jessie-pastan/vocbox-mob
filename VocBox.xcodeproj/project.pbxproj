@@ -28,6 +28,9 @@
 		75BF2CBE2ACF26EF003A32E6 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CBD2ACF26EF003A32E6 /* SearchView.swift */; };
 		75BF2CC12ACF286D003A32E6 /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CC02ACF286D003A32E6 /* ReminderView.swift */; };
 		75BF2CC42ACF2B1B003A32E6 /* ProUpgradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CC32ACF2B1B003A32E6 /* ProUpgradeView.swift */; };
+		75BF2CCA2AD0C3D3003A32E6 /* DefinitionView .swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CC92AD0C3D3003A32E6 /* DefinitionView .swift */; };
+		75BF2CCC2AD1C025003A32E6 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CCB2AD1C025003A32E6 /* Test.swift */; };
+		75BF2CCE2AD1DEE1003A32E6 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CCD2AD1DEE1003A32E6 /* CustomSearchBar.swift */; };
 		8304D7E12AB3DC2D00C9A9B1 /* VocBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304D7E02AB3DC2D00C9A9B1 /* VocBoxApp.swift */; };
 		8304D7E32AB3DC2D00C9A9B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304D7E22AB3DC2D00C9A9B1 /* ContentView.swift */; };
 		8304D7E52AB3DC2F00C9A9B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8304D7E42AB3DC2F00C9A9B1 /* Assets.xcassets */; };
@@ -73,6 +76,9 @@
 		75BF2CBD2ACF26EF003A32E6 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		75BF2CC02ACF286D003A32E6 /* ReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
 		75BF2CC32ACF2B1B003A32E6 /* ProUpgradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProUpgradeView.swift; sourceTree = "<group>"; };
+		75BF2CC92AD0C3D3003A32E6 /* DefinitionView .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefinitionView .swift"; sourceTree = "<group>"; };
+		75BF2CCB2AD1C025003A32E6 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		75BF2CCD2AD1DEE1003A32E6 /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
 		8304D7DD2AB3DC2D00C9A9B1 /* VocBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8304D7E02AB3DC2D00C9A9B1 /* VocBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocBoxApp.swift; sourceTree = "<group>"; };
 		8304D7E22AB3DC2D00C9A9B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -114,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				75621A662ABFDC4F00B407A9 /* Animation.swift */,
+				75BF2CCB2AD1C025003A32E6 /* Test.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -134,8 +141,8 @@
 				75BF2CB82ACE47BB003A32E6 /* ProfileView.swift */,
 				75BF2CC22ACF2AF6003A32E6 /* ProUpgrade */,
 				75BF2CBF2ACF2854003A32E6 /* Reminder */,
-				75BF2CBC2ACF26CD003A32E6 /* Search */,
 				75BF2CAA2ACC8CE7003A32E6 /* Widget */,
+				75BF2CBC2ACF26CD003A32E6 /* Search */,
 				75BF2CA62ACC8C3C003A32E6 /* Statistics */,
 			);
 			path = Profile;
@@ -153,6 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				75BF2CBD2ACF26EF003A32E6 /* SearchView.swift */,
+				75BF2CC92AD0C3D3003A32E6 /* DefinitionView .swift */,
+				75BF2CCD2AD1DEE1003A32E6 /* CustomSearchBar.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -406,11 +415,13 @@
 				83E590D02AB52962002ABD04 /* VocabCardRow.swift in Sources */,
 				75621A742AC3B27200B407A9 /* Alert.swift in Sources */,
 				75BF2CB52ACCF5EB003A32E6 /* LeastRecallVocabRow.swift in Sources */,
+				75BF2CCA2AD0C3D3003A32E6 /* DefinitionView .swift in Sources */,
 				75BF2CB72ACD052B003A32E6 /* TotalVocabRow.swift in Sources */,
 				83E590BF2AB3E9D7002ABD04 /* CoredataController.swift in Sources */,
 				75621A6D2AC28D3600B407A9 /* Pronunciation.swift in Sources */,
 				83E590D22AB571ED002ABD04 /* PartOfSpeech.swift in Sources */,
 				83E5AA562ABBD8BC00136C34 /* RecallVocViewModel.swift in Sources */,
+				75BF2CCC2AD1C025003A32E6 /* Test.swift in Sources */,
 				8304D7F52AB3DD6500C9A9B1 /* AddVocView.swift in Sources */,
 				75621A672ABFDC4F00B407A9 /* Animation.swift in Sources */,
 				75621A6B2AC2606B00B407A9 /* Vocab.swift in Sources */,
@@ -428,6 +439,7 @@
 				75621A7A2AC8D35A00B407A9 /* StatisticsViewModel.swift in Sources */,
 				83E590C92AB52695002ABD04 /* Extentions .swift in Sources */,
 				75621A782AC7AB4800B407A9 /* StatisticsCardRow.swift in Sources */,
+				75BF2CCE2AD1DEE1003A32E6 /* CustomSearchBar.swift in Sources */,
 				75BF2CC12ACF286D003A32E6 /* ReminderView.swift in Sources */,
 				75621A7C2AC8D9BB00B407A9 /* MockScore.swift in Sources */,
 				8304D7FB2AB3DDD400C9A9B1 /* RecallVocView.swift in Sources */,

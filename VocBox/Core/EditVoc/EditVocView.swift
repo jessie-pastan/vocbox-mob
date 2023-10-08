@@ -12,7 +12,7 @@ struct EditVocView: View {
     var item: Vocab
     @Environment(\.managedObjectContext) var moc
     @Environment(\.dismiss) var dismiss
-    
+    @ObservedObject var vm = AddVocViewModel()
     
     
     @State  var vocab = ""
@@ -84,10 +84,18 @@ struct EditVocView: View {
                     
                     //MARK: Save button
                     Button {
+                        //trim vocab to uniform String with no space and "" from predictive keyboard
+                        let trimmedString = TrimString.trimString(input: vocab)
                         
-                        CoreDataController().editVocab(item: item, vocab: vocab, favourite: false, definition: definition, phonetic: item.viewPhonetic, type: partOfSpeech.acronym, context: moc)
+                        Task{
+                            //fetch phonetic from api
+                            self.phonetic = try await vm.fetchPhonetic(vocab: trimmedString)
+                            //self.phonetic = try await vm.fetchPronunciation(vocab: trimmedString, vocabType: partOfSpeech.title)
                         
-                        dismiss()
+                            CoreDataController().editVocab(item: item, vocab: trimmedString, favourite: false, definition: definition, phonetic: item.viewPhonetic, type: partOfSpeech.acronym, context: moc)
+                            
+                            dismiss()
+                        }
                     } label: {
                         
                             Text("Save")

@@ -7,12 +7,46 @@
 
 import SwiftUI
 
-struct DefinitionView_: View {
+struct DefinitionView: View {
+    
+    @Environment(\.dismiss) var dissmiss
+    @Environment(\.colorScheme) var colorScheme
+
+    var vocab: Vocab
+    
+    @Binding var vocabs: [Vocab]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+
+            Color.background
+            .ignoresSafeArea()
+            
+            VStack{
+                
+                HStack{
+                    Spacer()
+                    Button {
+                        dissmiss()
+                    } label: {
+                        Image(systemName: "x.circle.fill")
+                            .foregroundColor(Color(UIColor.label))
+                    }
+                    .padding()
+                }
+                Spacer()
+                Text(vocab.viewVocab).bold().font(.title)
+                HStack{
+                    Text(vocab.viewType)
+                    Text(vocab.viewDefinition)
+                }
+                Spacer()
+            }
+            
+        }
+        .onDisappear{
+           vocabs.removeAll()
+        }
     }
 }
 
-#Preview {
-    DefinitionView_()
-}

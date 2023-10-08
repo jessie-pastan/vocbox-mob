@@ -51,10 +51,12 @@ struct ReviewVocView: View {
                                     .frame(maxWidth: .infinity)
                                     .frame(height: 200)
                                     .padding(.horizontal)
-                                    //force view to update after editing instanlty
+                                   //force scrollview to roll to the top
                                     .id(index)
                                 }
                             }
+                            //force view to update after editing instanlty
+                            .id(UUID())
                         }
                         //Programatically scroll to the top when added new word
                         .onAppear {

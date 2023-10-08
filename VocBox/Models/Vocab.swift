@@ -17,6 +17,16 @@ struct Phonetic : Codable {
     
 }
 
+struct VocabularyPronunciation : Codable {
+    var word: String?
+    var pronunciation :  Pronunciation
+}
+
+struct Pronunciation : Codable {
+    let noun: String?
+    let verb: String?
+    let all: String? 
+}
 
 extension Phonetic {
     static var MOCKPhonetic: [Phonetic] {

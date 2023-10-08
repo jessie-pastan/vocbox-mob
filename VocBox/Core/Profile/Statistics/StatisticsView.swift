@@ -32,7 +32,7 @@ struct StatisticsView: View {
         
         VStack(alignment: .leading){
             
-            ScrollView{
+            ScrollView {
                 
                 GeometryReader { proxy in
                     VStack{
@@ -58,7 +58,11 @@ struct StatisticsView: View {
                 vm.findLeastRecallVocab(recalls: leastRecalls)
             }
             
+            
         }
+        .padding(.top,40)
+        .background(Color(.background))
+        
     }
     
 }
