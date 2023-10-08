@@ -21,6 +21,7 @@ struct RecallVocView: View {
     @State private var text = ""
     @State private var currentScore = 0
     @State private var arrayOfRecalledVocab = [String]()
+
     @State private var isSubmitted = false
     
     @State private var feedback = ""
@@ -63,7 +64,9 @@ struct RecallVocView: View {
                 }
                 .padding()
                 //MARK: Display hint to user
-                //Text("\(hint)").multilineTextAlignment(.center)
+                VStack(alignment: .center){
+                    Text("\(hint)").multilineTextAlignment(.center)
+                }
                 //MARK: Current Score
                 VStack(alignment: .center){
                     HStack{
@@ -109,6 +112,8 @@ struct RecallVocView: View {
                         
                         //MARK: verify if user already recalled this word
                         arrayOfRecalledVocab.append(trimmedText)
+                        //MARK: Also add definition in array
+                       // arrayOfRecalledDefinition.append()
                         
                         if let feedbackWord = compliments.randomElement() {
                             feedback = "We found '\(trimmedText)'. \(String(describing: feedbackWord))"
@@ -163,30 +168,8 @@ struct RecallVocView: View {
             }
             .fontWeight(.bold)
             .padding()
-            /*
-            //MARK: Hint tool bar
-            .toolbar(content: {
-                Button {
-                    //show hint on UI
-                    hint = vm.randomHint(vocabs: vocabs)
-                } label: {
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 120)
-                            .frame(height: 20)
-                            .foregroundColor(Color.button)
-                        Text("Hint!")
-                            .padding()
-                            .bold()
-                            .foregroundColor(Color.text)
-                    }
-                    .background(Rectangle().frame(height: 20).foregroundColor(.textField).cornerRadius(120).offset(x: 2, y: 2))
-                    .padding(.top, 5)
-                    .padding(.leading, -5)
-                }
-
-            })
-            */
             
+            //MARK: Done tool bar
             .toolbar {
                 Button {
                     
@@ -223,6 +206,28 @@ struct RecallVocView: View {
                 }
                 
                
+            }
+            
+        
+            //MARK: Hint tool bar
+            .toolbar {
+                Button {
+                    //show a hint on UI
+                    hint = vm.randomHint(vocabs: vocabs, arrayOfRecalledVocabs: arrayOfRecalledVocab)
+                } label: {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 120)
+                            .frame(height: 20)
+                            .foregroundColor(Color.button)
+                        Text("Hint!")
+                            .padding()
+                            .bold()
+                            .foregroundColor(Color.text)
+                    }
+                    .background(Rectangle().frame(height: 20).foregroundColor(.textField).cornerRadius(120).offset(x: 2, y: 2))
+                    .padding(.top, 5)
+                    .padding(.leading, -5)
+                }
             }
             
         }

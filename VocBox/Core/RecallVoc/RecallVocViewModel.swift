@@ -45,15 +45,33 @@ class RecallVocViewModel: ObservableObject {
         return self.percentage
     }
     
-    func randomHint(vocabs: FetchedResults<Vocab>) -> String {
-        for vocab in vocabs {
-            DefinitionHints.append(vocab.viewDefinition)
-        }
-        let hint = DefinitionHints.randomElement() ?? "Please add a word definition"
+    func randomHint(vocabs: FetchedResults<Vocab>, arrayOfRecalledVocabs: [String]) -> String {
+        var arrayOfAllvocab = [String]()
         
+        for vocab in vocabs {
+            arrayOfAllvocab.append(vocab.viewVocab)
+        }
+        
+        //create set of both array
+        let set1 = Set(arrayOfAllvocab)
+        let set2 = Set(arrayOfRecalledVocabs)
+        
+        //create an array of uncallVocabs
+        let unRecalledVocabs = Array(set1.symmetricDifference(set2))
+        
+        
+        for vocab in vocabs {
+            if unRecalledVocabs.contains(vocab.viewVocab) {
+                DefinitionHints.append(vocab.viewDefinition)
+            }
+        }
+        
+        let hint = DefinitionHints.randomElement() ?? "Please add a word definition"
+    
         if hint.isEmpty {
             return "Please add a word definition, then we can give you a hint!"
         }
+        
         return hint
     }
     
