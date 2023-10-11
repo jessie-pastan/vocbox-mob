@@ -7,12 +7,53 @@
 
 import SwiftUI
 
-struct TakeAChallengeCard_: View {
+struct TakeAchallengeCard: View {
+    
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        
+        ZStack{
+            Rectangle()
+            VStack{
+                Spacer()
+                Image("brain")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 100, height: 100)
+                Text("Take a recall challenge to see your improvement!")
+                    .bold()
+                    .foregroundColor(.black)
+                    .multilineTextAlignment(.center)
+                
+                Spacer()
+                
+                //MARK: Navigate to recallView
+                
+                
+                Button {
+                    dismiss()
+                }
+                label: {
+                    GeometryReader { proxy in 
+                        SmallButton(title: "Got it")
+                    }
+                    .frame(height: 44)
+                    .padding(.horizontal)
+                }
+                .padding(.bottom,20)
+                
+            }
+            
+        }
+        .foregroundColor(.white)
+        .cornerRadius(10)
+        
+        
+        
+       
     }
-}
-
-#Preview {
-    TakeAChallengeCard_()
+    
+    
 }

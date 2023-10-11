@@ -36,9 +36,10 @@ struct ReviewVocView: View {
                             CreateFirstVocabCard()
                         }
                         .frame(maxWidth: .infinity)
-                        .frame(height: 500)
-                        .padding(.horizontal,40)
-                        .padding([.top, .bottom], 60)
+                        .frame(height: 400)
+                        .padding(.horizontal, 30)
+                        .padding(.top, 70)
+                        
                     }
                     //MARK: All vocabulary
                     ScrollViewReader { proxy in
@@ -65,34 +66,35 @@ struct ReviewVocView: View {
                     }
                     
                     Spacer()
-                    
-                    //MARK: Add new vocabulary button
-                    HStack(spacing: 25) {
-                        Spacer()
-                        NavigationLink {
-                            AddVocView()
-                        } label: {
-                            GeometryReader { proxy in
-                                SmallButton(title: "Add word")
+                    if !vocabs.isEmpty {
+                        //MARK: Add new vocabulary button
+                        HStack(spacing: 25) {
+                            Spacer()
+                            NavigationLink {
+                                AddVocView()
+                            } label: {
+                                GeometryReader { proxy in
+                                    SmallButton(title: "Add word")
+                                }
+                                .frame(height: 44)
+                                
                             }
-                            .frame(height: 44)
+                            Spacer()
+                            //MARK: Brain Challenge button
+                            NavigationLink {
+                                RecallVocView()
+                            } label: {
+                                GeometryReader { proxy in
+                                    SmallButton(title: "Recall Challenge")
+                                }
+                                .frame(height: 44)
+                            }
                             
+                            Spacer()
                         }
-                        Spacer()
-                        //MARK: Brain Challenge button
-                        NavigationLink {
-                            RecallVocView()
-                        } label: {
-                            GeometryReader { proxy in
-                                SmallButton(title: "Recall Challenge")
-                            }
-                            .frame(height: 44)
-                        }
-                        
+                        .padding(.top,5)
                         Spacer()
                     }
-                    .padding(.top,5)
-                    Spacer()
                 }
                 .padding(.bottom,30)
                 .padding(.leading, 2)
@@ -106,8 +108,9 @@ struct ReviewVocView: View {
                             profileViewIsShow  = true
                         }label: {
                             Image(systemName: "person.crop.circle")
-                                .foregroundColor(Color(UIColor.label))
+                                .foregroundColor(vocabs.isEmpty ? (Color.gray) : Color(UIColor.label))
                         }
+                        .disabled(vocabs.isEmpty)
                         .navigationDestination(isPresented: $profileViewIsShow) {
                            ProfileView()
                         }

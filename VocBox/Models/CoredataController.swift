@@ -89,6 +89,16 @@ class CoreDataController: ObservableObject {
         }
     }
     
+    
+    func deleteScores(scores: FetchedResults<Score>, context: NSManagedObjectContext) {
+        
+        for score in scores {
+            context.delete(score)
+            save(context: context)
+        }
+         
+    }
+    
     func editVocab(item: Vocab, vocab: String, favourite: Bool, definition: String, phonetic: String, type: String, context: NSManagedObjectContext) {
         item.vocab = vocab
         item.favourite = favourite

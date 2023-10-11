@@ -18,6 +18,8 @@ class RecallVocViewModel: ObservableObject {
     @Published var vocabRecall: Int = 0
     @Published var vocab = ""
     
+    @Published var hint = ""
+    
     var DefinitionHints = [String]()
     
     

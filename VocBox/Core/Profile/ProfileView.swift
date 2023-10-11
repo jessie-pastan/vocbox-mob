@@ -13,13 +13,18 @@ struct ProfileView: View {
     
    @Environment(\.managedObjectContext) var moc
     
+    @Environment(\.dismiss) var dismiss
+    @State private var isShowAlert = false
+    
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.date, order: .reverse)]) private var scores: FetchedResults<Score>
+    
     var body: some View {
         
         VStack(alignment: .leading) {
             HStack{
                
                 Image(systemName: "person.circle").resizable().scaledToFill().frame(width: 65, height: 65)
-                Text("Joined March2023")
+                Text("Joined March 2023")
             }
             .padding(.top,20)
             .padding(.bottom,-20)
@@ -36,7 +41,7 @@ struct ProfileView: View {
                 }
                 .foregroundColor(Color.text)
                 .listRowBackground(Color.card)
-                                
+                
                 //MARK: Statictics navigate bar
                 NavigationLink {
                     StatisticsView()
@@ -72,6 +77,32 @@ struct ProfileView: View {
                 }
                 .foregroundColor(Color.text)
                 .listRowBackground(Color.card)
+                
+                //MARK: Delete score history
+                VStack {
+                    Button {
+                        // show alert
+                        isShowAlert = true
+                    } label: {
+                        HStack{
+                            Text("Delete all score records")
+                        }
+                    }
+                    .alert("Are you sure to delete all score records?",
+                           isPresented: $isShowAlert) {
+                        HStack{
+                            Button(role: .destructive) {
+                                CoreDataController().deleteScores(scores: scores, context: moc)
+                            } label: {
+                                Text("Delete")
+                            }
+                        }
+                    }
+                }
+                .foregroundColor(Color.text)
+                .listRowBackground(Color.card)
+                
+                
                 
                 //MARK: Toggle Dark Mode
                 Toggle(isOn: $isDarkMode) {

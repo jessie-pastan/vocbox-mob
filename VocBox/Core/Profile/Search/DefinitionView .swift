@@ -11,10 +11,8 @@ struct DefinitionView: View {
     
     @Environment(\.dismiss) var dissmiss
     @Environment(\.colorScheme) var colorScheme
-
-    var vocab: Vocab
     
-    @Binding var vocabs: [Vocab]
+    @Binding var selectedVocab: Vocab?
     
     var body: some View {
         ZStack {
@@ -23,7 +21,6 @@ struct DefinitionView: View {
             .ignoresSafeArea()
             
             VStack{
-                
                 HStack{
                     Spacer()
                     Button {
@@ -35,17 +32,13 @@ struct DefinitionView: View {
                     .padding()
                 }
                 Spacer()
-                Text(vocab.viewVocab).bold().font(.title)
+                Text("\(selectedVocab?.viewVocab ?? "*nil*")").bold().font(.title)
                 HStack{
-                    Text(vocab.viewType)
-                    Text(vocab.viewDefinition)
+                    Text("\(selectedVocab?.viewType ?? "*nil*")")
+                    Text("\(selectedVocab?.viewDefinition ?? "*nil*")")
                 }
                 Spacer()
             }
-            
-        }
-        .onDisappear{
-           vocabs.removeAll()
         }
     }
 }

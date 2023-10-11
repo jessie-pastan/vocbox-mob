@@ -28,20 +28,16 @@ struct AddVocView: View {
        
             GeometryReader { proxy in
                 VStack(alignment: .leading) {
-                    Text("Add New Word")
+                    Text("Add New word")
                         .font(.title2)
-                    Text("Enter Word and its definition")
+                    Text("Enter word and its definition")
                     TextField("Word", text: $vocab)
                         .padding(10)
-                        .frame(width: proxy.size.width / 1.08, height: 39)
+                        .frame(width: proxy.size.width / 1.08, height: 33)
                         .background(Color.textField)
                         .cornerRadius(10)
                         
                         
-                        
-                        
-                    
-                    Text("Add part of Speech")
 
                     //MARK: PartOfSpeech buttons
                     LazyVGrid(columns: colums) {
@@ -66,9 +62,9 @@ struct AddVocView: View {
                         }
                     }
                     
-                    TextField("Definition", text: $definition, axis: .vertical)
+                    TextField("Definition / e.g.", text: $definition, axis: .vertical)
                         .padding(10)
-                        .frame(width: proxy.size.width / 1.08, height: 75)
+                        .frame(width: proxy.size.width / 1.08, height: 60)
                         .multilineTextAlignment(.leading)
                         .background(Color.textField)
                         .cornerRadius(10)
@@ -98,7 +94,7 @@ struct AddVocView: View {
                         
                             Text("Save")
                                 .lineLimit(1)
-                                .frame(width: proxy.size.width / 1.10, height: 39)
+                                .frame(width: proxy.size.width / 1.10, height: 35)
                                 .foregroundColor(Color.text)
                                 .padding(7)
                                 .background(Color.button)

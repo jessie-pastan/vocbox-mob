@@ -8,17 +8,21 @@
 import SwiftUI
 
 struct CreateFirstVocabCard: View {
-    var body: some View {  
+    
+    @State private var isBounce = true
+    
+    var body: some View {
         
         ZStack{
             
             Rectangle()
             VStack{
                 Spacer()
+                
                 Image("open-box")
                     .resizable().aspectRatio(contentMode: .fill)
                     .frame(width: 200, height: 200)
-                    
+                 
                 VStack{
                     Text("It's time to add your First Voc in the Box!")
                 }
@@ -31,42 +35,27 @@ struct CreateFirstVocabCard: View {
                 
                 Spacer()
                 //MARK: Got it Button'
-                Button {
-                    //dismiss card
+                NavigationLink {
+                    //dismiss card or link to add voc card
+                    AddVocView()
                 } label: {
-                    Text("Got it")
-                        .foregroundColor(.white)
-                }
-                .background(Color(.black))
-                .buttonStyle(.bordered)
-                .cornerRadius(20)
-                .padding(.bottom)
-                
-               
-                    /*
-                    VStack(spacing: 30){
-                        HStack{
-                            Text("It's")
-                            Text("time")
-                        }
-                        HStack{
-                            Text("To")
-                            Text("Add")
-                            Text("Your")
-                        }
-                        Text("first")
-                        Text("Voc")
-                        Text("in")
-                        Text("the")
-                        Text("Box")
+                    GeometryReader { proxy in
+                        SmallButton(title: "Add word")
                     }
-                    .font(.title3)
-                    .bold()
-                    .foregroundColor(.text)
-                     */
+                    .frame(height: 44)
+                    .padding(.horizontal)
+                }
+                .padding(.bottom, 20)
+                //MARK: Button Animation
+                .offset(y: isBounce ? 1  : -1 )
+                .animation(.spring(response: 1.3, dampingFraction: 0), value: isBounce)
+                .onAppear{
+                    isBounce.toggle()
+                }
                 
                 }
-        
+            
+
         }
         //.frame(width: 300, height: 500 )
         .foregroundColor(.white)

@@ -30,38 +30,61 @@ struct StatisticsView: View {
     
     var body: some View {
         
-        VStack(alignment: .leading){
-            
-            ScrollView {
-                
-                GeometryReader { proxy in
-                    VStack{
-                        StatisticsCardRow(vocabs: vocabs, scores:scores, vm: vm)
-                        
-                        MostRecallVocabRow(recalls: mostRecalls, vm: vm)
-                        
-                        LeastRecallVocabRow(recalls: leastRecalls, vm: vm)
-                        
-                        TotalVocabRow(vocabs: vocabs, vm: vm)
-                    }
+        VStack{
+            Color.background
+                .edgesIgnoringSafeArea(.all)
+                .overlay {
+                   
+                        if !scores.isEmpty {
+                            VStack(alignment: .leading){
+                                
+                                ScrollView {
+                                    
+                                    GeometryReader { proxy in
+                                        VStack{
+                                            StatisticsCardRow(vocabs: vocabs, scores:scores, vm: vm)
+                                            
+                                            MostRecallVocabRow(recalls: mostRecalls, vm: vm)
+                                            
+                                            LeastRecallVocabRow(recalls: leastRecalls, vm: vm)
+                                            
+                                            TotalVocabRow(vocabs: vocabs, vm: vm)
+                                        }
+                                    }
+                                    .frame(maxWidth: .infinity)
+                                    .frame(height:500)
+                                    .padding(.horizontal)
+                                    
+                                }
+                                .onAppear{
+                                    vm.calculateSuccessRecalledVocab(vocabs: vocabs)
+                                    vm.findHighestPercentage(scores: scores, context: moc)
+                                    vm.findLastestPercentage(scores: scores, context: moc)
+                                    vm.findMostRecallVocab(recalls: mostRecalls)
+                                    vm.findLeastRecallVocab(recalls: leastRecalls)
+                                }
+                                
+                                
+                            }
+                            .padding(.top,40)
+                            
+                        }else{
+                            //TODO: Display card that have a button navigate user to Recall Challenge screen
+                            //Text("Recently, have no score yet, please take a challenge")
+                            
+                            GeometryReader { proxy in
+                                TakeAchallengeCard()
+                            }
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 400)
+                            .padding(.horizontal, 30)
+                            .padding(.bottom, 70)
+                            
+                        }
+                    
                 }
-                .frame(maxWidth: .infinity)
-                .frame(height:500)
-                .padding(.horizontal)
-    
-            }
-            .onAppear{
-                vm.calculateSuccessRecalledVocab(vocabs: vocabs)
-                vm.findHighestPercentage(scores: scores, context: moc)
-                vm.findLastestPercentage(scores: scores, context: moc)
-                vm.findMostRecallVocab(recalls: mostRecalls)
-                vm.findLeastRecallVocab(recalls: leastRecalls)
-            }
-            
-            
         }
-        .padding(.top,40)
-        .background(Color(.background))
+            
         
     }
     

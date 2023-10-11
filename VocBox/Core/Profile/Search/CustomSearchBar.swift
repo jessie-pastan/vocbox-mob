@@ -28,7 +28,6 @@ struct CustomSearchBar: View {
                         
                         if isEditing {
                             Button(action: {
-                               
                                 self.text = ""
                             }, label: {
                                 Image(systemName: "multiply.circle.fill")

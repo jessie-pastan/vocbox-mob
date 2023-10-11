@@ -33,7 +33,10 @@ struct RecallVocView: View {
     @State private var showAlert2 = false
     @State private var scorePercentage = ""
     
+    //need hint in @State not in vm
     @State private var hint = ""
+    @State private var showCard = false
+    @State private var useAnimation = false
     
     var body: some View {
         let trimmedText = TrimString.trimString(input: text)
@@ -63,10 +66,8 @@ struct RecallVocView: View {
                     }
                 }
                 .padding()
-                //MARK: Display hint to user
-                VStack(alignment: .center){
-                    Text("\(hint)").multilineTextAlignment(.center)
-                }
+                
+                
                 //MARK: Current Score
                 VStack(alignment: .center){
                     HStack{
@@ -81,7 +82,7 @@ struct RecallVocView: View {
                 Spacer()
                 TextField("Type a word you can remember!", text: $text)
                     .padding(10)
-                    .frame(width: proxy.size.width / 1.08, height: 39)
+                    .frame(width: proxy.size.width / 1.08, height: 33)
                     .background(Color.textField)
                     .cornerRadius(10)
                     .disableAutocorrection(true)
@@ -146,7 +147,7 @@ struct RecallVocView: View {
                 } label: {
                     Text("Submit")
                         .lineLimit(1)
-                        .frame(width: proxy.size.width / 1.10, height: 38)
+                        .frame(width: proxy.size.width / 1.10, height: 23)
                         .foregroundColor(Color.text)
                         .padding(7)
                         .background(Color.button)
@@ -186,7 +187,7 @@ struct RecallVocView: View {
                         RoundedRectangle(cornerRadius: 120)
                             .frame(height: 20)
                             .foregroundColor(Color.button)
-                        Text("Done")
+                        Text("Quit")
                             .padding()
                             .bold()
                             .foregroundColor(Color.text)
@@ -214,6 +215,8 @@ struct RecallVocView: View {
                 Button {
                     //show a hint on UI
                     hint = vm.randomHint(vocabs: vocabs, arrayOfRecalledVocabs: arrayOfRecalledVocab)
+                    showCard = true
+                    useAnimation = true
                 } label: {
                     ZStack{
                         RoundedRectangle(cornerRadius: 120)
@@ -227,9 +230,13 @@ struct RecallVocView: View {
                     .background(Rectangle().frame(height: 20).foregroundColor(.textField).cornerRadius(120).offset(x: 2, y: 2))
                     .padding(.top, 5)
                     .padding(.leading, -5)
+                    
+                   
                 }
             }
             
+            //MARK: HintCard with Animation 
+            HintCard(showCard: $showCard, useAnimation: $useAnimation, hint: hint)
         }
         .background(Color.background)
     }
