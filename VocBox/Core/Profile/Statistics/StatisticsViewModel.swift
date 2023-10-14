@@ -24,8 +24,6 @@ class StatisticsViewModel: ObservableObject {
     @Published var lastestScore: Int64 = 0
     @Published var lastestScoreVocabAmount: Int64 = 0
     
-    @Published var mostRecalledVocabs = [String]()
-    @Published var leastRecalledVocabs = [String]()
              
     @Published var mostRecalledArray = [(String, Int)]()
     @Published var leastRecalledArray = [(String, Int)]()
@@ -33,29 +31,42 @@ class StatisticsViewModel: ObservableObject {
     
     func findHighestPercentage(scores: FetchedResults<Score>, context: NSManagedObjectContext) {
         
-        var heighestPercentage = 0.0
-        var heighestScoreEntity = Score(context: context)
-
+        var arrayOfAllPercentage = [Double]()
+        var highestPercentage: Double = 0
+        
         for entity in scores {
-            if entity.percentage > heighestPercentage {
-                heighestPercentage = entity.percentage
-                heighestScoreEntity = entity
-                let percentageString = String(format: "%.0f", heighestScoreEntity.percentage)
-                self.heighestPercentage = percentageString
-                self.heighestDate = heighestScoreEntity.viewDate
-                self.heighestScore = heighestScoreEntity.score
-                self.heighestScoreVocabAmount = heighestScoreEntity.vocabAmount
+            arrayOfAllPercentage.append(entity.percentage)
+        }
+        
+        for percentage in arrayOfAllPercentage {
+            if percentage > highestPercentage {
+                highestPercentage = percentage
             }
         }
+        
+        for entity in scores {
+            if highestPercentage == entity.percentage {
+                let percentageString = String(format: "%.0f", entity.percentage)
+                self.heighestPercentage = percentageString
+                print("score = \(entity.score)")
+                self.heighestScore = entity.score
+                print("Self highest score = \(self.heighestScore)")
+                self.heighestScoreVocabAmount = entity.vocabAmount
+                self.heighestDate = entity.viewDate
+               
+                
+            }
+        }
+       
     }
     
     func findLastestPercentage(scores: FetchedResults<Score>, context: NSManagedObjectContext) {
         if let lastestEntity = scores.first {
             self.lastestDate = lastestEntity.viewDate
             self.lastestScore = lastestEntity.score
+            self.lastestScoreVocabAmount = lastestEntity.vocabAmount
             let percentageString = String(format: "%.0f", lastestEntity.percentage)
             self.lastestPercentage = percentageString
-            self.lastestScoreVocabAmount = lastestEntity.vocabAmount
         }
     }
     
@@ -81,14 +92,25 @@ class StatisticsViewModel: ObservableObject {
     }
     
     func findMostRecallVocab(recalls: FetchedResults<Vocab>) {
-        
+        // find top3 vocabs that user recalled
+        // or if there is less than 3 vocab, display all 
         mostRecalledArray = [(String, Int)]()
-        for index in 0..<3 {
+        if recalls.count >= 3 {
+            for index in 0..<3 {
+                let  mostRecall = recalls[index].viewVocab
+                let recallTime = recalls[index].viewRecall
+                mostRecalledArray.append((mostRecall, recallTime))
+            }
+            
+        }
+        else{
+             for index in (0..<recalls.count) {
                 let  mostRecall = recalls[index].viewVocab
                 let recallTime = recalls[index].viewRecall
                 mostRecalledArray.append((mostRecall, recallTime))
             }
         }
+    }
 
     func findLeastRecallVocab(recalls: FetchedResults<Vocab>) {
         leastRecalledArray = [(String, Int)]()

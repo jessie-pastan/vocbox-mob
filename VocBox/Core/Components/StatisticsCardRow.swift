@@ -9,10 +9,17 @@ import SwiftUI
 
 struct StatisticsCardRow: View {
     
-    var vocabs: FetchedResults<Vocab>
-    var scores: FetchedResults<Score>
-   
-    @ObservedObject var vm = StatisticsViewModel()
+    @Environment(\.managedObjectContext) var moc
+    
+    var heighestPercentage: String
+    var heighestDate: String
+    var heighestScore: Int64
+    var heighestScoreVocabAmount: Int64
+    
+    var lastestPercentage: String
+    var lastestDate: String
+    var lastestScore: Int64
+    var lastestScoreVocabAmount: Int64
     
     var body: some View {
         
@@ -23,18 +30,24 @@ struct StatisticsCardRow: View {
                 Text("Highest Score")
                     .bold()
                 HStack{
-                    Text("\(vm.heighestDate)")
-                    Text("\(vm.heighestPercentage)%")
-                    Text("\(vm.heighestScore)/\(vm.heighestScoreVocabAmount)")
+                    Text("\(heighestDate)")
+                    Spacer()
+                    Text("\(heighestPercentage)%")
+                    Spacer()
+                    Text("\(heighestScore)/\(heighestScoreVocabAmount)")
+                    Spacer()
                 }
                 Spacer()
                 Text("Lastest Score")
                     .bold()
                 HStack{
-                    Text("\(vm.lastestDate)")
-                    Text("\(vm.lastestPercentage)%")
-                    Text("\(vm.lastestScore)/\(vm.lastestScoreVocabAmount)")
                     
+                    Text("\(lastestDate)")
+                    Spacer()
+                    Text("\(lastestPercentage)%")
+                    Spacer()
+                    Text("\(lastestScore)/\(lastestScoreVocabAmount)")
+                    Spacer()
                 }
                 Spacer()
                 
@@ -43,7 +56,6 @@ struct StatisticsCardRow: View {
             .padding(.horizontal)
             .foregroundColor(Color.text)
         }
-   
         .foregroundColor(Color.card)
         .cornerRadius(10)
         

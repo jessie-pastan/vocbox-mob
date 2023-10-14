@@ -42,6 +42,7 @@ class CoreDataController: ObservableObject {
         }
         
         
+        
         let score = Score(context: context)
         score.date = Date()
         score.vocabAmount = Int64(allVocabAmount)

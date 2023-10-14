@@ -113,26 +113,28 @@ class FetchData {
       
     }
 }
+
+/*
+ enum FetchError: Error, LocalizedError {
+ case invalidURL
+ case serverError
+ case parsingJson
+ case unknown(Error)
  
-enum FetchError: Error, LocalizedError {
-    case invalidURL
-    case serverError
-    case parsingJson
-    case unknown(Error)
-    
-    var errorDescription: String? {
-        switch self{
-        case .invalidURL:
-            return " The URL was invalid"
-        case .serverError:
-            return "There was an errir with the server, please try again"
-            
-        case .parsingJson:
-            return "Cannot parsing JsonData"
-            
-        case.unknown(let error):
-            return error.localizedDescription
-        }
-        
-    }
-}
+ var errorDescription: String? {
+ switch self{
+ case .invalidURL:
+ return " The URL was invalid"
+ case .serverError:
+ return "There was an errir with the server, please try again"
+ 
+ case .parsingJson:
+ return "Cannot parsing JsonData"
+ 
+ case.unknown(let error):
+ return error.localizedDescription
+ }
+ 
+ }
+ }
+ */

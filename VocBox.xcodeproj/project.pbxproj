@@ -17,7 +17,6 @@
 		75621A782AC7AB4800B407A9 /* StatisticsCardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75621A772AC7AB4800B407A9 /* StatisticsCardRow.swift */; };
 		75621A7A2AC8D35A00B407A9 /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75621A792AC8D35A00B407A9 /* StatisticsViewModel.swift */; };
 		75621A7C2AC8D9BB00B407A9 /* MockScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75621A7B2AC8D9BB00B407A9 /* MockScore.swift */; };
-		75BF2CA82ACC8C5E003A32E6 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CA72ACC8C5E003A32E6 /* StatisticsView.swift */; };
 		75BF2CAD2ACC8D11003A32E6 /* WidgetSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CAC2ACC8D11003A32E6 /* WidgetSettingView.swift */; };
 		75BF2CB12ACCB5FD003A32E6 /* MostRecallVocabRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CB02ACCB5FD003A32E6 /* MostRecallVocabRow.swift */; };
 		75BF2CB32ACCB859003A32E6 /* RecallStatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CB22ACCB859003A32E6 /* RecallStatisticsViewModel.swift */; };
@@ -34,6 +33,11 @@
 		75BF2CD02AD24CDF003A32E6 /* HintCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CCF2AD24CDF003A32E6 /* HintCard.swift */; };
 		75BF2CD32AD27464003A32E6 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CD22AD27464003A32E6 /* RegisterView.swift */; };
 		75BF2CD52AD3ABB7003A32E6 /* TakeAChallengeCard .swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CD42AD3ABB7003A32E6 /* TakeAChallengeCard .swift */; };
+		75D816962AD7603E009D76B5 /* ReadWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D816952AD7603E009D76B5 /* ReadWord.swift */; };
+		75D816B52AD89C89009D76B5 /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D816B42AD89C89009D76B5 /* StatisticView.swift */; };
+		75D816B72AD8EB14009D76B5 /* TestStatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D816B62AD8EB14009D76B5 /* TestStatisticView.swift */; };
+		75D816B92ADAFB74009D76B5 /* VocabPronunciation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D816B82ADAFB74009D76B5 /* VocabPronunciation.swift */; };
+		75D816BB2ADB003B009D76B5 /* FetchPronunciation .swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D816BA2ADB003B009D76B5 /* FetchPronunciation .swift */; };
 		8304D7E12AB3DC2D00C9A9B1 /* VocBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304D7E02AB3DC2D00C9A9B1 /* VocBoxApp.swift */; };
 		8304D7E32AB3DC2D00C9A9B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304D7E22AB3DC2D00C9A9B1 /* ContentView.swift */; };
 		8304D7E52AB3DC2F00C9A9B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8304D7E42AB3DC2F00C9A9B1 /* Assets.xcassets */; };
@@ -45,7 +49,6 @@
 		83E590BD2AB3E81F002ABD04 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83E590BB2AB3E81F002ABD04 /* DataModel.xcdatamodeld */; };
 		83E590BF2AB3E9D7002ABD04 /* CoredataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E590BE2AB3E9D7002ABD04 /* CoredataController.swift */; };
 		83E590C12AB3E9FF002ABD04 /* EntityExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E590C02AB3E9FF002ABD04 /* EntityExtentions.swift */; };
-		83E590C42AB51D07002ABD04 /* FetchPhonetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E590C32AB51D07002ABD04 /* FetchPhonetic.swift */; };
 		83E590C62AB51F9C002ABD04 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E590C52AB51F9C002ABD04 /* HomeView.swift */; };
 		83E590C92AB52695002ABD04 /* Extentions .swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E590C82AB52695002ABD04 /* Extentions .swift */; };
 		83E590CB2AB527FC002ABD04 /* ReviewVocView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E590CA2AB527FC002ABD04 /* ReviewVocView.swift */; };
@@ -68,7 +71,6 @@
 		75621A772AC7AB4800B407A9 /* StatisticsCardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCardRow.swift; sourceTree = "<group>"; };
 		75621A792AC8D35A00B407A9 /* StatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModel.swift; sourceTree = "<group>"; };
 		75621A7B2AC8D9BB00B407A9 /* MockScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockScore.swift; sourceTree = "<group>"; };
-		75BF2CA72ACC8C5E003A32E6 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		75BF2CAC2ACC8D11003A32E6 /* WidgetSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSettingView.swift; sourceTree = "<group>"; };
 		75BF2CB02ACCB5FD003A32E6 /* MostRecallVocabRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostRecallVocabRow.swift; sourceTree = "<group>"; };
 		75BF2CB22ACCB859003A32E6 /* RecallStatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecallStatisticsViewModel.swift; sourceTree = "<group>"; };
@@ -85,6 +87,11 @@
 		75BF2CCF2AD24CDF003A32E6 /* HintCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintCard.swift; sourceTree = "<group>"; };
 		75BF2CD22AD27464003A32E6 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		75BF2CD42AD3ABB7003A32E6 /* TakeAChallengeCard .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TakeAChallengeCard .swift"; sourceTree = "<group>"; };
+		75D816952AD7603E009D76B5 /* ReadWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadWord.swift; sourceTree = "<group>"; };
+		75D816B42AD89C89009D76B5 /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
+		75D816B62AD8EB14009D76B5 /* TestStatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStatisticView.swift; sourceTree = "<group>"; };
+		75D816B82ADAFB74009D76B5 /* VocabPronunciation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabPronunciation.swift; sourceTree = "<group>"; };
+		75D816BA2ADB003B009D76B5 /* FetchPronunciation .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FetchPronunciation .swift"; sourceTree = "<group>"; };
 		8304D7DD2AB3DC2D00C9A9B1 /* VocBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8304D7E02AB3DC2D00C9A9B1 /* VocBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocBoxApp.swift; sourceTree = "<group>"; };
 		8304D7E22AB3DC2D00C9A9B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,7 +104,6 @@
 		83E590BC2AB3E81F002ABD04 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		83E590BE2AB3E9D7002ABD04 /* CoredataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoredataController.swift; sourceTree = "<group>"; };
 		83E590C02AB3E9FF002ABD04 /* EntityExtentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityExtentions.swift; sourceTree = "<group>"; };
-		83E590C32AB51D07002ABD04 /* FetchPhonetic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPhonetic.swift; sourceTree = "<group>"; };
 		83E590C52AB51F9C002ABD04 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		83E590C82AB52695002ABD04 /* Extentions .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extentions .swift"; sourceTree = "<group>"; };
 		83E590CA2AB527FC002ABD04 /* ReviewVocView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVocView.swift; sourceTree = "<group>"; };
@@ -134,9 +140,10 @@
 		75BF2CA62ACC8C3C003A32E6 /* Statistics */ = {
 			isa = PBXGroup;
 			children = (
-				75BF2CA72ACC8C5E003A32E6 /* StatisticsView.swift */,
+				75D816B42AD89C89009D76B5 /* StatisticView.swift */,
 				75621A792AC8D35A00B407A9 /* StatisticsViewModel.swift */,
 				75BF2CB22ACCB859003A32E6 /* RecallStatisticsViewModel.swift */,
+				75D816B62AD8EB14009D76B5 /* TestStatisticView.swift */,
 			);
 			path = Statistics;
 			sourceTree = "<group>";
@@ -196,6 +203,21 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
+		75D816932AD75FFB009D76B5 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		75D816942AD76015009D76B5 /* ReadWord */ = {
+			isa = PBXGroup;
+			children = (
+				75D816952AD7603E009D76B5 /* ReadWord.swift */,
+			);
+			path = ReadWord;
+			sourceTree = "<group>";
+		};
 		8304D7D42AB3DC2D00C9A9B1 = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +241,7 @@
 				75621A652ABFDC2F00B407A9 /* Animation */,
 				8304D7EE2AB3DC4500C9A9B1 /* Core */,
 				75BF2CD12AD27434003A32E6 /* Register */,
+				75D816942AD76015009D76B5 /* ReadWord */,
 				83E590C22AB51CBA002ABD04 /* Services */,
 				8304D7F02AB3DC8400C9A9B1 /* Models */,
 				83E590C72AB52677002ABD04 /* Helpers */,
@@ -239,6 +262,7 @@
 		8304D7EE2AB3DC4500C9A9B1 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				75D816932AD75FFB009D76B5 /* New Group */,
 				83E590CC2AB52811002ABD04 /* ReviewVoc */,
 				8304D7E22AB3DC2D00C9A9B1 /* ContentView.swift */,
 				8304D7F32AB3DD4B00C9A9B1 /* AddVoc */,
@@ -258,6 +282,7 @@
 				83E590BE2AB3E9D7002ABD04 /* CoredataController.swift */,
 				83E590C02AB3E9FF002ABD04 /* EntityExtentions.swift */,
 				75621A6A2AC2606B00B407A9 /* Vocab.swift */,
+				75D816B82ADAFB74009D76B5 /* VocabPronunciation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -301,7 +326,7 @@
 		83E590C22AB51CBA002ABD04 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				83E590C32AB51D07002ABD04 /* FetchPhonetic.swift */,
+				75D816BA2ADB003B009D76B5 /* FetchPronunciation .swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -422,6 +447,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83E5AA612ABD2C9A00136C34 /* RecallProgressView.swift in Sources */,
+				75D816B52AD89C89009D76B5 /* StatisticView.swift in Sources */,
 				8304D7E32AB3DC2D00C9A9B1 /* ContentView.swift in Sources */,
 				83E5AA5F2ABCAEE300136C34 /* TrimString.swift in Sources */,
 				75BF2CAD2ACC8D11003A32E6 /* WidgetSettingView.swift in Sources */,
@@ -437,14 +463,15 @@
 				83E590BF2AB3E9D7002ABD04 /* CoredataController.swift in Sources */,
 				75621A6D2AC28D3600B407A9 /* Pronunciation.swift in Sources */,
 				83E590D22AB571ED002ABD04 /* PartOfSpeech.swift in Sources */,
+				75D816962AD7603E009D76B5 /* ReadWord.swift in Sources */,
 				83E5AA562ABBD8BC00136C34 /* RecallVocViewModel.swift in Sources */,
 				75BF2CD52AD3ABB7003A32E6 /* TakeAChallengeCard .swift in Sources */,
 				75BF2CCC2AD1C025003A32E6 /* Test.swift in Sources */,
+				75D816B72AD8EB14009D76B5 /* TestStatisticView.swift in Sources */,
 				8304D7F52AB3DD6500C9A9B1 /* AddVocView.swift in Sources */,
 				75621A672ABFDC4F00B407A9 /* Animation.swift in Sources */,
 				75621A6B2AC2606B00B407A9 /* Vocab.swift in Sources */,
 				75BF2CC42ACF2B1B003A32E6 /* ProUpgradeView.swift in Sources */,
-				83E590C42AB51D07002ABD04 /* FetchPhonetic.swift in Sources */,
 				75BF2CBE2ACF26EF003A32E6 /* SearchView.swift in Sources */,
 				83E590CB2AB527FC002ABD04 /* ReviewVocView.swift in Sources */,
 				83E590C62AB51F9C002ABD04 /* HomeView.swift in Sources */,
@@ -453,7 +480,6 @@
 				8304D7E12AB3DC2D00C9A9B1 /* VocBoxApp.swift in Sources */,
 				75BF2CB32ACCB859003A32E6 /* RecallStatisticsViewModel.swift in Sources */,
 				83E590C12AB3E9FF002ABD04 /* EntityExtentions.swift in Sources */,
-				75BF2CA82ACC8C5E003A32E6 /* StatisticsView.swift in Sources */,
 				75621A7A2AC8D35A00B407A9 /* StatisticsViewModel.swift in Sources */,
 				83E590C92AB52695002ABD04 /* Extentions .swift in Sources */,
 				75BF2CD02AD24CDF003A32E6 /* HintCard.swift in Sources */,
@@ -462,9 +488,11 @@
 				75BF2CCE2AD1DEE1003A32E6 /* CustomSearchBar.swift in Sources */,
 				75BF2CC12ACF286D003A32E6 /* ReminderView.swift in Sources */,
 				75621A7C2AC8D9BB00B407A9 /* MockScore.swift in Sources */,
+				75D816B92ADAFB74009D76B5 /* VocabPronunciation.swift in Sources */,
 				8304D7FB2AB3DDD400C9A9B1 /* RecallVocView.swift in Sources */,
 				75621A722AC3A7C300B407A9 /* Confetti.swift in Sources */,
 				750D26AD2ABE8E1D00300914 /* CreateFirstVocabCard.swift in Sources */,
+				75D816BB2ADB003B009D76B5 /* FetchPronunciation .swift in Sources */,
 				83E5AA5D2ABCAC8000136C34 /* AddVocViewModel.swift in Sources */,
 				83E5AA542ABA8AB100136C34 /* TimeCalculate.swift in Sources */,
 			);

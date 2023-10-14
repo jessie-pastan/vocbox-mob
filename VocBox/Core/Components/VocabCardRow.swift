@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import AVFoundation
 
-@available(iOS 17.0, *)
+
+//@available(iOS 17.0, *)
 struct VocabCardRow: View {
     @Environment(\.managedObjectContext) var moc
-   
+    let synthesizer = AVSpeechSynthesizer()
     var vocab: Vocab
     var vocabulary = "Vocabulary"
     var type = "Noun"
@@ -81,10 +83,10 @@ struct VocabCardRow: View {
                         
                     //MARK: Pronunciation speaker
                         Button {
-                            // pronounce word when user tap
+                            // pronounce word when user tap stereo button
+                            ReadWord.speakWord(vocabPronunciation: vocab.viewVocab, speechSynthesizer: synthesizer)
                         } label: {
                             Image(systemName: "speaker.wave.2.fill")
-                            
                         }
                         
                         
@@ -99,7 +101,7 @@ struct VocabCardRow: View {
                         } label: {
                             Image(systemName: vocab.favourite ? "heart.fill" : "heart" )
                                 .foregroundColor(vocab.favourite ? .red : .black)
-                                .symbolEffect(.bounce, value: trigger)
+                                //.symbolEffect(.bounce, value: trigger)
                         }
                         .onChange(of: isfavourite) { newValue in
                            vocab.favourite = newValue

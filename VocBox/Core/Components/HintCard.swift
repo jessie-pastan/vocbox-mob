@@ -11,18 +11,18 @@ struct HintCard: View {
     
     @Binding var showCard: Bool
     @Binding var useAnimation: Bool
-    
+  
     var hint : String = ""
     
     
     var body: some View {
-        withAnimation(.spring) {
+       withAnimation(.default) {
             VStack {
                 HStack{
-                    
                     Button {
                         useAnimation = false
-                        showCard.toggle()
+                        showCard = false
+                      
                     } label: {
                         Image(systemName: "x.circle.fill")
                             .foregroundColor(Color(UIColor.label))
@@ -42,8 +42,9 @@ struct HintCard: View {
                                  .stroke(Color.textField, lineWidth: 2)
             })
             .padding(.horizontal)
-            .offset(x: showCard ? 0 : -400)
-        }
+            .offset(x: showCard ? 0 : -500)
+            //        .animation(useAnimation ? .spring : .none, value: showCard)
+       }
         
        
     }

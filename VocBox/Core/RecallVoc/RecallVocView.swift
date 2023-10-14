@@ -86,11 +86,13 @@ struct RecallVocView: View {
                     .background(Color.textField)
                     .cornerRadius(10)
                     .disableAutocorrection(true)
+                   
                 
                 
                 
                 //MARK: Recall button
                 Button {
+                   
                     //action: verify whether this vocab exist in VocBox and update score
                     // convert fetchedResult to array of Vocab object in order to loop through
                     let arrayOfVocab = arrayOfVocab()
@@ -156,6 +158,7 @@ struct RecallVocView: View {
                 .background(Rectangle().foregroundColor(.textField).cornerRadius(120).offset(x: 2, y: 2))
                 .padding(.top, 5)
                 .padding(.leading, -5)
+                
                 
             }
             //MARK: Alert for 100% Score
@@ -239,6 +242,7 @@ struct RecallVocView: View {
             HintCard(showCard: $showCard, useAnimation: $useAnimation, hint: hint)
         }
         .background(Color.background)
+        
     }
     
     //MARK: Convert fetchedResult to Array of Vocab

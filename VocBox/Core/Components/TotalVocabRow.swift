@@ -11,17 +11,18 @@ struct TotalVocabRow: View {
     
     
     var vocabs: FetchedResults<Vocab>
-    
-    @ObservedObject var vm = StatisticsViewModel()
+    var totalRecalled: String
+
     
     var body: some View {
         
         ZStack{
             Rectangle()
             VStack(alignment: .center){
-                Text("\(vocabs.count) Voc in the box")
+                Text("\(vocabs.count) Voc in the box").bold()
                 
-                Text("Total Successfull recall : \(vm.totalRecalledString)")
+                Text("Total Successfull recall : \(totalRecalled)")
+                
             }
             
             .padding([.bottom, .top])

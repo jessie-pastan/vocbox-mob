@@ -72,7 +72,7 @@ struct EditVocView: View {
                         }
                     }
                     
-                    TextField("\(item.viewDefinition)", text: $definition, axis: .vertical)
+                    TextField(item.viewDefinition.isEmpty ? "Definition / e.g." : "\(item.viewDefinition)" , text: $definition, axis: .vertical)
                         .padding(10)
                         .frame(width: proxy.size.width / 1.08, height: 75)
                         .multilineTextAlignment(.leading)
@@ -90,7 +90,7 @@ struct EditVocView: View {
                         Task{
                             //fetch phonetic from api
                             self.phonetic = try await vm.fetchPhonetic(vocab: trimmedString)
-                            //self.phonetic = try await vm.fetchPronunciation(vocab: trimmedString, vocabType: partOfSpeech.title)
+                            
                         
                             CoreDataController().editVocab(item: item, vocab: trimmedString, favourite: false, definition: definition, phonetic: item.viewPhonetic, type: partOfSpeech.acronym, context: moc)
                             

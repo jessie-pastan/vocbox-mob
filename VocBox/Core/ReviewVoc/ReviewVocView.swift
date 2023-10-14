@@ -8,12 +8,11 @@
 import SwiftUI
 import CoreData
 
-@available(iOS 17.0, *)
+//@available(iOS 17.0, *)
 struct ReviewVocView: View {
     
     @FetchRequest(sortDescriptors: [SortDescriptor(\.createDate, order: .reverse)]) private var vocabs: FetchedResults<Vocab>
 
-    
     @Environment(\.managedObjectContext) var moc
     
     @State private var text = ""
@@ -42,9 +41,11 @@ struct ReviewVocView: View {
                         
                     }
                     //MARK: All vocabulary
-                    ScrollViewReader { proxy in
+                        ScrollViewReader { proxy in
                         ScrollView {
                             LazyVStack{
+                                
+                                
                                 ForEach(0..<vocabs.count, id: \.self) { index in
                                     GeometryReader { proxy in
                                         VocabCardRow(vocab: vocabs[index])
@@ -80,6 +81,10 @@ struct ReviewVocView: View {
                                 
                             }
                             Spacer()
+                            
+                         
+                            
+                            
                             //MARK: Brain Challenge button
                             NavigationLink {
                                 RecallVocView()
@@ -91,6 +96,9 @@ struct ReviewVocView: View {
                             }
                             
                             Spacer()
+                            
+                            
+
                         }
                         .padding(.top,5)
                         Spacer()

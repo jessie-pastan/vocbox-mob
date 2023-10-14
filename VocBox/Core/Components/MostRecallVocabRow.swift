@@ -9,8 +9,7 @@ import SwiftUI
 
 struct MostRecallVocabRow: View {
 
-    var recalls: FetchedResults<Vocab>
-    @ObservedObject var vm = StatisticsViewModel()
+    var mostRecalledArray : [(String, Int)]
 
     var body: some View {
         
@@ -18,8 +17,8 @@ struct MostRecallVocabRow: View {
             Rectangle()
             VStack(alignment: .center){
                 
-                Text("Most Recalled")
-                ForEach(vm.mostRecalledArray, id: \.0){ vocab in
+                Text("Most Recalled").bold()
+                ForEach(mostRecalledArray, id: \.0){ vocab in
                     HStack{
                         Text("\(vocab.0) : \(vocab.1)")
                         Text(vocab.1 <= 1 ? "time" : "times")

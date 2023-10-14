@@ -30,62 +30,71 @@ struct StatisticsView: View {
     
     var body: some View {
         
+        
+        
         VStack{
+            
             Color.background
                 .edgesIgnoringSafeArea(.all)
                 .overlay {
-                   
-                        if !scores.isEmpty {
-                            VStack(alignment: .leading){
+                    
+                    
+                    if !scores.isEmpty {
+                        VStack(alignment: .leading){
+                            
+                            ScrollView {
                                 
-                                ScrollView {
-                                    
-                                    GeometryReader { proxy in
-                                        VStack{
-                                            StatisticsCardRow(vocabs: vocabs, scores:scores, vm: vm)
+                                GeometryReader { proxy in
+                                    VStack{
+                                        Text("score = \(scores.count)")
+                                        ForEach(scores) {score in
+                                            Text("\(score.viewDate)")
+                                            Text("\(score.percentage)")
                                             
-                                            MostRecallVocabRow(recalls: mostRecalls, vm: vm)
-                                            
-                                            LeastRecallVocabRow(recalls: leastRecalls, vm: vm)
-                                            
-                                            TotalVocabRow(vocabs: vocabs, vm: vm)
                                         }
+                                        StatisticsCardRow(heighestPercentage: vm.heighestPercentage, heighestDate: vm.heighestDate, heighestScore: vm.heighestScore, heighestScoreVocabAmount: vm.heighestScoreVocabAmount, lastestPercentage: vm.lastestPercentage, lastestDate: vm.lastestDate, lastestScore: vm.lastestScore, lastestScoreVocabAmount: vm.lastestScoreVocabAmount)
+                                        
+                                        TotalVocabRow(vocabs: vocabs, totalRecalled: vm.totalRecalledString)
+                                        
+                                        MostRecallVocabRow(mostRecalledArray: vm.mostRecalledArray)
+                                        LeastRecallVocabRow(leastRecalledArray: vm.leastRecalledArray)
+                                        
                                     }
-                                    .frame(maxWidth: .infinity)
-                                    .frame(height:500)
-                                    .padding(.horizontal)
-                                    
                                 }
-                                .onAppear{
-                                    vm.calculateSuccessRecalledVocab(vocabs: vocabs)
-                                    vm.findHighestPercentage(scores: scores, context: moc)
-                                    vm.findLastestPercentage(scores: scores, context: moc)
-                                    vm.findMostRecallVocab(recalls: mostRecalls)
-                                    vm.findLeastRecallVocab(recalls: leastRecalls)
-                                }
-                                
+                                .frame(maxWidth: .infinity)
+                                .frame(height:500)
+                                .padding(.horizontal)
                                 
                             }
-                            .padding(.top,40)
                             
-                        }else{
-                            //TODO: Display card that have a button navigate user to Recall Challenge screen
-                            //Text("Recently, have no score yet, please take a challenge")
                             
-                            GeometryReader { proxy in
-                                TakeAchallengeCard()
-                            }
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 400)
-                            .padding(.horizontal, 30)
-                            .padding(.bottom, 70)
                             
                         }
+                        .onAppear{
+                            vm.calculateSuccessRecalledVocab(vocabs: vocabs)
+                            vm.findHighestPercentage(scores: scores, context: moc)
+                            vm.findLastestPercentage(scores: scores, context: moc)
+                            vm.findMostRecallVocab(recalls: mostRecalls)
+                            vm.findLeastRecallVocab(recalls: leastRecalls)
+                        }
+                        .padding(.top,40)
+                        
+                    }else{
+                        //TODO: Display card that have a button navigate user to Recall Challenge screen
+                        //Text("Recently, have no score yet, please take a challenge")
+                        
+                        GeometryReader { proxy in
+                            TakeAchallengeCard()
+                        }
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 400)
+                        .padding(.horizontal, 30)
+                        .padding(.bottom, 70)
+                        
+                    }
                     
                 }
         }
-            
-        
     }
     
 }

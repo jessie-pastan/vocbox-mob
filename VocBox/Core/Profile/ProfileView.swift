@@ -44,7 +44,7 @@ struct ProfileView: View {
                 
                 //MARK: Statictics navigate bar
                 NavigationLink {
-                    StatisticsView()
+                    StatisticView()
                 } label: {
                     Text("Statistics")
                 }
@@ -79,29 +79,30 @@ struct ProfileView: View {
                 .listRowBackground(Color.card)
                 
                 //MARK: Delete score history
-                VStack {
-                    Button {
-                        // show alert
-                        isShowAlert = true
-                    } label: {
-                        HStack{
-                            Text("Delete all score records")
+                if !scores.isEmpty {
+                    VStack {
+                        Button {
+                            // show alert
+                            isShowAlert = true
+                        } label: {
+                            HStack{
+                                Text("Delete all score records")
+                            }
                         }
-                    }
-                    .alert("Are you sure to delete all score records?",
-                           isPresented: $isShowAlert) {
-                        HStack{
-                            Button(role: .destructive) {
-                                CoreDataController().deleteScores(scores: scores, context: moc)
-                            } label: {
-                                Text("Delete")
+                        .alert("Are you sure to delete all score records?",
+                               isPresented: $isShowAlert) {
+                            HStack{
+                                Button(role: .destructive) {
+                                    CoreDataController().deleteScores(scores: scores, context: moc)
+                                } label: {
+                                    Text("Delete")
+                                }
                             }
                         }
                     }
+                    .foregroundColor(Color.text)
+                    .listRowBackground(Color.card)
                 }
-                .foregroundColor(Color.text)
-                .listRowBackground(Color.card)
-                
                 
                 
                 //MARK: Toggle Dark Mode
