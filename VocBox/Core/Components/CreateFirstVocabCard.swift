@@ -18,11 +18,11 @@ struct CreateFirstVocabCard: View {
             Rectangle()
             VStack{
                 Spacer()
-                
+                /*
                 Image("open-box")
                     .resizable().aspectRatio(contentMode: .fill)
                     .frame(width: 200, height: 200)
-                 
+                 */
                 VStack{
                     Text("It's time to add your First Voc in the Box!")
                 }
@@ -40,7 +40,7 @@ struct CreateFirstVocabCard: View {
                     AddVocView()
                 } label: {
                     GeometryReader { proxy in
-                        SmallButton(title: "Add word")
+                        SmallButton(title: "Add Vocabulary")
                     }
                     .frame(height: 44)
                     .padding(.horizontal)

@@ -14,6 +14,7 @@ struct ReviewVocView: View {
     @FetchRequest(sortDescriptors: [SortDescriptor(\.createDate, order: .reverse)]) private var vocabs: FetchedResults<Vocab>
 
     @Environment(\.managedObjectContext) var moc
+    @Environment(\.colorScheme) var colorScheme
     
     @State private var text = ""
     @State private var isShowFavourite = false
@@ -36,9 +37,8 @@ struct ReviewVocView: View {
                         }
                         .frame(maxWidth: .infinity)
                         .frame(height: 400)
-                        .padding(.horizontal, 30)
+                        .padding(.horizontal)
                         .padding(.top, 70)
-                        
                     }
                     //MARK: All vocabulary
                         ScrollViewReader { proxy in
@@ -81,10 +81,6 @@ struct ReviewVocView: View {
                                 
                             }
                             Spacer()
-                            
-                         
-                            
-                            
                             //MARK: Brain Challenge button
                             NavigationLink {
                                 RecallVocView()
@@ -96,9 +92,6 @@ struct ReviewVocView: View {
                             }
                             
                             Spacer()
-                            
-                            
-
                         }
                         .padding(.top,5)
                         Spacer()
@@ -107,6 +100,7 @@ struct ReviewVocView: View {
                 .padding(.bottom,30)
                 .padding(.leading, 2)
                 .background(Color.background)
+                
             
                 //MARK: Right toolbar for setting profile
             
@@ -171,7 +165,7 @@ struct ReviewVocView: View {
                         
                     }
                 }
-        }.tint(Color(UIColor.label))
+       }.tint(Color(UIColor.label))
             
        
     

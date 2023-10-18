@@ -32,12 +32,9 @@ struct VocabCardRow: View {
                     Spacer()
                     VStack {
                         Text(vocab.viewVocab).fontWeight(.bold).font(.title2)
-                        HStack(spacing: 5){
-                           
-
-                            Text(vocab.viewPhonetic)
                             
-                        }
+                        Text(vocab.viewPhonetic)
+                            
                         Text("(\(vocab.viewType)) \(vocab.viewDefinition)")
                         .padding(.top, 10)
                         

@@ -15,6 +15,8 @@ extension Color {
     static let textField = Color("TextField")
     static let button = Color("Button")
     static let card = Color("Card")
+    static let selectedPartOfSpeech = Color("SelectedPartOfSpeech")
+    static let buttonShadowDarkMode = Color("ButtonShadowDarkMode")
     static let systemBackground = Color(uiColor: .systemBackground)
 }
 

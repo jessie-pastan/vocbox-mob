@@ -11,7 +11,9 @@ struct AddVocView: View {
     
     @Environment(\.managedObjectContext) var moc
     @Environment(\.dismiss) var dismiss
+    @Environment(\.colorScheme) var colorScheme
     @ObservedObject var vm = AddVocViewModel()
+    
     
     @State private var vocab = ""
     @State private var partOfSpeech: PartOfSpeechType = PartOfSpeechType.types.first!
@@ -53,10 +55,10 @@ struct AddVocView: View {
                                         .lineLimit(1)
                                         .foregroundColor(Color.text)
                                         .padding(7)
-                                        .background(partOfSpeech.id == item.id ? Color.card : Color.button)
+                                        .background(partOfSpeech.id == item.id ? Color.selectedPartOfSpeech : Color.button)
                                         .cornerRadius(10)
                                 }
-                                .background(Rectangle().foregroundColor(.textField).cornerRadius(10).offset(x: 2, y: 2))
+                                .background(Rectangle().foregroundColor(Color(colorScheme == .light ? .textField : .buttonShadowDarkMode)).cornerRadius(10).offset(x: 2, y: 2))
                                 
                             }
                         }

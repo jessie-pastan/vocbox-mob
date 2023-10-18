@@ -14,11 +14,9 @@ struct VocBoxApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ReviewVocView()
+            SplashScreenView()
                 .modifier(DarkModeViewModifier())
                 .environment(\.managedObjectContext,CoreDataController().container.viewContext)
-            
-            
         }
     }
 }

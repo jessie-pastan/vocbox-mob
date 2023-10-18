@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SmallButton: View {
+    @Environment(\.colorScheme) var colorScheme
+    
     var title = "Title"
     var body: some View {
         ZStack{
@@ -21,6 +23,7 @@ struct SmallButton: View {
         .background(Rectangle().foregroundColor(.textField).cornerRadius(120).offset(x: 2, y: 2))
         .padding(.top, 5)
         .padding(.leading, -5)
+        
         
     }
 }

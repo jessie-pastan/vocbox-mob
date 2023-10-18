@@ -38,6 +38,12 @@
 		75D816B72AD8EB14009D76B5 /* TestStatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D816B62AD8EB14009D76B5 /* TestStatisticView.swift */; };
 		75D816B92ADAFB74009D76B5 /* VocabPronunciation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D816B82ADAFB74009D76B5 /* VocabPronunciation.swift */; };
 		75D816BB2ADB003B009D76B5 /* FetchPronunciation .swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D816BA2ADB003B009D76B5 /* FetchPronunciation .swift */; };
+		75D816C22ADB34E0009D76B5 /* GetApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D816C12ADB34E0009D76B5 /* GetApiKey.swift */; };
+		75D816C42ADB3662009D76B5 /* WNApiKey.json in Resources */ = {isa = PBXBuildFile; fileRef = 75D816C32ADB3662009D76B5 /* WNApiKey.json */; };
+		75D816C62ADB599D009D76B5 /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D816C52ADB599D009D76B5 /* ApiKey.swift */; };
+		75F9C7A62ADF297B008A0430 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7A52ADF297B008A0430 /* SplashScreenView.swift */; };
+		75F9C7A82ADF2BB5008A0430 /* OnboardingScreen1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7A72ADF2BB4008A0430 /* OnboardingScreen1.swift */; };
+		75F9C7AA2ADF2BC4008A0430 /* OnboardingScreen2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7A92ADF2BC4008A0430 /* OnboardingScreen2.swift */; };
 		8304D7E12AB3DC2D00C9A9B1 /* VocBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304D7E02AB3DC2D00C9A9B1 /* VocBoxApp.swift */; };
 		8304D7E32AB3DC2D00C9A9B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304D7E22AB3DC2D00C9A9B1 /* ContentView.swift */; };
 		8304D7E52AB3DC2F00C9A9B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8304D7E42AB3DC2F00C9A9B1 /* Assets.xcassets */; };
@@ -92,6 +98,12 @@
 		75D816B62AD8EB14009D76B5 /* TestStatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStatisticView.swift; sourceTree = "<group>"; };
 		75D816B82ADAFB74009D76B5 /* VocabPronunciation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabPronunciation.swift; sourceTree = "<group>"; };
 		75D816BA2ADB003B009D76B5 /* FetchPronunciation .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FetchPronunciation .swift"; sourceTree = "<group>"; };
+		75D816C12ADB34E0009D76B5 /* GetApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetApiKey.swift; sourceTree = "<group>"; };
+		75D816C32ADB3662009D76B5 /* WNApiKey.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = WNApiKey.json; sourceTree = "<group>"; };
+		75D816C52ADB599D009D76B5 /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
+		75F9C7A52ADF297B008A0430 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		75F9C7A72ADF2BB4008A0430 /* OnboardingScreen1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen1.swift; sourceTree = "<group>"; };
+		75F9C7A92ADF2BC4008A0430 /* OnboardingScreen2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen2.swift; sourceTree = "<group>"; };
 		8304D7DD2AB3DC2D00C9A9B1 /* VocBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8304D7E02AB3DC2D00C9A9B1 /* VocBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocBoxApp.swift; sourceTree = "<group>"; };
 		8304D7E22AB3DC2D00C9A9B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -218,6 +230,31 @@
 			path = ReadWord;
 			sourceTree = "<group>";
 		};
+		75D816BC2ADB3345009D76B5 /* ApiKey */ = {
+			isa = PBXGroup;
+			children = (
+				75D816C32ADB3662009D76B5 /* WNApiKey.json */,
+			);
+			path = ApiKey;
+			sourceTree = "<group>";
+		};
+		75F9C7A12ADE17EC008A0430 /* GitIgnore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GitIgnore;
+			sourceTree = "<group>";
+		};
+		75F9C7A42ADF2942008A0430 /* Onboarding  */ = {
+			isa = PBXGroup;
+			children = (
+				75F9C7A52ADF297B008A0430 /* SplashScreenView.swift */,
+				75F9C7A72ADF2BB4008A0430 /* OnboardingScreen1.swift */,
+				75F9C7A92ADF2BC4008A0430 /* OnboardingScreen2.swift */,
+			);
+			path = "Onboarding ";
+			sourceTree = "<group>";
+		};
 		8304D7D42AB3DC2D00C9A9B1 = {
 			isa = PBXGroup;
 			children = (
@@ -240,10 +277,13 @@
 				8304D7E02AB3DC2D00C9A9B1 /* VocBoxApp.swift */,
 				75621A652ABFDC2F00B407A9 /* Animation */,
 				8304D7EE2AB3DC4500C9A9B1 /* Core */,
+				75F9C7A42ADF2942008A0430 /* Onboarding  */,
 				75BF2CD12AD27434003A32E6 /* Register */,
 				75D816942AD76015009D76B5 /* ReadWord */,
 				83E590C22AB51CBA002ABD04 /* Services */,
 				8304D7F02AB3DC8400C9A9B1 /* Models */,
+				75D816BC2ADB3345009D76B5 /* ApiKey */,
+				75F9C7A12ADE17EC008A0430 /* GitIgnore */,
 				83E590C72AB52677002ABD04 /* Helpers */,
 				8304D7E42AB3DC2F00C9A9B1 /* Assets.xcassets */,
 				8304D7E62AB3DC2F00C9A9B1 /* Preview Content */,
@@ -283,6 +323,7 @@
 				83E590C02AB3E9FF002ABD04 /* EntityExtentions.swift */,
 				75621A6A2AC2606B00B407A9 /* Vocab.swift */,
 				75D816B82ADAFB74009D76B5 /* VocabPronunciation.swift */,
+				75D816C52ADB599D009D76B5 /* ApiKey.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -327,6 +368,7 @@
 			isa = PBXGroup;
 			children = (
 				75D816BA2ADB003B009D76B5 /* FetchPronunciation .swift */,
+				75D816C12ADB34E0009D76B5 /* GetApiKey.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -435,6 +477,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8304D7E82AB3DC2F00C9A9B1 /* Preview Assets.xcassets in Resources */,
+				75D816C42ADB3662009D76B5 /* WNApiKey.json in Resources */,
 				8304D7E52AB3DC2F00C9A9B1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,6 +490,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				83E5AA612ABD2C9A00136C34 /* RecallProgressView.swift in Sources */,
+				75D816C62ADB599D009D76B5 /* ApiKey.swift in Sources */,
 				75D816B52AD89C89009D76B5 /* StatisticView.swift in Sources */,
 				8304D7E32AB3DC2D00C9A9B1 /* ContentView.swift in Sources */,
 				83E5AA5F2ABCAEE300136C34 /* TrimString.swift in Sources */,
@@ -472,15 +516,19 @@
 				75621A672ABFDC4F00B407A9 /* Animation.swift in Sources */,
 				75621A6B2AC2606B00B407A9 /* Vocab.swift in Sources */,
 				75BF2CC42ACF2B1B003A32E6 /* ProUpgradeView.swift in Sources */,
+				75F9C7A62ADF297B008A0430 /* SplashScreenView.swift in Sources */,
 				75BF2CBE2ACF26EF003A32E6 /* SearchView.swift in Sources */,
 				83E590CB2AB527FC002ABD04 /* ReviewVocView.swift in Sources */,
+				75F9C7A82ADF2BB5008A0430 /* OnboardingScreen1.swift in Sources */,
 				83E590C62AB51F9C002ABD04 /* HomeView.swift in Sources */,
 				83E590BD2AB3E81F002ABD04 /* DataModel.xcdatamodeld in Sources */,
 				75BF2CB12ACCB5FD003A32E6 /* MostRecallVocabRow.swift in Sources */,
 				8304D7E12AB3DC2D00C9A9B1 /* VocBoxApp.swift in Sources */,
 				75BF2CB32ACCB859003A32E6 /* RecallStatisticsViewModel.swift in Sources */,
 				83E590C12AB3E9FF002ABD04 /* EntityExtentions.swift in Sources */,
+				75F9C7AA2ADF2BC4008A0430 /* OnboardingScreen2.swift in Sources */,
 				75621A7A2AC8D35A00B407A9 /* StatisticsViewModel.swift in Sources */,
+				75D816C22ADB34E0009D76B5 /* GetApiKey.swift in Sources */,
 				83E590C92AB52695002ABD04 /* Extentions .swift in Sources */,
 				75BF2CD02AD24CDF003A32E6 /* HintCard.swift in Sources */,
 				75621A782AC7AB4800B407A9 /* StatisticsCardRow.swift in Sources */,

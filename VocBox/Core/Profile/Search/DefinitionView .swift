@@ -10,7 +10,7 @@ import SwiftUI
 struct DefinitionView: View {
     
     @Environment(\.dismiss) var dissmiss
-    @Environment(\.colorScheme) var colorScheme
+    //@Environment(\.colorScheme) var colorScheme
     
     @Binding var selectedVocab: Vocab?
     

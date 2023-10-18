@@ -8,11 +8,15 @@
 import Foundation
 
 class FetchVocabPronunciation {
-    
+    var myKey = ""
+
     func fetchVocabPronunciation(vocab: String) async throws -> String {
         var fetchedPronunce = [VocabPronunciation]()
         var pronunciation = ""
-        let myKey = ""
+
+        // fetch Api key
+        self.myKey  =  FetchApiKey.fetchWordNikApiKey()
+        
         let urlEndpoint = "https://api.wordnik.com/v4/word.json/\(vocab.lowercased())/pronunciations?useCanonical=false&sourceDictionary=ahd-5&typeFormat=ahd-5&limit=1&api_key=\(myKey)"
         
         do{

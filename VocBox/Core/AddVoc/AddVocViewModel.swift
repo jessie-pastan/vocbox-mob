@@ -11,7 +11,6 @@ import Foundation
 class AddVocViewModel: ObservableObject {
 
     func fetchPhonetic(vocab: String) async throws -> String {
-       //return try! await FetchData().fetchVocabPhonetic(vocab: vocab)
         return try! await  FetchVocabPronunciation().fetchVocabPronunciation(vocab: vocab)
     }
     
