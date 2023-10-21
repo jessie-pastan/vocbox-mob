@@ -18,29 +18,32 @@ struct ProfileView: View {
     
     @FetchRequest(sortDescriptors: [SortDescriptor(\.date, order: .reverse)]) private var scores: FetchedResults<Score>
     
+  
+    
     var body: some View {
         
         VStack(alignment: .leading) {
             HStack{
-               
+                
                 Image(systemName: "person.circle").resizable().scaledToFill().frame(width: 65, height: 65)
                 Text("Joined March 2023")
             }
             .padding(.top,20)
             .padding(.bottom,-20)
             .padding(.horizontal)
-           
             .foregroundColor(Color(UIColor.label))
             
             List{
-                //MARK: Pro Upgrade
-                NavigationLink {
-                    ProUpgradeView()
-                } label: {
-                    Text("Pro Upgrade")
-                }
-                .foregroundColor(Color.text)
-                .listRowBackground(Color.card)
+                /*
+                 //MARK: Pro Upgrade
+                 NavigationLink {
+                 ProUpgradeView()
+                 } label: {
+                 Text("Pro Upgrade")
+                 }
+                 .foregroundColor(Color.text)
+                 .listRowBackground(Color.card)
+                 */
                 
                 //MARK: Statictics navigate bar
                 NavigationLink {
@@ -115,11 +118,11 @@ struct ProfileView: View {
             .foregroundColor(Color.text)
             .scrollContentBackground(.hidden)
             .scrollDisabled(true)
-           
+            
         }
         .background(Color.background)
         
-       
+        
         
     }
 }

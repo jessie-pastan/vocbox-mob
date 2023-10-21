@@ -113,6 +113,7 @@ struct AddVocView: View {
                 
             }
             .background(Color.background)
+            .tint(Color(UIColor.label))
     }
 }
 

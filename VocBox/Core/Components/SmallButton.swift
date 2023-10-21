@@ -16,7 +16,7 @@ struct SmallButton: View {
             RoundedRectangle(cornerRadius: 120)
                 .foregroundColor(Color.button)
             Text(title)
-                .font(.caption)
+                .font(.custom(.playfairSemibold, size: 16))
                 .bold()
                 .foregroundColor(Color.text)
         }

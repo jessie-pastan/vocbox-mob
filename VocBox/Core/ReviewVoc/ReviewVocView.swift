@@ -11,6 +11,9 @@ import CoreData
 //@available(iOS 17.0, *)
 struct ReviewVocView: View {
     
+    
+    
+    
     @FetchRequest(sortDescriptors: [SortDescriptor(\.createDate, order: .reverse)]) private var vocabs: FetchedResults<Vocab>
 
     @Environment(\.managedObjectContext) var moc
@@ -26,26 +29,39 @@ struct ReviewVocView: View {
     
     let position = UUID()
     
+    /*
+    init() {
+        for familyName in UIFont.familyNames {
+            print(familyName)
+            for fontName in UIFont.fontNames(forFamilyName: familyName) {
+                print("-- \(fontName)")
+            }
+        }
+    }
+     */
+    
     var body: some View {
-        NavigationStack{
-           
+       NavigationStack{
+       
                 VStack {
                     Spacer()
                     if vocabs.isEmpty {
-                        GeometryReader { _ in
-                            CreateFirstVocabCard()
+                        VStack{
+                            Spacer()
+                            GeometryReader { proxy in
+                                CreateFirstVocabCard(parentHeight: proxy.size.height)
+                            }
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 400)
+                            .padding(.horizontal)
+                            .padding(.top, 150)
+                            Spacer()
                         }
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 400)
-                        .padding(.horizontal)
-                        .padding(.top, 70)
                     }
                     //MARK: All vocabulary
                         ScrollViewReader { proxy in
                         ScrollView {
                             LazyVStack{
-                                
-                                
                                 ForEach(0..<vocabs.count, id: \.self) { index in
                                     GeometryReader { proxy in
                                         VocabCardRow(vocab: vocabs[index])
@@ -80,6 +96,8 @@ struct ReviewVocView: View {
                                 .frame(height: 44)
                                 
                             }
+                            //.foregroundStyle(Color(UIColor.label))
+                            
                             Spacer()
                             //MARK: Brain Challenge button
                             NavigationLink {
@@ -97,25 +115,25 @@ struct ReviewVocView: View {
                         Spacer()
                     }
                 }
+               
+                .navigationBarBackButtonHidden(true)
                 .padding(.bottom,30)
                 .padding(.leading, 2)
                 .background(Color.background)
                 
             
                 //MARK: Right toolbar for setting profile
-            
+           
                 .toolbar {
                     ToolbarItem {
-                        Button {
-                            profileViewIsShow  = true
+                       NavigationLink {
+                           ProfileView()
                         }label: {
                             Image(systemName: "person.crop.circle")
                                 .foregroundColor(vocabs.isEmpty ? (Color.gray) : Color(UIColor.label))
                         }
                         .disabled(vocabs.isEmpty)
-                        .navigationDestination(isPresented: $profileViewIsShow) {
-                           ProfileView()
-                        }
+                        
                     }
                 }
              
@@ -162,10 +180,12 @@ struct ReviewVocView: View {
                             Image(systemName: "line.3.horizontal")
                                 .foregroundColor(Color(UIColor.label))
                         }
-                        
                     }
                 }
-       }.tint(Color(UIColor.label))
+        }
+       .tint(Color(UIColor.label))
+       
+        
             
        
     

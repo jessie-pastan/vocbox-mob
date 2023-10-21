@@ -6,3 +6,6 @@
 //
 
 import Foundation
+struct AppConstants {
+    static let hasVisitedAppKey = "HasVisitedAppKey"
+}

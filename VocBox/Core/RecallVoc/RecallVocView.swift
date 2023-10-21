@@ -148,6 +148,7 @@ struct RecallVocView: View {
                     text = ""
                 } label: {
                     Text("Submit")
+                        .font(.custom(.playfairBold, size: 17))
                         .lineLimit(1)
                         .frame(width: proxy.size.width / 1.10, height: 23)
                         .foregroundColor(Color.text)
@@ -192,6 +193,7 @@ struct RecallVocView: View {
                             .foregroundColor(Color.button)
                         Text("Quit")
                             .padding()
+                            //.font(.custom(.playfairBold, size: 17))
                             .bold()
                             .foregroundColor(Color.text)
                     }
@@ -226,6 +228,7 @@ struct RecallVocView: View {
                             .frame(height: 20)
                             .foregroundColor(Color.button)
                         Text("Hint!")
+                            //.font(.custom(.playfairBold, size: 17))
                             .padding()
                             .bold()
                             .foregroundColor(Color.text)
@@ -239,6 +242,7 @@ struct RecallVocView: View {
             
             //MARK: HintCard with Animation 
             HintCard(showCard: $showCard, useAnimation: $useAnimation, hint: hint)
+                .padding(.top, 15)
         }
         .padding(.top, -20)
         .background(Color.background)

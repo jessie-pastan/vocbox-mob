@@ -10,63 +10,74 @@ import SwiftUI
 struct CreateFirstVocabCard: View {
     
     @State private var isBounce = true
+    let parentHeight: CGFloat
+    @State private var yOffset: CGFloat = -2
     
     var body: some View {
-        
-        ZStack{
-            
-            Rectangle()
-            VStack{
-                Spacer()
-                /*
-                Image("open-box")
-                    .resizable().aspectRatio(contentMode: .fill)
-                    .frame(width: 200, height: 200)
-                 */
+        //NavigationStack {
+            ZStack{
+                
+                Rectangle()
                 VStack{
-                    Text("It's time to add your First Voc in the Box!")
-                }
-                .padding(.top, 20)
-                .padding(.horizontal)
-                .font(.title3)
-                .bold()
-                .foregroundColor(.text)
-                .multilineTextAlignment(.center)
-                
-                Spacer()
-                //MARK: Got it Button'
-                NavigationLink {
-                    //dismiss card or link to add voc card
-                    AddVocView()
-                } label: {
-                    GeometryReader { proxy in
-                        SmallButton(title: "Add Vocabulary")
+                    Spacer()
+                    
+                    Image("open-box")
+                        .resizable().aspectRatio(contentMode: .fill)
+                        .frame(width: 200, height: 200)
+                    //.padding(.top, 20)
+                    
+                    VStack{
+                        Text("Hey. It's time to add your first voc in the box!")
                     }
-                    .frame(height: 44)
+                    .padding(.top, 20)
                     .padding(.horizontal)
-                }
-                .padding(.bottom, 20)
-                //MARK: Button Animation
-                .offset(y: isBounce ? 1  : -1 )
-                .animation(.spring(response: 1.3, dampingFraction: 0), value: isBounce)
-                .onAppear{
-                    isBounce.toggle()
+                    .font(.custom(.playfairBold, size: 25))
+                    .bold()
+                    .foregroundColor(.text)
+                    .multilineTextAlignment(.center)
+                    
+                    Spacer()
+                    //MARK: Got it Button'
+                    NavigationLink {
+                        //dismiss card or link to add voc card
+                        AddVocView()
+                    } label: {
+                        GeometryReader { proxy in
+                            SmallButton(title: "Add Vocabulary")
+                        }
+                        .frame(height: 44)
+                        .padding(.horizontal)
+                    }
+                    
+                    .padding(.bottom, 20)
+                    .accentColor(.black)
+                    
+                    
                 }
                 
+                
+            }
+            //.frame(width: 300, height: 500 )
+            .foregroundColor(Color(.card))
+            .cornerRadius(15)
+            //MARK: Button Animation
+            //.offset(y: isBounce ? 1.5 : -1 )
+            .offset(y: yOffset)
+            //.animation(.spring(response: 1.3, dampingFraction: 0), value: isBounce)
+            .onAppear{
+                withAnimation(.easeInOut(duration: 1.2).repeatForever(autoreverses: true)) {
+                    yOffset = parentHeight / 15
+                    // Start at the center
+                    // isBounce.toggle()
                 }
-            
-
-        }
-        //.frame(width: 300, height: 500 )
-        .foregroundColor(.white)
-        .cornerRadius(15)
-        
+            }
+        //}.tint(Color(UIColor.label))
     }
 }
 
 struct CreateFirstVocabCard_Previews: PreviewProvider {
     static var previews: some View {
-        CreateFirstVocabCard()
+        CreateFirstVocabCard(parentHeight: 400)
             .background(.background)
     }
 }

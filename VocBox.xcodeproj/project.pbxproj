@@ -42,8 +42,15 @@
 		75D816C42ADB3662009D76B5 /* WNApiKey.json in Resources */ = {isa = PBXBuildFile; fileRef = 75D816C32ADB3662009D76B5 /* WNApiKey.json */; };
 		75D816C62ADB599D009D76B5 /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D816C52ADB599D009D76B5 /* ApiKey.swift */; };
 		75F9C7A62ADF297B008A0430 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7A52ADF297B008A0430 /* SplashScreenView.swift */; };
-		75F9C7A82ADF2BB5008A0430 /* OnboardingScreen1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7A72ADF2BB4008A0430 /* OnboardingScreen1.swift */; };
-		75F9C7AA2ADF2BC4008A0430 /* OnboardingScreen2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7A92ADF2BC4008A0430 /* OnboardingScreen2.swift */; };
+		75F9C7AC2AE06007008A0430 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7AB2AE06007008A0430 /* OnboardingPage.swift */; };
+		75F9C7AE2AE06198008A0430 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7AD2AE06198008A0430 /* OnboardingView.swift */; };
+		75F9C7B02AE06361008A0430 /* OnboardingPagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7AF2AE06361008A0430 /* OnboardingPagesView.swift */; };
+		75F9C7B22AE0DB45008A0430 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7B12AE0DB45008A0430 /* AppConstant.swift */; };
+		75F9C7B52AE1AED4008A0430 /* AbrilFatface-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75F9C7B42AE1AED4008A0430 /* AbrilFatface-Regular.ttf */; };
+		75F9C7BB2AE1FFAA008A0430 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7BA2AE1FFAA008A0430 /* CustomFont.swift */; };
+		75F9C7BE2AE20040008A0430 /* FontExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7BD2AE20040008A0430 /* FontExtention.swift */; };
+		75F9C7C02AE20B81008A0430 /* ZillaSlab-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75F9C7BF2AE20B81008A0430 /* ZillaSlab-Regular.ttf */; };
+		75F9C7C22AE2DB39008A0430 /* PlayfairDisplay-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75F9C7C12AE2DB39008A0430 /* PlayfairDisplay-VariableFont_wght.ttf */; };
 		8304D7E12AB3DC2D00C9A9B1 /* VocBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304D7E02AB3DC2D00C9A9B1 /* VocBoxApp.swift */; };
 		8304D7E32AB3DC2D00C9A9B1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304D7E22AB3DC2D00C9A9B1 /* ContentView.swift */; };
 		8304D7E52AB3DC2F00C9A9B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8304D7E42AB3DC2F00C9A9B1 /* Assets.xcassets */; };
@@ -102,8 +109,16 @@
 		75D816C32ADB3662009D76B5 /* WNApiKey.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = WNApiKey.json; sourceTree = "<group>"; };
 		75D816C52ADB599D009D76B5 /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
 		75F9C7A52ADF297B008A0430 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
-		75F9C7A72ADF2BB4008A0430 /* OnboardingScreen1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen1.swift; sourceTree = "<group>"; };
-		75F9C7A92ADF2BC4008A0430 /* OnboardingScreen2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen2.swift; sourceTree = "<group>"; };
+		75F9C7AB2AE06007008A0430 /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
+		75F9C7AD2AE06198008A0430 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		75F9C7AF2AE06361008A0430 /* OnboardingPagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPagesView.swift; sourceTree = "<group>"; };
+		75F9C7B12AE0DB45008A0430 /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
+		75F9C7B42AE1AED4008A0430 /* AbrilFatface-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AbrilFatface-Regular.ttf"; sourceTree = "<group>"; };
+		75F9C7B62AE1B217008A0430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		75F9C7BA2AE1FFAA008A0430 /* CustomFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFont.swift; sourceTree = "<group>"; };
+		75F9C7BD2AE20040008A0430 /* FontExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtention.swift; sourceTree = "<group>"; };
+		75F9C7BF2AE20B81008A0430 /* ZillaSlab-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ZillaSlab-Regular.ttf"; sourceTree = "<group>"; };
+		75F9C7C12AE2DB39008A0430 /* PlayfairDisplay-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		8304D7DD2AB3DC2D00C9A9B1 /* VocBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8304D7E02AB3DC2D00C9A9B1 /* VocBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocBoxApp.swift; sourceTree = "<group>"; };
 		8304D7E22AB3DC2D00C9A9B1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -215,13 +230,6 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
-		75D816932AD75FFB009D76B5 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		75D816942AD76015009D76B5 /* ReadWord */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,10 +257,36 @@
 			isa = PBXGroup;
 			children = (
 				75F9C7A52ADF297B008A0430 /* SplashScreenView.swift */,
-				75F9C7A72ADF2BB4008A0430 /* OnboardingScreen1.swift */,
-				75F9C7A92ADF2BC4008A0430 /* OnboardingScreen2.swift */,
+				75F9C7AD2AE06198008A0430 /* OnboardingView.swift */,
+				75F9C7AF2AE06361008A0430 /* OnboardingPagesView.swift */,
 			);
 			path = "Onboarding ";
+			sourceTree = "<group>";
+		};
+		75F9C7B32AE1AE71008A0430 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				75F9C7B42AE1AED4008A0430 /* AbrilFatface-Regular.ttf */,
+				75F9C7BF2AE20B81008A0430 /* ZillaSlab-Regular.ttf */,
+				75F9C7C12AE2DB39008A0430 /* PlayfairDisplay-VariableFont_wght.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		75F9C7B92AE1FF8A008A0430 /* CustomFonts */ = {
+			isa = PBXGroup;
+			children = (
+				75F9C7BA2AE1FFAA008A0430 /* CustomFont.swift */,
+			);
+			path = CustomFonts;
+			sourceTree = "<group>";
+		};
+		75F9C7BC2AE20021008A0430 /* FontExtension */ = {
+			isa = PBXGroup;
+			children = (
+				75F9C7BD2AE20040008A0430 /* FontExtention.swift */,
+			);
+			path = FontExtension;
 			sourceTree = "<group>";
 		};
 		8304D7D42AB3DC2D00C9A9B1 = {
@@ -274,6 +308,7 @@
 		8304D7DF2AB3DC2D00C9A9B1 /* VocBox */ = {
 			isa = PBXGroup;
 			children = (
+				75F9C7B62AE1B217008A0430 /* Info.plist */,
 				8304D7E02AB3DC2D00C9A9B1 /* VocBoxApp.swift */,
 				75621A652ABFDC2F00B407A9 /* Animation */,
 				8304D7EE2AB3DC4500C9A9B1 /* Core */,
@@ -282,6 +317,9 @@
 				75D816942AD76015009D76B5 /* ReadWord */,
 				83E590C22AB51CBA002ABD04 /* Services */,
 				8304D7F02AB3DC8400C9A9B1 /* Models */,
+				75F9C7B32AE1AE71008A0430 /* Fonts */,
+				75F9C7BC2AE20021008A0430 /* FontExtension */,
+				75F9C7B92AE1FF8A008A0430 /* CustomFonts */,
 				75D816BC2ADB3345009D76B5 /* ApiKey */,
 				75F9C7A12ADE17EC008A0430 /* GitIgnore */,
 				83E590C72AB52677002ABD04 /* Helpers */,
@@ -302,7 +340,6 @@
 		8304D7EE2AB3DC4500C9A9B1 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				75D816932AD75FFB009D76B5 /* New Group */,
 				83E590CC2AB52811002ABD04 /* ReviewVoc */,
 				8304D7E22AB3DC2D00C9A9B1 /* ContentView.swift */,
 				8304D7F32AB3DD4B00C9A9B1 /* AddVoc */,
@@ -324,6 +361,7 @@
 				75621A6A2AC2606B00B407A9 /* Vocab.swift */,
 				75D816B82ADAFB74009D76B5 /* VocabPronunciation.swift */,
 				75D816C52ADB599D009D76B5 /* ApiKey.swift */,
+				75F9C7AB2AE06007008A0430 /* OnboardingPage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -376,6 +414,7 @@
 		83E590C72AB52677002ABD04 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				75F9C7B12AE0DB45008A0430 /* AppConstant.swift */,
 				83E590C82AB52695002ABD04 /* Extentions .swift */,
 				83E5AA532ABA8AB100136C34 /* TimeCalculate.swift */,
 				83E5AA5E2ABCAEE300136C34 /* TrimString.swift */,
@@ -479,6 +518,9 @@
 				8304D7E82AB3DC2F00C9A9B1 /* Preview Assets.xcassets in Resources */,
 				75D816C42ADB3662009D76B5 /* WNApiKey.json in Resources */,
 				8304D7E52AB3DC2F00C9A9B1 /* Assets.xcassets in Resources */,
+				75F9C7C02AE20B81008A0430 /* ZillaSlab-Regular.ttf in Resources */,
+				75F9C7C22AE2DB39008A0430 /* PlayfairDisplay-VariableFont_wght.ttf in Resources */,
+				75F9C7B52AE1AED4008A0430 /* AbrilFatface-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,11 +543,15 @@
 				75BF2CB92ACE47BB003A32E6 /* ProfileView.swift in Sources */,
 				83E590D02AB52962002ABD04 /* VocabCardRow.swift in Sources */,
 				75621A742AC3B27200B407A9 /* Alert.swift in Sources */,
+				75F9C7B02AE06361008A0430 /* OnboardingPagesView.swift in Sources */,
 				75BF2CB52ACCF5EB003A32E6 /* LeastRecallVocabRow.swift in Sources */,
+				75F9C7AE2AE06198008A0430 /* OnboardingView.swift in Sources */,
 				75BF2CCA2AD0C3D3003A32E6 /* DefinitionView .swift in Sources */,
 				75BF2CB72ACD052B003A32E6 /* TotalVocabRow.swift in Sources */,
 				83E590BF2AB3E9D7002ABD04 /* CoredataController.swift in Sources */,
 				75621A6D2AC28D3600B407A9 /* Pronunciation.swift in Sources */,
+				75F9C7BE2AE20040008A0430 /* FontExtention.swift in Sources */,
+				75F9C7B22AE0DB45008A0430 /* AppConstant.swift in Sources */,
 				83E590D22AB571ED002ABD04 /* PartOfSpeech.swift in Sources */,
 				75D816962AD7603E009D76B5 /* ReadWord.swift in Sources */,
 				83E5AA562ABBD8BC00136C34 /* RecallVocViewModel.swift in Sources */,
@@ -519,17 +565,16 @@
 				75F9C7A62ADF297B008A0430 /* SplashScreenView.swift in Sources */,
 				75BF2CBE2ACF26EF003A32E6 /* SearchView.swift in Sources */,
 				83E590CB2AB527FC002ABD04 /* ReviewVocView.swift in Sources */,
-				75F9C7A82ADF2BB5008A0430 /* OnboardingScreen1.swift in Sources */,
 				83E590C62AB51F9C002ABD04 /* HomeView.swift in Sources */,
 				83E590BD2AB3E81F002ABD04 /* DataModel.xcdatamodeld in Sources */,
 				75BF2CB12ACCB5FD003A32E6 /* MostRecallVocabRow.swift in Sources */,
 				8304D7E12AB3DC2D00C9A9B1 /* VocBoxApp.swift in Sources */,
 				75BF2CB32ACCB859003A32E6 /* RecallStatisticsViewModel.swift in Sources */,
 				83E590C12AB3E9FF002ABD04 /* EntityExtentions.swift in Sources */,
-				75F9C7AA2ADF2BC4008A0430 /* OnboardingScreen2.swift in Sources */,
 				75621A7A2AC8D35A00B407A9 /* StatisticsViewModel.swift in Sources */,
 				75D816C22ADB34E0009D76B5 /* GetApiKey.swift in Sources */,
 				83E590C92AB52695002ABD04 /* Extentions .swift in Sources */,
+				75F9C7BB2AE1FFAA008A0430 /* CustomFont.swift in Sources */,
 				75BF2CD02AD24CDF003A32E6 /* HintCard.swift in Sources */,
 				75621A782AC7AB4800B407A9 /* StatisticsCardRow.swift in Sources */,
 				75BF2CD32AD27464003A32E6 /* RegisterView.swift in Sources */,
@@ -538,6 +583,7 @@
 				75621A7C2AC8D9BB00B407A9 /* MockScore.swift in Sources */,
 				75D816B92ADAFB74009D76B5 /* VocabPronunciation.swift in Sources */,
 				8304D7FB2AB3DDD400C9A9B1 /* RecallVocView.swift in Sources */,
+				75F9C7AC2AE06007008A0430 /* OnboardingPage.swift in Sources */,
 				75621A722AC3A7C300B407A9 /* Confetti.swift in Sources */,
 				750D26AD2ABE8E1D00300914 /* CreateFirstVocabCard.swift in Sources */,
 				75D816BB2ADB003B009D76B5 /* FetchPronunciation .swift in Sources */,
@@ -676,6 +722,7 @@
 				DEVELOPMENT_TEAM = M538P8S5RA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VocBox/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -705,6 +752,7 @@
 				DEVELOPMENT_TEAM = M538P8S5RA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VocBox/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -17,14 +17,14 @@ struct SplashScreenView: View {
     
     var body: some View {
         if isActive {
-            ReviewVocView()
+            OnboardingPagesView()
         }else {
             
             ZStack{
                 Color.background
                     .ignoresSafeArea()
                 VStack{
-                    Image("open-box")
+                    Image("box")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 70, height: 70)
@@ -32,6 +32,7 @@ struct SplashScreenView: View {
                         .offset(x: isMove ? 0 : 0, y: isMove ? 0 : -420)
                         
                     Text("VocBox").bold()
+                        .font(.custom(.abrilFatfaceRegular, size: 15))
                         .padding(.top, 3)
                         .scaleEffect(textSize)
                     
@@ -39,7 +40,7 @@ struct SplashScreenView: View {
                 .opacity(opacity)
                 .onAppear {
                     withAnimation(.bouncy(duration: 1.4)) {
-                            self.imageSize = 1.2
+                            self.imageSize = 1.4
                             self.textSize = 2.0
                             self.opacity = 1.0
                             isMove = true
