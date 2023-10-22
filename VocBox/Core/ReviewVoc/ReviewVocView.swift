@@ -54,7 +54,7 @@ struct ReviewVocView: View {
                             .frame(maxWidth: .infinity)
                             .frame(height: 400)
                             .padding(.horizontal)
-                            .padding(.top, 150)
+                            .padding(.top, 100)
                             Spacer()
                         }
                     }
@@ -91,8 +91,9 @@ struct ReviewVocView: View {
                                 AddVocView()
                             } label: {
                                 GeometryReader { proxy in
-                                    SmallButton(title: "Add word")
+                                    SmallButton(title: "Add Voc")
                                 }
+                                
                                 .frame(height: 44)
                                 
                             }
@@ -104,8 +105,9 @@ struct ReviewVocView: View {
                                 RecallVocView()
                             } label: {
                                 GeometryReader { proxy in
-                                    SmallButton(title: "Recall Challenge")
+                                    SmallButton(title: "Voc Recall")
                                 }
+                               
                                 .frame(height: 44)
                             }
                             

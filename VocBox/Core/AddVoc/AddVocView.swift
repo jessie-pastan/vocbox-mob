@@ -30,7 +30,7 @@ struct AddVocView: View {
        
             GeometryReader { proxy in
                 VStack(alignment: .leading) {
-                    Text("Add New word")
+                    Text("Add New Voc")
                         .font(.title2)
                     Text("Enter word and its definition")
                     TextField("Word", text: $vocab)

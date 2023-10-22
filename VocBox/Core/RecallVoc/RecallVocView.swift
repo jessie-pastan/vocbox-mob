@@ -148,7 +148,7 @@ struct RecallVocView: View {
                     text = ""
                 } label: {
                     Text("Submit")
-                        .font(.custom(.playfairBold, size: 17))
+                        .font(.body)
                         .lineLimit(1)
                         .frame(width: proxy.size.width / 1.10, height: 23)
                         .foregroundColor(Color.text)
@@ -169,7 +169,7 @@ struct RecallVocView: View {
                         dismiss()
                    }
             } message: {
-                   Text("Fantastic! You got 100% Score of all Vocab.")
+                   Text("Fantastic! You got 100% score.")
             }
             .fontWeight(.bold)
             .padding()
@@ -206,7 +206,7 @@ struct RecallVocView: View {
                                 dismiss()
                            }
                     } message: {
-                           Text("You got \(scorePercentage)% Score of all Vocab. Keep it up:)")
+                           Text("You got \(scorePercentage)% score. Keep it up:)")
                     }
                     
                 }

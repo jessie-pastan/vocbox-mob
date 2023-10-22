@@ -45,6 +45,7 @@ struct CreateFirstVocabCard: View {
                         GeometryReader { proxy in
                             SmallButton(title: "Add Vocabulary")
                         }
+                        .font(.custom(.playfairSemibold, size: 16))
                         .frame(height: 44)
                         .padding(.horizontal)
                     }

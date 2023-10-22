@@ -9,7 +9,7 @@ import SwiftUI
 
 @available(iOS 17.0, *)
 @main
-struct VocBoxApp: App {
+  struct VocBoxApp: App {
     @FetchRequest(sortDescriptors: [SortDescriptor(\.createDate, order: .reverse)]) private var vocabs: FetchedResults<Vocab>
     
    
@@ -17,7 +17,10 @@ struct VocBoxApp: App {
     
     var body: some Scene {
         WindowGroup {
-            
+            SplashScreenView()
+                .modifier(DarkModeViewModifier())
+                .environment(\.managedObjectContext,CoreDataController().container.viewContext)
+            /*
             if UserDefaults.standard.bool(forKey: AppConstants.hasVisitedAppKey) {
             
                 ReviewVocView()
@@ -31,6 +34,7 @@ struct VocBoxApp: App {
                         UserDefaults.standard.set(true, forKey: AppConstants.hasVisitedAppKey)
                     }
             }
+             */
         }
     }
 }
