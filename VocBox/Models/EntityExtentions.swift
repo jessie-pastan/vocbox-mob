@@ -7,7 +7,7 @@
 
 import Foundation
 import CoreData
-
+       
 extension Vocab {
     var viewVocab: String {
         vocab ?? "Vocabulary"
@@ -45,6 +45,15 @@ extension Score {
         
     }
     
+}
+
+extension User {
+    var viewJoinedDate: String {
+        let today = Date()
+        return joinedDate?.formatted(date: .abbreviated, time: .omitted) ?? today.formatted(date: .abbreviated, time: .omitted)
+    }
     
-    
+    var viewReminderTime: Date {
+        return reminderTime ?? Date()
+    }
 }

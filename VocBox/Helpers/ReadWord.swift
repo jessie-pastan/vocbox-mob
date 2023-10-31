@@ -8,7 +8,7 @@
 import Foundation
 import AVFoundation
 
-class ReadWord {
+final class ReadWord {
     static func speakWord(vocabPronunciation : String, speechSynthesizer: AVSpeechSynthesizer) {
            let speechUtterance = AVSpeechUtterance(string: vocabPronunciation)
            speechUtterance.voice = AVSpeechSynthesisVoice(language: "en-US")

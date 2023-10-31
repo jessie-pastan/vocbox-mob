@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct OnboardingPagesView: View {
+    
+    @Environment(\.managedObjectContext) var moc
     @State private var pageIndex = 0
+    @State private var readyToNavigate: Bool = false
     private let pages: [OnboardingPage] = OnboardingPage.pages
     private let dotAppearance = UIPageControl.appearance()
     
@@ -20,20 +23,30 @@ struct OnboardingPagesView: View {
                 TabView(selection: $pageIndex) {
                     ForEach(pages) { page in
                         VStack(spacing: 50) {
+                            GeometryReader{ proxy in
+                               OnboardingView(page: page, width: proxy.size.width / 1 , height: proxy.size.height / 1.2 )
+                                    .padding(.bottom,40)
+                            }
                             
-                            Spacer()
-                            OnboardingView(page: page)
-                            Spacer()
                             if page == pages.last {
-                                NavigationLink {
-                                    // navigate to registration view
-                                    ReviewVocView()
+                                Button {
+                                    readyToNavigate = true
+                                    //TODO: UnComment this function for production testing
+                                    //Action: Save joined date of user
+                                    
+                                    CoreDataController().addUserJoinedDate(context: moc)
+                                    print("DeBug: Saved joined date")
+                                    
                                 } label: {
                                     Text("Get Started")
                                         .font(.custom(.abrilFatfaceRegular, size:20))
                                         .fontWeight(.heavy)
                                         .foregroundStyle(Color(.selectedPartOfSpeech))
                                 }
+                                .navigationDestination(isPresented: $readyToNavigate){ ReviewVocView()
+                                }
+                                
+                              
                                 
                             } else {
                                    

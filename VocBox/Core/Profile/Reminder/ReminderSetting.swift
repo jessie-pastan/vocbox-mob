@@ -6,3 +6,9 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct ReminderSetting {
+    @AppStorage("notificationsEnabled") static var notificationsEnabled: Bool = false
+    //@AppStorage("selectedReminderTime") static var selectedReminderTime: Bool = true
+}

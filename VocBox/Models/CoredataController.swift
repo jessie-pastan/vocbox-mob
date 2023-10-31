@@ -53,6 +53,20 @@ class CoreDataController: ObservableObject {
         
     }
     
+    func addUserJoinedDate(context: NSManagedObjectContext) {
+       let user = User(context: context)
+        user.joinedDate = Date()
+        //user.reminderTime = Date()
+        
+        save(context: context)
+    }
+    
+    func editUserReminderTime(item: User, context: NSManagedObjectContext, selectedTime: Date) {
+        item.reminderTime = selectedTime
+        
+        save(context: context)
+    }
+    
     func addVocab(definition: String, favourite: Bool, phonetic: String, type: String, word: String, context: NSManagedObjectContext) {
         
         let newWord = Vocab(context: context)

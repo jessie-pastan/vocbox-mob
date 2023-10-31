@@ -10,10 +10,7 @@ import CoreData
 
 //@available(iOS 17.0, *)
 struct ReviewVocView: View {
-    
-    
-    
-    
+
     @FetchRequest(sortDescriptors: [SortDescriptor(\.createDate, order: .reverse)]) private var vocabs: FetchedResults<Vocab>
 
     @Environment(\.managedObjectContext) var moc
@@ -186,6 +183,9 @@ struct ReviewVocView: View {
                 }
         }
        .tint(Color(UIColor.label))
+       
+           
+     
        
         
             

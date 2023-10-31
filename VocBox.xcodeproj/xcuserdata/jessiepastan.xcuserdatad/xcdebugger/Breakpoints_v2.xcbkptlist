@@ -3,4 +3,54 @@
    uuid = "BAC83BF4-10C8-4F1C-A18B-489CBD48503D"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4A5B55B3-7BED-4147-8B07-8EF92B56EA36"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VocBox/Core/ReviewVoc/ReviewVocView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "4A5B55B3-7BED-4147-8B07-8EF92B56EA36 - 7d5245563ecb167"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VocBox.ReviewVocView.body.getter : some"
+                  moduleName = "VocBox"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessiepastan/Desktop/iOS%20development%20/Sep23/VocBox/VocBox/Core/ReviewVoc/ReviewVocView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "244">
+               </Location>
+               <Location
+                  uuid = "4A5B55B3-7BED-4147-8B07-8EF92B56EA36 - c4820d301815f8ad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in VocBox.ReviewVocView.body.getter : some"
+                  moduleName = "VocBox"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jessiepastan/Desktop/iOS%20development%20/Sep23/VocBox/VocBox/Core/ReviewVoc/ReviewVocView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "600">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

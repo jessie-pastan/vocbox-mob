@@ -22,7 +22,7 @@ struct TakeAchallengeCard: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 100, height: 100)
-                Text("Take a recall challenge to see your improvement!")
+                Text("Take a Voc recall to see your improvement!")
                     .bold()
                     .foregroundColor(.black)
                     .multilineTextAlignment(.center)
@@ -43,9 +43,7 @@ struct TakeAchallengeCard: View {
                     .padding(.horizontal)
                 }
                 .padding(.bottom,20)
-                
             }
-            
         }
         .foregroundColor(.white)
         .cornerRadius(10)

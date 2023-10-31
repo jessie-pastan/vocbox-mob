@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SmallButton: View {
-    @Environment(\.colorScheme) var colorScheme
+   // @Environment(\.colorScheme) var colorScheme
     
     var title = "Title"
     var body: some View {

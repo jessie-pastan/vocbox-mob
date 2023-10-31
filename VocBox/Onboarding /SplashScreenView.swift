@@ -31,10 +31,12 @@ struct SplashScreenView: View {
                         .scaleEffect(imageSize)
                         .offset(x: isMove ? 0 : 0, y: isMove ? 0 : -420)
                         
-                    Text("VocBox").bold()
-                        .font(.custom(.abrilFatfaceRegular, size: 15))
+                    Text("VocBox")
+                        .bold()
+                        .font(.custom(.abrilFatfaceRegular, size: 17))
                         .padding(.top, 3)
                         .scaleEffect(textSize)
+                        
                     
                 }
                 .opacity(opacity)

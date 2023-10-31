@@ -24,10 +24,19 @@ struct CreateFirstVocabCard: View {
                     Image("open-box")
                         .resizable().aspectRatio(contentMode: .fill)
                         .frame(width: 200, height: 200)
+                        .offset(y: yOffset)
+                        //.animation(.spring(response: 1.3, dampingFraction: 0), value: isBounce)
+                        .onAppear{
+                            withAnimation(.easeInOut(duration: 1.2).repeatForever(autoreverses: true)) {
+                                yOffset = parentHeight / 15
+                                // Start at the center
+                                // isBounce.toggle()
+                            }
+                        }
                     //.padding(.top, 20)
                     
                     VStack{
-                        Text("Hey. It's time to add your first voc in the box!")
+                        Text("Hey! It's time to add your first voc in the box!")
                     }
                     .padding(.top, 20)
                     .padding(.horizontal)
@@ -43,9 +52,9 @@ struct CreateFirstVocabCard: View {
                         AddVocView()
                     } label: {
                         GeometryReader { proxy in
-                            SmallButton(title: "Add Vocabulary")
+                            CardButton(title: "Add Vocabulary")
                         }
-                        .font(.custom(.playfairSemibold, size: 16))
+                        
                         .frame(height: 44)
                         .padding(.horizontal)
                     }
@@ -61,6 +70,7 @@ struct CreateFirstVocabCard: View {
             //.frame(width: 300, height: 500 )
             .foregroundColor(Color(.card))
             .cornerRadius(15)
+        /*
             //MARK: Button Animation
             //.offset(y: isBounce ? 1.5 : -1 )
             .offset(y: yOffset)
@@ -71,7 +81,10 @@ struct CreateFirstVocabCard: View {
                     // Start at the center
                     // isBounce.toggle()
                 }
+         
             }
+         */
+        
         //}.tint(Color(UIColor.label))
     }
 }

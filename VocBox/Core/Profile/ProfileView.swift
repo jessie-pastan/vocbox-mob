@@ -6,32 +6,38 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ProfileView: View {
     
-   @AppStorage("isDarkMode") var isDarkMode = false
+    @AppStorage("isDarkMode") var isDarkMode = false
     
-   @Environment(\.managedObjectContext) var moc
+    @Environment(\.managedObjectContext) var moc
     
     @Environment(\.dismiss) var dismiss
     @State private var isShowAlert = false
     
     @FetchRequest(sortDescriptors: [SortDescriptor(\.date, order: .reverse)]) private var scores: FetchedResults<Score>
     
-  
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.joinedDate)]) private var user: FetchedResults<User>
+    
+    //@FetchRequest(sortDescriptors: [SortDescriptor(\.reminderTime)]) private var user: FetchedResults<User>
     
     var body: some View {
         
+     
+        
         VStack(alignment: .leading) {
+         
             HStack{
-                
                 Image(systemName: "person.circle").resizable().scaledToFill().frame(width: 65, height: 65)
-                Text("Joined March 2023")
+                Text("Joined: \(user[0].viewJoinedDate)")
             }
             .padding(.top,20)
             .padding(.bottom,-20)
             .padding(.horizontal)
             .foregroundColor(Color(UIColor.label))
+            
             
             List{
                 /*
@@ -74,9 +80,10 @@ struct ProfileView: View {
                 
                 //MARK: Reminder
                 NavigationLink {
-                    ReminderView()
+                    ReminderView(user: user[0])
+                    
                 } label: {
-                    Text("Reminder")
+                    Text("Daily reminder")
                 }
                 .foregroundColor(Color.text)
                 .listRowBackground(Color.card)
