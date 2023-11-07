@@ -99,7 +99,7 @@ struct ProfileView: View {
                                 Text("Delete all score records")
                             }
                         }
-                        .alert("Are you sure to delete all score records?",
+                        .alert("Are you sure you want to delete all score records?",
                                isPresented: $isShowAlert) {
                             HStack{
                                 Button(role: .destructive) {

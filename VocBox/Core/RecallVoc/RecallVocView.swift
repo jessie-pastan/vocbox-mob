@@ -51,7 +51,7 @@ struct RecallVocView: View {
                 }
                 .font(.title)
                 
-                Text("Try to recall vocab as much as you can")
+                Text("Try to recall as much vocab as you can")
                 Spacer()
                 
                 //MARK: Progress bar
@@ -80,7 +80,7 @@ struct RecallVocView: View {
                 }.frame(maxWidth: .infinity)
                 
                 Spacer()
-                TextField("Type a word you can remember!", text: $text)
+                TextField("Type a word you remember!", text: $text)
                     .padding(10)
                     .frame(width: proxy.size.width / 1.08, height: 33)
                     .background(Color.textField)

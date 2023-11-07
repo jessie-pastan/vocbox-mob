@@ -12,7 +12,11 @@ import CoreData
 struct ReviewVocView: View {
 
     @FetchRequest(sortDescriptors: [SortDescriptor(\.createDate, order: .reverse)]) private var vocabs: FetchedResults<Vocab>
-
+    
+    @FetchRequest(sortDescriptors: [SortDescriptor(\.favourite, order: .reverse)]) private var favVocabs: FetchedResults<Vocab>
+    
+    @FetchRequest<Vocab>(sortDescriptors: [], predicate: NSPredicate(format: "favourite == true")) private var favoriteVocabs
+    
     @Environment(\.managedObjectContext) var moc
     @Environment(\.colorScheme) var colorScheme
     
@@ -23,6 +27,8 @@ struct ReviewVocView: View {
     @State private var isShowDescending = false
 
     @State private var profileViewIsShow = false
+    
+    @State private var isShowNoFavoriteCard = false
     
     let position = UUID()
     
@@ -38,11 +44,12 @@ struct ReviewVocView: View {
      */
     
     var body: some View {
+        
        NavigationStack{
        
                 VStack {
                     Spacer()
-                    if vocabs.isEmpty {
+                    if vocabs.isEmpty  {
                         VStack{
                             Spacer()
                             GeometryReader { proxy in
@@ -54,7 +61,9 @@ struct ReviewVocView: View {
                             .padding(.top, 100)
                             Spacer()
                         }
+                    
                     }
+                    
                     //MARK: All vocabulary
                         ScrollViewReader { proxy in
                         ScrollView {
@@ -102,7 +111,7 @@ struct ReviewVocView: View {
                                 RecallVocView()
                             } label: {
                                 GeometryReader { proxy in
-                                    SmallButton(title: "Voc Recall")
+                                    SmallButton(title: "Challenge")
                                 }
                                
                                 .frame(height: 44)
@@ -151,10 +160,18 @@ struct ReviewVocView: View {
                             
                             
                             //MARK: Filter favourite
-                            Button("Favourite") {
+                            Button("Favorite") {
                                 // action: fetch favourite vocabulary
                                 isShowFavourite = true
-                                vocabs.nsPredicate = isShowFavourite ?  NSPredicate(format: "favourite = 1") : nil
+                                
+                                if favoriteVocabs.isEmpty {
+                                  isShowNoFavoriteCard = true
+                                    
+                                }else {
+                                            
+                                   vocabs.nsPredicate = isShowFavourite ?  NSPredicate(format: "favourite = 1") : nil
+                                    
+                                }
                             }
                             
                             

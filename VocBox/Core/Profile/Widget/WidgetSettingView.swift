@@ -9,7 +9,20 @@ import SwiftUI
 
 struct WidgetSettingView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Color.background
+                .edgesIgnoringSafeArea(.all)
+                .overlay {
+                    GeometryReader { proxy in
+                        WidgetCard()
+                    }
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 500)
+                    .padding(.horizontal, 30)
+                    .padding(.bottom, 70)
+                }
+           
+        }
     }
 }
 

@@ -12,10 +12,11 @@
 		75621A6D2AC28D3600B407A9 /* Pronunciation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75621A6C2AC28D3600B407A9 /* Pronunciation.swift */; };
 		75621A702AC3A72000B407A9 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 75621A6F2AC3A72000B407A9 /* ConfettiSwiftUI */; };
 		75621A722AC3A7C300B407A9 /* Confetti.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75621A712AC3A7C300B407A9 /* Confetti.swift */; };
-		75621A742AC3B27200B407A9 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75621A732AC3B27200B407A9 /* Alert.swift */; };
 		75621A782AC7AB4800B407A9 /* StatisticsCardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75621A772AC7AB4800B407A9 /* StatisticsCardRow.swift */; };
 		75621A7A2AC8D35A00B407A9 /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75621A792AC8D35A00B407A9 /* StatisticsViewModel.swift */; };
 		75621A7C2AC8D9BB00B407A9 /* MockScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75621A7B2AC8D9BB00B407A9 /* MockScore.swift */; };
+		758FDFE82AF99EB70006B2C0 /* NoFavoriteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758FDFE72AF99EB70006B2C0 /* NoFavoriteCard.swift */; };
+		758FDFEA2AF9E6190006B2C0 /* FirstVocView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758FDFE92AF9E6190006B2C0 /* FirstVocView.swift */; };
 		75BF2CAD2ACC8D11003A32E6 /* WidgetSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CAC2ACC8D11003A32E6 /* WidgetSettingView.swift */; };
 		75BF2CB12ACCB5FD003A32E6 /* MostRecallVocabRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CB02ACCB5FD003A32E6 /* MostRecallVocabRow.swift */; };
 		75BF2CB32ACCB859003A32E6 /* RecallStatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CB22ACCB859003A32E6 /* RecallStatisticsViewModel.swift */; };
@@ -59,6 +60,22 @@
 		75F9C7D32AEB51FB008A0430 /* ReminderSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7D22AEB51FB008A0430 /* ReminderSetting.swift */; };
 		75F9C7D52AEDE3EE008A0430 /* boxSmileAnimate.json in Resources */ = {isa = PBXBuildFile; fileRef = 75F9C7D42AEDE3EE008A0430 /* boxSmileAnimate.json */; };
 		75F9C7D72AEDEC13008A0430 /* boxSpark.json in Resources */ = {isa = PBXBuildFile; fileRef = 75F9C7D62AEDEC13008A0430 /* boxSpark.json */; };
+		75F9C8082AF33FEC008A0430 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F9C7E02AF326D2008A0430 /* WidgetKit.framework */; };
+		75F9C8092AF33FEC008A0430 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F9C7E22AF326D2008A0430 /* SwiftUI.framework */; };
+		75F9C80C2AF33FEC008A0430 /* VocBoxWidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C80B2AF33FEC008A0430 /* VocBoxWidgetsBundle.swift */; };
+		75F9C80E2AF33FEC008A0430 /* VocBoxWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C80D2AF33FEC008A0430 /* VocBoxWidgets.swift */; };
+		75F9C8102AF33FED008A0430 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F9C80F2AF33FED008A0430 /* Assets.xcassets */; };
+		75F9C8142AF33FED008A0430 /* VocBoxWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 75F9C8072AF33FEC008A0430 /* VocBoxWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		75F9C8182AF34001008A0430 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83E590BB2AB3E81F002ABD04 /* DataModel.xcdatamodeld */; };
+		75F9C8192AF34005008A0430 /* CoredataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E590BE2AB3E9D7002ABD04 /* CoredataController.swift */; };
+		75F9C81A2AF34010008A0430 /* VocBoxWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C80D2AF33FEC008A0430 /* VocBoxWidgets.swift */; };
+		75F9C81D2AF417D9008A0430 /* Extentions .swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E590C82AB52695002ABD04 /* Extentions .swift */; };
+		75F9C81E2AF42110008A0430 /* AbrilFatface-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75F9C7B42AE1AED4008A0430 /* AbrilFatface-Regular.ttf */; };
+		75F9C81F2AF42114008A0430 /* ZillaSlab-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75F9C7BF2AE20B81008A0430 /* ZillaSlab-Regular.ttf */; };
+		75F9C8202AF42118008A0430 /* PlayfairDisplay-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75F9C7C12AE2DB39008A0430 /* PlayfairDisplay-VariableFont_wght.ttf */; };
+		75F9C8212AF4215F008A0430 /* FontExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7BD2AE20040008A0430 /* FontExtention.swift */; };
+		75F9C8222AF421C5008A0430 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7BA2AE1FFAA008A0430 /* CustomFont.swift */; };
+		75F9C8242AF42C52008A0430 /* WidgetCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C8232AF42C52008A0430 /* WidgetCard.swift */; };
 		8304D7E12AB3DC2D00C9A9B1 /* VocBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304D7E02AB3DC2D00C9A9B1 /* VocBoxApp.swift */; };
 		8304D7E52AB3DC2F00C9A9B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8304D7E42AB3DC2F00C9A9B1 /* Assets.xcassets */; };
 		8304D7E82AB3DC2F00C9A9B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8304D7E72AB3DC2F00C9A9B1 /* Preview Assets.xcassets */; };
@@ -80,15 +97,40 @@
 		83E5AA612ABD2C9A00136C34 /* RecallProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83E5AA602ABD2C9A00136C34 /* RecallProgressView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		75F9C8122AF33FED008A0430 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8304D7D52AB3DC2D00C9A9B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 75F9C8062AF33FEC008A0430;
+			remoteInfo = VocBoxWidgetsExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		75F9C7F62AF326D3008A0430 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				75F9C8142AF33FED008A0430 /* VocBoxWidgetsExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		750D26AC2ABE8E1D00300914 /* CreateFirstVocabCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFirstVocabCard.swift; sourceTree = "<group>"; };
 		75621A6A2AC2606B00B407A9 /* Vocab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vocab.swift; sourceTree = "<group>"; };
 		75621A6C2AC28D3600B407A9 /* Pronunciation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pronunciation.swift; sourceTree = "<group>"; };
 		75621A712AC3A7C300B407A9 /* Confetti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Confetti.swift; sourceTree = "<group>"; };
-		75621A732AC3B27200B407A9 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		75621A772AC7AB4800B407A9 /* StatisticsCardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCardRow.swift; sourceTree = "<group>"; };
 		75621A792AC8D35A00B407A9 /* StatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModel.swift; sourceTree = "<group>"; };
 		75621A7B2AC8D9BB00B407A9 /* MockScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockScore.swift; sourceTree = "<group>"; };
+		758FDFE72AF99EB70006B2C0 /* NoFavoriteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoFavoriteCard.swift; sourceTree = "<group>"; };
+		758FDFE92AF9E6190006B2C0 /* FirstVocView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVocView.swift; sourceTree = "<group>"; };
 		75BF2CAC2ACC8D11003A32E6 /* WidgetSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSettingView.swift; sourceTree = "<group>"; };
 		75BF2CB02ACCB5FD003A32E6 /* MostRecallVocabRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostRecallVocabRow.swift; sourceTree = "<group>"; };
 		75BF2CB22ACCB859003A32E6 /* RecallStatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecallStatisticsViewModel.swift; sourceTree = "<group>"; };
@@ -132,6 +174,16 @@
 		75F9C7D22AEB51FB008A0430 /* ReminderSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderSetting.swift; sourceTree = "<group>"; };
 		75F9C7D42AEDE3EE008A0430 /* boxSmileAnimate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = boxSmileAnimate.json; sourceTree = "<group>"; };
 		75F9C7D62AEDEC13008A0430 /* boxSpark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = boxSpark.json; sourceTree = "<group>"; };
+		75F9C7E02AF326D2008A0430 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		75F9C7E22AF326D2008A0430 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		75F9C8072AF33FEC008A0430 /* VocBoxWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VocBoxWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		75F9C80B2AF33FEC008A0430 /* VocBoxWidgetsBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocBoxWidgetsBundle.swift; sourceTree = "<group>"; };
+		75F9C80D2AF33FEC008A0430 /* VocBoxWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocBoxWidgets.swift; sourceTree = "<group>"; };
+		75F9C80F2AF33FED008A0430 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		75F9C8112AF33FED008A0430 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75F9C81B2AF34FA0008A0430 /* VocBox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VocBox.entitlements; sourceTree = "<group>"; };
+		75F9C81C2AF35048008A0430 /* VocBoxWidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VocBoxWidgetsExtension.entitlements; sourceTree = "<group>"; };
+		75F9C8232AF42C52008A0430 /* WidgetCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetCard.swift; sourceTree = "<group>"; };
 		8304D7DD2AB3DC2D00C9A9B1 /* VocBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8304D7E02AB3DC2D00C9A9B1 /* VocBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocBoxApp.swift; sourceTree = "<group>"; };
 		8304D7E42AB3DC2F00C9A9B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -155,6 +207,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		75F9C8042AF33FEC008A0430 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75F9C8092AF33FEC008A0430 /* SwiftUI.framework in Frameworks */,
+				75F9C8082AF33FEC008A0430 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8304D7DA2AB3DC2D00C9A9B1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -195,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				75BF2CAC2ACC8D11003A32E6 /* WidgetSettingView.swift */,
+				75F9C8232AF42C52008A0430 /* WidgetCard.swift */,
 			);
 			path = Widget;
 			sourceTree = "<group>";
@@ -275,10 +337,33 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		75F9C7DF2AF326D2008A0430 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				75F9C7E02AF326D2008A0430 /* WidgetKit.framework */,
+				75F9C7E22AF326D2008A0430 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		75F9C80A2AF33FEC008A0430 /* VocBoxWidgets */ = {
+			isa = PBXGroup;
+			children = (
+				75F9C80B2AF33FEC008A0430 /* VocBoxWidgetsBundle.swift */,
+				75F9C80D2AF33FEC008A0430 /* VocBoxWidgets.swift */,
+				75F9C80F2AF33FED008A0430 /* Assets.xcassets */,
+				75F9C8112AF33FED008A0430 /* Info.plist */,
+			);
+			path = VocBoxWidgets;
+			sourceTree = "<group>";
+		};
 		8304D7D42AB3DC2D00C9A9B1 = {
 			isa = PBXGroup;
 			children = (
+				75F9C81C2AF35048008A0430 /* VocBoxWidgetsExtension.entitlements */,
 				8304D7DF2AB3DC2D00C9A9B1 /* VocBox */,
+				75F9C80A2AF33FEC008A0430 /* VocBoxWidgets */,
+				75F9C7DF2AF326D2008A0430 /* Frameworks */,
 				8304D7DE2AB3DC2D00C9A9B1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -287,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				8304D7DD2AB3DC2D00C9A9B1 /* VocBox.app */,
+				75F9C8072AF33FEC008A0430 /* VocBoxWidgetsExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -294,6 +380,7 @@
 		8304D7DF2AB3DC2D00C9A9B1 /* VocBox */ = {
 			isa = PBXGroup;
 			children = (
+				75F9C81B2AF34FA0008A0430 /* VocBox.entitlements */,
 				75F9C7B62AE1B217008A0430 /* Info.plist */,
 				8304D7E02AB3DC2D00C9A9B1 /* VocBoxApp.swift */,
 				75D816BC2ADB3345009D76B5 /* ApiKey */,
@@ -403,6 +490,7 @@
 		83E590CC2AB52811002ABD04 /* ReviewVoc */ = {
 			isa = PBXGroup;
 			children = (
+				758FDFE92AF9E6190006B2C0 /* FirstVocView.swift */,
 				83E590CA2AB527FC002ABD04 /* ReviewVocView.swift */,
 			);
 			path = ReviewVoc;
@@ -417,13 +505,13 @@
 				83E34A872AB677B600350CF7 /* SmallButton.swift */,
 				75F9C7C52AE838FF008A0430 /* CardButton .swift */,
 				750D26AC2ABE8E1D00300914 /* CreateFirstVocabCard.swift */,
-				75621A732AC3B27200B407A9 /* Alert.swift */,
 				75621A772AC7AB4800B407A9 /* StatisticsCardRow.swift */,
 				75BF2CB02ACCB5FD003A32E6 /* MostRecallVocabRow.swift */,
 				75BF2CB42ACCF5EB003A32E6 /* LeastRecallVocabRow.swift */,
 				75BF2CB62ACD052B003A32E6 /* TotalVocabRow.swift */,
 				75BF2CCF2AD24CDF003A32E6 /* HintCard.swift */,
 				75BF2CD42AD3ABB7003A32E6 /* TakeAChallengeCard .swift */,
+				758FDFE72AF99EB70006B2C0 /* NoFavoriteCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -431,6 +519,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		75F9C8062AF33FEC008A0430 /* VocBoxWidgetsExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75F9C8152AF33FED008A0430 /* Build configuration list for PBXNativeTarget "VocBoxWidgetsExtension" */;
+			buildPhases = (
+				75F9C8032AF33FEC008A0430 /* Sources */,
+				75F9C8042AF33FEC008A0430 /* Frameworks */,
+				75F9C8052AF33FEC008A0430 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VocBoxWidgetsExtension;
+			productName = VocBoxWidgetsExtension;
+			productReference = 75F9C8072AF33FEC008A0430 /* VocBoxWidgetsExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		8304D7DC2AB3DC2D00C9A9B1 /* VocBox */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8304D7EB2AB3DC2F00C9A9B1 /* Build configuration list for PBXNativeTarget "VocBox" */;
@@ -438,10 +543,12 @@
 				8304D7D92AB3DC2D00C9A9B1 /* Sources */,
 				8304D7DA2AB3DC2D00C9A9B1 /* Frameworks */,
 				8304D7DB2AB3DC2D00C9A9B1 /* Resources */,
+				75F9C7F62AF326D3008A0430 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				75F9C8132AF33FED008A0430 /* PBXTargetDependency */,
 			);
 			name = VocBox;
 			packageProductDependencies = (
@@ -459,9 +566,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1420;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					75F9C8062AF33FEC008A0430 = {
+						CreatedOnToolsVersion = 15.0;
+					};
 					8304D7DC2AB3DC2D00C9A9B1 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -485,11 +595,23 @@
 			projectRoot = "";
 			targets = (
 				8304D7DC2AB3DC2D00C9A9B1 /* VocBox */,
+				75F9C8062AF33FEC008A0430 /* VocBoxWidgetsExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		75F9C8052AF33FEC008A0430 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75F9C81F2AF42114008A0430 /* ZillaSlab-Regular.ttf in Resources */,
+				75F9C8102AF33FED008A0430 /* Assets.xcassets in Resources */,
+				75F9C8202AF42118008A0430 /* PlayfairDisplay-VariableFont_wght.ttf in Resources */,
+				75F9C81E2AF42110008A0430 /* AbrilFatface-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8304D7DB2AB3DC2D00C9A9B1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -510,6 +632,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		75F9C8032AF33FEC008A0430 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75F9C8222AF421C5008A0430 /* CustomFont.swift in Sources */,
+				75F9C8182AF34001008A0430 /* DataModel.xcdatamodeld in Sources */,
+				75F9C81D2AF417D9008A0430 /* Extentions .swift in Sources */,
+				75F9C80E2AF33FEC008A0430 /* VocBoxWidgets.swift in Sources */,
+				75F9C8212AF4215F008A0430 /* FontExtention.swift in Sources */,
+				75F9C8192AF34005008A0430 /* CoredataController.swift in Sources */,
+				75F9C80C2AF33FEC008A0430 /* VocBoxWidgetsBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8304D7D92AB3DC2D00C9A9B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -526,17 +662,19 @@
 				8304D7F82AB3DD8A00C9A9B1 /* EditVocView.swift in Sources */,
 				75BF2CB92ACE47BB003A32E6 /* ProfileView.swift in Sources */,
 				83E590D02AB52962002ABD04 /* VocabCardRow.swift in Sources */,
-				75621A742AC3B27200B407A9 /* Alert.swift in Sources */,
 				75F9C7B02AE06361008A0430 /* OnboardingPagesView.swift in Sources */,
 				75BF2CB52ACCF5EB003A32E6 /* LeastRecallVocabRow.swift in Sources */,
 				75F9C7AE2AE06198008A0430 /* OnboardingView.swift in Sources */,
 				75BF2CCA2AD0C3D3003A32E6 /* DefinitionView .swift in Sources */,
 				75BF2CB72ACD052B003A32E6 /* TotalVocabRow.swift in Sources */,
+				75F9C8242AF42C52008A0430 /* WidgetCard.swift in Sources */,
+				75F9C81A2AF34010008A0430 /* VocBoxWidgets.swift in Sources */,
 				83E590BF2AB3E9D7002ABD04 /* CoredataController.swift in Sources */,
 				75621A6D2AC28D3600B407A9 /* Pronunciation.swift in Sources */,
 				75F9C7BE2AE20040008A0430 /* FontExtention.swift in Sources */,
 				75F9C7B22AE0DB45008A0430 /* AppConstant.swift in Sources */,
 				83E590D22AB571ED002ABD04 /* PartOfSpeech.swift in Sources */,
+				758FDFE82AF99EB70006B2C0 /* NoFavoriteCard.swift in Sources */,
 				75F9C7CB2AE99DCF008A0430 /* LottieView.swift in Sources */,
 				75D816962AD7603E009D76B5 /* ReadWord.swift in Sources */,
 				83E5AA562ABBD8BC00136C34 /* RecallVocViewModel.swift in Sources */,
@@ -550,6 +688,7 @@
 				75BF2CBE2ACF26EF003A32E6 /* SearchView.swift in Sources */,
 				83E590CB2AB527FC002ABD04 /* ReviewVocView.swift in Sources */,
 				83E590BD2AB3E81F002ABD04 /* DataModel.xcdatamodeld in Sources */,
+				758FDFEA2AF9E6190006B2C0 /* FirstVocView.swift in Sources */,
 				75BF2CB12ACCB5FD003A32E6 /* MostRecallVocabRow.swift in Sources */,
 				8304D7E12AB3DC2D00C9A9B1 /* VocBoxApp.swift in Sources */,
 				75BF2CB32ACCB859003A32E6 /* RecallStatisticsViewModel.swift in Sources */,
@@ -578,7 +717,80 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		75F9C8132AF33FED008A0430 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 75F9C8062AF33FEC008A0430 /* VocBoxWidgetsExtension */;
+			targetProxy = 75F9C8122AF33FED008A0430 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		75F9C8162AF33FED008A0430 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = VocBoxWidgetsExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M538P8S5RA;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VocBoxWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VocBoxWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jessie.VocBox.VocBoxWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		75F9C8172AF33FED008A0430 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = VocBoxWidgetsExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M538P8S5RA;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VocBoxWidgets/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VocBoxWidgets;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jessie.VocBox.VocBoxWidgets;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		8304D7E92AB3DC2F00C9A9B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -698,8 +910,10 @@
 		8304D7EC2AB3DC2F00C9A9B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VocBox/VocBox.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VocBox/Preview Content\"";
@@ -728,8 +942,10 @@
 		8304D7ED2AB3DC2F00C9A9B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VocBox/VocBox.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VocBox/Preview Content\"";
@@ -758,6 +974,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		75F9C8152AF33FED008A0430 /* Build configuration list for PBXNativeTarget "VocBoxWidgetsExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75F9C8162AF33FED008A0430 /* Debug */,
+				75F9C8172AF33FED008A0430 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8304D7D82AB3DC2D00C9A9B1 /* Build configuration list for PBXProject "VocBox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

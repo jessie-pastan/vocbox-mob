@@ -36,7 +36,7 @@ struct CreateFirstVocabCard: View {
                     //.padding(.top, 20)
                     
                     VStack{
-                        Text("Hey! It's time to add your first voc in the box!")
+                        Text("Hey! It's time to add your Voc in the box!")
                     }
                     .padding(.top, 20)
                     .padding(.horizontal)
@@ -46,7 +46,9 @@ struct CreateFirstVocabCard: View {
                     .multilineTextAlignment(.center)
                     
                     Spacer()
+                    
                     //MARK: Got it Button'
+                    
                     NavigationLink {
                         //dismiss card or link to add voc card
                         AddVocView()

@@ -1,15 +1,15 @@
 //
-//  TakeAChallengeCard .swift
+//  NoFavoriteCard.swift
 //  VocBox
 //
-//  Created by Jessie Pastan on 10/8/23.
+//  Created by Jessie Pastan on 11/6/23.
 //
 
 import SwiftUI
 
-struct TakeAchallengeCard: View {
+struct NoFavoriteCard: View {
     
-    @Environment(\.dismiss) var dismiss
+
     
     var body: some View {
         
@@ -18,24 +18,24 @@ struct TakeAchallengeCard: View {
             Rectangle()
             VStack{
                 Spacer()
-                Image("brain")
+                Image(systemName: "heart")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 100, height: 100)
-                Text("Take a challenge to see your improvement!")
-                    .bold()
-                    .foregroundColor(.black)
-                    .multilineTextAlignment(.center)
+              
+                Text("Tap on heart")
+                Text("To mark your favorite vocabulary")
+                  
                 
                 Spacer()
                 
-                //MARK: Navigate back to profile view 
+                //MARK: Navigate back to profile view
             
                 Button {
-                    dismiss()
+                  
                 }
                 label: {
-                    GeometryReader { proxy in 
+                    GeometryReader { proxy in
                         SmallButton(title: "Got it")
                     }
                     .frame(height: 44)
@@ -43,6 +43,9 @@ struct TakeAchallengeCard: View {
                 }
                 .padding(.bottom,20)
             }
+            .bold()
+            .foregroundColor(.black)
+            .multilineTextAlignment(.center)
         }
         .foregroundColor(.white)
         .cornerRadius(10)
@@ -51,6 +54,9 @@ struct TakeAchallengeCard: View {
         
        
     }
-    
-    
+        
+}
+
+#Preview {
+    NoFavoriteCard()
 }

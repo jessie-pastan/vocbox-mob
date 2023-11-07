@@ -77,7 +77,7 @@ struct VocabCardRow: View {
                         
                         
                         
-                        
+                    //This function is not working on iOS17 at 11/2/23 
                     //MARK: Pronunciation speaker
                         Button {
                             // pronounce word when user tap stereo button

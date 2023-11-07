@@ -11,9 +11,15 @@ import SwiftUI
 
 class CoreDataController: ObservableObject {
     let container: NSPersistentContainer
+    static let shared = CoreDataController()
+    
     init() {
         //create container with file name when app start
+        let url = URL.storeUrl(for: "group.com.Jessie.VocBox", dataBaseName: "DataModel")
+        let storeDescription = NSPersistentStoreDescription(url: url)
         container = NSPersistentContainer(name:"DataModel")
+        container.persistentStoreDescriptions = [storeDescription]
+    
         container.loadPersistentStores { description, error in
             if let error = error {
                 print("DEBUG: There is error \(error.localizedDescription)")
@@ -129,4 +135,12 @@ class CoreDataController: ObservableObject {
         save(context: context)
     }
     
+}
+public extension URL {
+    static func storeUrl(for appGroup: String, dataBaseName: String) -> URL {
+        guard let fileContainer = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: appGroup) else {
+            fatalError("Unable to create URL for \(appGroup)")
+        }
+        return fileContainer.appendingPathComponent("\(dataBaseName).sqlite")
+    }
 }

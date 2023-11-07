@@ -12,6 +12,5 @@ import SwiftUI
 struct VocBoxWidgetsBundle: WidgetBundle {
     var body: some Widget {
         VocBoxWidgets()
-        VocBoxWidgetsLiveActivity()
     }
 }

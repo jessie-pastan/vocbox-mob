@@ -7,47 +7,90 @@
 
 import WidgetKit
 import SwiftUI
+import CoreData
 
-struct Provider: AppIntentTimelineProvider {
-    func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationAppIntent())
-    }
 
-    func snapshot(for configuration: ConfigurationAppIntent, in context: Context) async -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: configuration)
-    }
+struct Provider: TimelineProvider {
+   
     
-    func timeline(for configuration: ConfigurationAppIntent, in context: Context) async -> Timeline<SimpleEntry> {
+    var randomVocab: Vocab {
+        let vocab = self.fetchDataFromCoreData()
+            return vocab
+        }
+    
+    func placeholder(in context: Context) -> SimpleEntry {
+        
+        SimpleEntry(date: Date(), vocab: randomVocab)
+    }
+
+    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
+        let entry = SimpleEntry(date: Date(), vocab: randomVocab)
+        completion(entry)
+    }
+
+    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [SimpleEntry] = []
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
+            let entry = SimpleEntry(date: entryDate, vocab: randomVocab)
             entries.append(entry)
         }
 
-        return Timeline(entries: entries, policy: .atEnd)
+        let timeline = Timeline(entries: entries, policy: .atEnd)
+        completion(timeline)
     }
+    
+    // Function to fetch data from Core Data
+        private func fetchDataFromCoreData() -> Vocab {
+            var items: [Vocab] = []
+            
+            let managedObjectContext = CoreDataController.shared.container.viewContext
+            let fetchRequest: NSFetchRequest<Vocab> = Vocab.fetchRequest()
+            do{
+                items = try managedObjectContext.fetch(fetchRequest)
+            }catch {
+                print("Debug: \(error.localizedDescription)")
+            }
+            
+            return items.randomElement() ?? Vocab(context: managedObjectContext)
+        }
+        
+    
+    
 }
 
 struct SimpleEntry: TimelineEntry {
     let date: Date
-    let configuration: ConfigurationAppIntent
+    let vocab: Vocab
 }
 
 struct VocBoxWidgetsEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
-
-            Text("Favorite Emoji:")
-            Text(entry.configuration.favoriteEmoji)
+        
+        ZStack{
+            ContainerRelativeShape()
+                .fill(Color("WidgetBackground"))
+            VStack {
+                VStack{
+                    Text(entry.vocab.vocab ?? "Vocab")
+                    Text("(\(entry.vocab.type ?? "type"))")
+                }
+               
+                .font(.custom("PlayfairDisplayRoman-SemiBold", size: 18))
+                
+                Text(entry.vocab.definition ?? "Widget definition" )
+            }
+            .foregroundColor(.black)
+           
+            
         }
+        
+        
     }
 }
 
@@ -55,30 +98,29 @@ struct VocBoxWidgets: Widget {
     let kind: String = "VocBoxWidgets"
 
     var body: some WidgetConfiguration {
-        AppIntentConfiguration(kind: kind, intent: ConfigurationAppIntent.self, provider: Provider()) { entry in
-            VocBoxWidgetsEntryView(entry: entry)
-                .containerBackground(.fill.tertiary, for: .widget)
+        StaticConfiguration(kind: kind, provider: Provider()) { entry in
+         
+            if #available(iOS 17.0, *) {
+                VocBoxWidgetsEntryView(entry: entry)
+                    .containerBackground(Color("WidgetBackground"), for: .widget)
+            } else {
+                VocBoxWidgetsEntryView(entry: entry)
+                    .background()
+            }
+            
+            
         }
+        .configurationDisplayName("My Widget")
+        .description("This is an example widget.")
+        .supportedFamilies([.systemSmall, .systemMedium])
     }
 }
 
-extension ConfigurationAppIntent {
-    fileprivate static var smiley: ConfigurationAppIntent {
-        let intent = ConfigurationAppIntent()
-        intent.favoriteEmoji = "😀"
-        return intent
-    }
-    
-    fileprivate static var starEyes: ConfigurationAppIntent {
-        let intent = ConfigurationAppIntent()
-        intent.favoriteEmoji = "🤩"
-        return intent
-    }
-}
-
+/*
 #Preview(as: .systemSmall) {
     VocBoxWidgets()
 } timeline: {
-    SimpleEntry(date: .now, configuration: .smiley)
-    SimpleEntry(date: .now, configuration: .starEyes)
+    SimpleEntry(date: .now, emoji: "😀")
+    SimpleEntry(date: .now, emoji: "🤩" )
 }
+*/

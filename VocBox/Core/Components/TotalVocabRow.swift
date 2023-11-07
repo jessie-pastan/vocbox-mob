@@ -19,7 +19,13 @@ struct TotalVocabRow: View {
         ZStack{
             Rectangle()
             VStack(alignment: .center){
-                Text("\(vocabs.count) Voc in the box").bold()
+                
+                if  vocabs.count > 1 {
+                    Text("\(vocabs.count) words in the box").bold()
+                }
+                else {
+                    Text("\(vocabs.count) word in the box").bold()
+                }
                 
                 Text("Total Successfull recall : \(totalRecalled)")
                 

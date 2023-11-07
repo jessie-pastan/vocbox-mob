@@ -29,10 +29,11 @@ struct ReminderView: View {
         
        
         
-        VStack {
+        ZStack {
+            Color.background
+                .ignoresSafeArea()
            
-           
-            List{
+            List {
                 
                     Toggle("Daily Reminder", isOn: $isEnabledNotification)
                         .tint(Color(.button))
@@ -90,16 +91,18 @@ struct ReminderView: View {
                     }
                     
                     
-                    Text("Get a daily notification from VocBox to remind the time of vocab study.")
+                    Text("Get a daily notification from VocBox to remind you of vocab study.")
                     .foregroundColor(Color.text)
                     .listRowBackground(Color.card)
                     
             }   
                 .foregroundColor(Color.text)
-                .scrollContentBackground(.hidden)
-                .scrollDisabled(true)
+               
+                
+               
         }
-        .background(Color.background)
+        .toolbarBackground(Color(.background))
+        .scrollContentBackground(.hidden)
         .onAppear{
             isEnabledNotification = ReminderSetting.notificationsEnabled
             

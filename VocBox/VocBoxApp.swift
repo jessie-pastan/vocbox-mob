@@ -19,9 +19,9 @@ import SwiftUI
                 .modifier(DarkModeViewModifier())
                 .environment(\.managedObjectContext,CoreDataController().container.viewContext)
                 .environmentObject(LocalNotificationManager())
-            */
-             
-             
+            
+             */
+            
             if UserDefaults.standard.bool(forKey: AppConstants.hasVisitedAppKey) {
             
                 ReviewVocView()
@@ -37,6 +37,7 @@ import SwiftUI
                         UserDefaults.standard.set(true, forKey: AppConstants.hasVisitedAppKey)
                     }
             }
+             
              
         }
     }
