@@ -36,7 +36,7 @@ struct CreateFirstVocabCard: View {
                     //.padding(.top, 20)
                     
                     VStack{
-                        Text("Hey! It's time to add your Voc in the box!")
+                        Text("Hey! It's time to add your 'Voc' in the box!")
                     }
                     .padding(.top, 20)
                     .padding(.horizontal)

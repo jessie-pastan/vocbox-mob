@@ -16,6 +16,8 @@ struct ReviewVocView: View {
     @FetchRequest(sortDescriptors: [SortDescriptor(\.favourite, order: .reverse)]) private var favVocabs: FetchedResults<Vocab>
     
     @FetchRequest<Vocab>(sortDescriptors: [], predicate: NSPredicate(format: "favourite == true")) private var favoriteVocabs
+    //@FetchRequest<Vocab>(sortDescriptors: []) private var favoriteVocabs
+    
     
     @Environment(\.managedObjectContext) var moc
     @Environment(\.colorScheme) var colorScheme
@@ -47,22 +49,35 @@ struct ReviewVocView: View {
         
        NavigationStack{
        
-                VStack {
-                    Spacer()
-                    if vocabs.isEmpty  {
-                        VStack{
-                            Spacer()
-                            GeometryReader { proxy in
-                                CreateFirstVocabCard(parentHeight: proxy.size.height)
-                            }
-                            .frame(maxWidth: .infinity)
-                            .frame(height: 400)
-                            .padding(.horizontal)
-                            .padding(.top, 100)
-                            Spacer()
-                        }
-                    
-                    }
+           VStack {
+               Spacer()
+               if vocabs.isEmpty && isShowAll == false {
+                   VStack{
+                       Spacer()
+                       GeometryReader { proxy in
+                           CreateFirstVocabCard(parentHeight: proxy.size.height)
+                       }
+                       .frame(maxWidth: .infinity)
+                       .frame(height: 400)
+                       .padding(.horizontal)
+                       .padding(.top, 100)
+                       Spacer()
+                   }
+                   
+               }else if isShowAll && vocabs.isEmpty {
+                   VStack{
+                       Spacer()
+                       GeometryReader { proxy in
+                           NoFavoriteCard()
+                       }
+                       .frame(maxWidth: .infinity)
+                       .frame(height: 400)
+                       .padding(.horizontal)
+                       .padding(.top, 100)
+                       Spacer()
+                   }
+                   
+               }
                     
                     //MARK: All vocabulary
                         ScrollViewReader { proxy in
@@ -89,6 +104,7 @@ struct ReviewVocView: View {
                     }
                     
                     Spacer()
+                    
                     if !vocabs.isEmpty {
                         //MARK: Add new vocabulary button
                         HStack(spacing: 25) {
@@ -138,9 +154,10 @@ struct ReviewVocView: View {
                            ProfileView()
                         }label: {
                             Image(systemName: "person.crop.circle")
-                                .foregroundColor(vocabs.isEmpty ? (Color.gray) : Color(UIColor.label))
+                                .foregroundColor(Color(UIColor.label))
+                                //.foregroundColor(vocabs.isEmpty ? (Color.gray) : Color(UIColor.label))
                         }
-                        .disabled(vocabs.isEmpty)
+                        //.disabled(vocabs.isEmpty)
                         
                     }
                 }
@@ -163,15 +180,10 @@ struct ReviewVocView: View {
                             Button("Favorite") {
                                 // action: fetch favourite vocabulary
                                 isShowFavourite = true
-                                
-                                if favoriteVocabs.isEmpty {
-                                  isShowNoFavoriteCard = true
-                                    
-                                }else {
-                                            
-                                   vocabs.nsPredicate = isShowFavourite ?  NSPredicate(format: "favourite = 1") : nil
-                                    
-                                }
+                                isShowAll = true
+                                   
+                                vocabs.nsPredicate = isShowFavourite ?  NSPredicate(format: "favourite = 1") : nil
+
                             }
                             
                             

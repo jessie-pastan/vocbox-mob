@@ -91,7 +91,7 @@ struct ReminderView: View {
                     }
                     
                     
-                    Text("Get a daily notification from VocBox to remind you of vocab study.")
+                    Text("Get a daily notification from VocBox to remind you of vocabulary study.")
                     .foregroundColor(Color.text)
                     .listRowBackground(Color.card)
                     
@@ -124,7 +124,7 @@ struct ReminderView: View {
                     dismiss()
                 }else {
                     //save setting time of notification
-                    localNotificationManager.sendNotifications(date: selectedTime, title: "VocBoc Reminder", body: "It's time to review your vocab!")
+                    localNotificationManager.sendNotifications(date: selectedTime, title: "VocBox Reminder", body: "It's time to review your vocabulary!")
                     print("Debug : Saved reminder")
                     
                     //save selectedTime into Core Data

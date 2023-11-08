@@ -15,6 +15,8 @@ struct SearchView: View {
     @FetchRequest(sortDescriptors: [SortDescriptor(\.vocab)]) private var vocabs: FetchedResults<Vocab>
     
     @Environment(\.managedObjectContext) var moc
+    @Environment(\.colorScheme) var colorScheme
+    
     @State private var searchedVocabs = ""
     @State private var isShowDefinition = false
     
@@ -62,7 +64,7 @@ struct SearchView: View {
    */
         
         
-        //Implement by customSearchBar
+        //option2: Implement by customSearchBar
         
             VStack {
                 
@@ -74,11 +76,19 @@ struct SearchView: View {
                         HStack {
                             Spacer()
                             VStack{
-                                Image("sad")
-                                    .resizable()
-                                    .frame(width: 40, height: 40)
-                                Text("Cannot find")
+                                if colorScheme == .light {
+                                    Image("sad_lightBg")
+                                        .resizable()
+                                        .frame(width: 100, height: 100)
+                                }else {
+                                    Image("sad_darkBg")
+                                        .resizable()
+                                        .frame(width: 100, height: 100)
+                                }
+                                
+                                Text("Not found")
                                     .bold()
+                                    .padding(.top, -25)
                             }
                             Spacer()
                         }
