@@ -27,14 +27,14 @@ struct SplashScreenView: View {
                     Image("VocBoxAppIcon1")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 70, height: 70)
+                        .frame(width: 80, height: 80)
                         .scaleEffect(imageSize)
-                        .offset(x: isMove ? 0 : 0, y: isMove ? 0 : -420)
-                        
-                    Text("VocBox")
-                        .bold()
-                        .font(.custom(.abrilFatfaceRegular, size: 17))
-                        .padding(.top, 3)
+                        .offset(x: isMove ? 0 : 0, y: isMove ? 0 : -720)
+                    
+                    Image("VB")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 70,height: 70)
                         .scaleEffect(textSize)
                         
                     
