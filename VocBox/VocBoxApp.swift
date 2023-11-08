@@ -14,7 +14,7 @@ import SwiftUI
     var body: some Scene {
         WindowGroup {
             
-            /*
+            /*  this is for testing splash screen and on boarding screens
             SplashScreenView()
                 .modifier(DarkModeViewModifier())
                 .environment(\.managedObjectContext,CoreDataController().container.viewContext)

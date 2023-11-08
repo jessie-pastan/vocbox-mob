@@ -16,7 +16,6 @@
 		75621A7A2AC8D35A00B407A9 /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75621A792AC8D35A00B407A9 /* StatisticsViewModel.swift */; };
 		75621A7C2AC8D9BB00B407A9 /* MockScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75621A7B2AC8D9BB00B407A9 /* MockScore.swift */; };
 		758FDFE82AF99EB70006B2C0 /* NoFavoriteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758FDFE72AF99EB70006B2C0 /* NoFavoriteCard.swift */; };
-		758FDFEA2AF9E6190006B2C0 /* FirstVocView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758FDFE92AF9E6190006B2C0 /* FirstVocView.swift */; };
 		75BF2CAD2ACC8D11003A32E6 /* WidgetSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CAC2ACC8D11003A32E6 /* WidgetSettingView.swift */; };
 		75BF2CB12ACCB5FD003A32E6 /* MostRecallVocabRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CB02ACCB5FD003A32E6 /* MostRecallVocabRow.swift */; };
 		75BF2CB32ACCB859003A32E6 /* RecallStatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CB22ACCB859003A32E6 /* RecallStatisticsViewModel.swift */; };
@@ -130,7 +129,6 @@
 		75621A792AC8D35A00B407A9 /* StatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModel.swift; sourceTree = "<group>"; };
 		75621A7B2AC8D9BB00B407A9 /* MockScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockScore.swift; sourceTree = "<group>"; };
 		758FDFE72AF99EB70006B2C0 /* NoFavoriteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoFavoriteCard.swift; sourceTree = "<group>"; };
-		758FDFE92AF9E6190006B2C0 /* FirstVocView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVocView.swift; sourceTree = "<group>"; };
 		75BF2CAC2ACC8D11003A32E6 /* WidgetSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSettingView.swift; sourceTree = "<group>"; };
 		75BF2CB02ACCB5FD003A32E6 /* MostRecallVocabRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostRecallVocabRow.swift; sourceTree = "<group>"; };
 		75BF2CB22ACCB859003A32E6 /* RecallStatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecallStatisticsViewModel.swift; sourceTree = "<group>"; };
@@ -490,7 +488,6 @@
 		83E590CC2AB52811002ABD04 /* ReviewVoc */ = {
 			isa = PBXGroup;
 			children = (
-				758FDFE92AF9E6190006B2C0 /* FirstVocView.swift */,
 				83E590CA2AB527FC002ABD04 /* ReviewVocView.swift */,
 			);
 			path = ReviewVoc;
@@ -688,7 +685,6 @@
 				75BF2CBE2ACF26EF003A32E6 /* SearchView.swift in Sources */,
 				83E590CB2AB527FC002ABD04 /* ReviewVocView.swift in Sources */,
 				83E590BD2AB3E81F002ABD04 /* DataModel.xcdatamodeld in Sources */,
-				758FDFEA2AF9E6190006B2C0 /* FirstVocView.swift in Sources */,
 				75BF2CB12ACCB5FD003A32E6 /* MostRecallVocabRow.swift in Sources */,
 				8304D7E12AB3DC2D00C9A9B1 /* VocBoxApp.swift in Sources */,
 				75BF2CB32ACCB859003A32E6 /* RecallStatisticsViewModel.swift in Sources */,
@@ -924,8 +920,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -956,8 +951,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

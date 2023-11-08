@@ -11,6 +11,7 @@ import AVFoundation
 final class ReadWord {
     static func speakWord(vocabPronunciation : String, speechSynthesizer: AVSpeechSynthesizer) {
            let speechUtterance = AVSpeechUtterance(string: vocabPronunciation)
+        
            let voiceIdentifier = "com.apple.ttsbundle.siri_male_en-US_compact"
            let voice = AVSpeechSynthesisVoice(identifier: voiceIdentifier)
     

@@ -69,8 +69,9 @@ struct VocabCardRow: View {
                             }
                             
                         } label: {
-                            Image(systemName: "ellipsis")
-                                .rotationEffect(.degrees(90))
+                    
+                            Image(systemName: "eraser")
+        
                         }
                         
                         

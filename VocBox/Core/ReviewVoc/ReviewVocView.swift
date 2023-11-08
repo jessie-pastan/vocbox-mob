@@ -13,11 +13,7 @@ struct ReviewVocView: View {
 
     @FetchRequest(sortDescriptors: [SortDescriptor(\.createDate, order: .reverse)]) private var vocabs: FetchedResults<Vocab>
     
-    @FetchRequest(sortDescriptors: [SortDescriptor(\.favourite, order: .reverse)]) private var favVocabs: FetchedResults<Vocab>
-    
-    @FetchRequest<Vocab>(sortDescriptors: [], predicate: NSPredicate(format: "favourite == true")) private var favoriteVocabs
-    //@FetchRequest<Vocab>(sortDescriptors: []) private var favoriteVocabs
-    
+ 
     
     @Environment(\.managedObjectContext) var moc
     @Environment(\.colorScheme) var colorScheme
@@ -119,7 +115,7 @@ struct ReviewVocView: View {
                                 .frame(height: 44)
                                 
                             }
-                            //.foregroundStyle(Color(UIColor.label))
+                           
                             
                             Spacer()
                             //MARK: Brain Challenge button
@@ -155,9 +151,8 @@ struct ReviewVocView: View {
                         }label: {
                             Image(systemName: "person.crop.circle")
                                 .foregroundColor(Color(UIColor.label))
-                                //.foregroundColor(vocabs.isEmpty ? (Color.gray) : Color(UIColor.label))
                         }
-                        //.disabled(vocabs.isEmpty)
+                        
                         
                     }
                 }
@@ -180,6 +175,7 @@ struct ReviewVocView: View {
                             Button("Favorite") {
                                 // action: fetch favourite vocabulary
                                 isShowFavourite = true
+                                // isShowAll = true : is work around for fixing bug when delete last favorite code data detect it as empty storage 
                                 isShowAll = true
                                    
                                 vocabs.nsPredicate = isShowFavourite ?  NSPredicate(format: "favourite = 1") : nil

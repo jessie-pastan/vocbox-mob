@@ -35,14 +35,14 @@ struct HintCard: View {
                 Spacer()
             }
             .padding()
-            .frame(height: 150)
+            .frame(height: 160)
             .background(RoundedRectangle(cornerRadius: 18).fill(Color(.background)))
             .overlay(content: {
                 RoundedRectangle(cornerRadius: 18)
                                  .stroke(Color.textField, lineWidth: 2)
             })
             .padding(.horizontal)
-            .offset(x: showCard ? 0 : -500)
+            .offset(x: showCard ? 0 : -1500)
             //        .animation(useAnimation ? .spring : .none, value: showCard)
        }
         

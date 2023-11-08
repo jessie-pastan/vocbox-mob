@@ -149,20 +149,7 @@ struct RecallVocView: View {
                 } label: {
                     LongButton(title: "Submit", width: proxy.size.width / 1.10, height:  23)
                 }
-                    /*
-                    Text("Submit")
-                        .font(.body)
-                        .lineLimit(1)
-                        .frame(width: proxy.size.width / 1.10, height: 23)
-                        .foregroundColor(Color.text)
-                        .padding(7)
-                        .background(Color.button)
-                        .cornerRadius(120)
-                }
-                .background(Rectangle().foregroundColor(.textField).cornerRadius(120).offset(x: 2, y: 2))
-                .padding(.top, 5)
-                .padding(.leading, -5)
-                     */
+                
                 
                 
             }

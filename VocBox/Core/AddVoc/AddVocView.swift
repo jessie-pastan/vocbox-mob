@@ -94,20 +94,7 @@ struct AddVocView: View {
                         LongButton(title: "Save", width: proxy.size.width / 1.10, height: 35)
                         
                     }
-                        /*
-                            Text("Save")
-                                .lineLimit(1)
-                                .frame(width: proxy.size.width / 1.10, height: 35)
-                                .foregroundColor(Color.text)
-                                .padding(7)
-                                .background(Color.button)
-                                .cornerRadius(120)
-                        }
-                        .background(Rectangle().foregroundColor(.textField).cornerRadius(120).offset(x: 2, y: 2))
-                        .padding(.top, 5)
-                        .padding(.leading, -5)
-                    */
-
+    
                         
                 }
                 .fontWeight(.bold)
