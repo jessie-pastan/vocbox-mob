@@ -109,7 +109,7 @@ struct ReviewVocView: View {
                                 AddVocView()
                             } label: {
                                 GeometryReader { proxy in
-                                    SmallButton(title: "Add Voc")
+                                    SmallButton(title: "Add")
                                 }
                                 
                                 .frame(height: 44)
@@ -170,28 +170,33 @@ struct ReviewVocView: View {
                                 vocabs.nsPredicate = isShowAll ? NSPredicate(value: true) : NSPredicate(value: true)
                             }
                             
-                            
+                           
                             //MARK: Filter favourite
                             Button("Favorite") {
                                 // action: fetch favourite vocabulary
                                 isShowFavourite = true
-                                // isShowAll = true : is work around for fixing bug when delete last favorite code data detect it as empty storage 
+                                // isShowAll = true : is work around for fixing bug when delete last favorite code data detect it as empty storage
                                 isShowAll = true
-                                   
+                                
                                 vocabs.nsPredicate = isShowFavourite ?  NSPredicate(format: "favourite = 1") : nil
-
+                                
                             }
                             
-                            
+                            /*
                             //MARK: sort A-Z Order
                             Button("A-Z") {
                                 // action: sort A-Z Vocab
-                               isShowAscending = true
+                                
+                                isShowAscending = true
+                                
                                 
                                 vocabs.nsPredicate = isShowAscending ? NSPredicate(value: true) : NSPredicate(value: true)
                                 vocabs.sortDescriptors = [SortDescriptor(\.vocab)]
                                
                             }
+                             
+                            
+                            
                             //MARK: sort Z-A Order
                             Button("Z-A") {
                                 // action: sort Z-A Vocab
@@ -199,6 +204,7 @@ struct ReviewVocView: View {
                                 vocabs.nsPredicate = isShowDescending ? NSPredicate(value: true) : NSPredicate(value: true)
                                 vocabs.sortDescriptors = [SortDescriptor(\.vocab, order: .reverse)]
                             }
+                             */
                             
                         } label: {
                             Image(systemName: "line.3.horizontal")

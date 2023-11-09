@@ -91,7 +91,7 @@ struct ReminderView: View {
                     }
                     
                     
-                    Text("Get a daily notification from VocBox to remind you of vocabulary study.")
+                    Text("Get a daily notification from VocBox to remind you of your vocabulary study.")
                     .foregroundColor(Color.text)
                     .listRowBackground(Color.card)
                     

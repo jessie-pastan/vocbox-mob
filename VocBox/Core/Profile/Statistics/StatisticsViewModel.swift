@@ -85,9 +85,9 @@ class StatisticsViewModel: ObservableObject {
     
     func addUnitOfRecallString(recall : Int) -> String {
         if self.totalRecalled != 0 || self.totalRecalled != 1 {
-            return "times"
+            return "points"
         }else {
-            return "time"
+            return "point"
         }
     }
     

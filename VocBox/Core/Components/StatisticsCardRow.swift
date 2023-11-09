@@ -27,7 +27,7 @@ struct StatisticsCardRow: View {
             Rectangle()
             VStack(alignment: .leading){
                 Spacer()
-                Text("Highest Score")
+                Text("🏆 Highest Score")
                     .bold()
                 HStack{
                     Text("\(heighestDate)")
@@ -38,7 +38,7 @@ struct StatisticsCardRow: View {
                     Spacer()
                 }
                 Spacer()
-                Text("Lastest Score")
+                Text("🌟 Latest Score")
                     .bold()
                 HStack{
                     

@@ -71,7 +71,7 @@ class RecallVocViewModel: ObservableObject {
         let hint = DefinitionHints.randomElement() ?? "Please add a word definition"
     
         if hint.isEmpty {
-            return "Please add a word definition, then we can give you a hint!"
+            return "Please add word definition, then we can give you a hint!"
         }
         
         return hint

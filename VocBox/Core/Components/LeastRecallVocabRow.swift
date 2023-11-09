@@ -16,8 +16,11 @@ struct LeastRecallVocabRow: View {
         ZStack {
             Rectangle()
             VStack(alignment: .center) {
+                HStack{
+                    Text("💭 Least")+Text(leastRecalledArray.count > 1 ? " Words" : " Word")+Text(" Recalled")
+                }
+                .bold()
                 
-                Text("Least Recalled").bold()
                 ForEach(leastRecalledArray, id: \.0) { vocab in
                     HStack{
                         Text("\(vocab.0) : \(vocab.1)")

@@ -17,7 +17,12 @@ struct MostRecallVocabRow: View {
             Rectangle()
             VStack(alignment: .center){
                 
-                Text("Most Recalled").bold()
+              
+                HStack{
+                    Text("💪 Most")+Text(mostRecalledArray.count > 1 ? " Words" : " Word")+Text(" Recalled")
+                }
+                .bold()
+                
                 ForEach(mostRecalledArray, id: \.0){ vocab in
                     HStack{
                         Text("\(vocab.0) : \(vocab.1)")

@@ -21,13 +21,13 @@ struct TotalVocabRow: View {
             VStack(alignment: .center){
                 
                 if  vocabs.count > 1 {
-                    Text("\(vocabs.count) Vocabulary words in the box").bold()
+                    Text("📦 \(vocabs.count) Vocabulary words in the box").bold()
                 }
                 else {
-                    Text("\(vocabs.count) Vocabulary word in the box").bold()
+                    Text("📦 \(vocabs.count) Vocabulary word in the box").bold()
                 }
                 
-                Text("Total Successfull recall : \(totalRecalled)")
+                Text("✨ Total challenge score : \(totalRecalled)")
                 
             }
             

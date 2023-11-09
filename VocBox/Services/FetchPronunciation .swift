@@ -47,7 +47,7 @@ class FetchVocabPronunciation {
             
         }
         
-        return "Can't find pronunciation"
+        return ""
         
     }
 }

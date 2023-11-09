@@ -26,7 +26,7 @@ struct RecallVocView: View {
     
     @State private var feedback = ""
     @State var progress: CGFloat = 0.0
-    private var compliments = ["Good job!", "Keep Going.", "You Rock!"]
+    private var compliments = ["Good job!", "Keep going!", "You rock!"]
     
     @State private var counter = 0
     @State private var showAlert1 = false
@@ -44,10 +44,12 @@ struct RecallVocView: View {
         GeometryReader { proxy in
             VStack(alignment: .leading) {
                 //MARK: Wording
-                VStack(alignment: .leading){
+                VStack(alignment: .leading) {
                     Text("Improve your memory")
                     Text("by recalling \(vocabs.count)")
-                    Text("stored words!")
+                    HStack {
+                        Text("stored")+Text(vocabs.count > 1 ? " words!" : " word!")
+                    }
                 }
                 .font(.title)
                 
@@ -63,7 +65,9 @@ struct RecallVocView: View {
                     }
                     GeometryReader { proxy in
                         RecallProgressView(width: proxy.size.width, progress: progress)
+                            .padding(.top, proxy.size.height)
                     }
+                    
                 }
                 .padding()
                 
@@ -80,12 +84,19 @@ struct RecallVocView: View {
                 }.frame(maxWidth: .infinity)
                 
                 Spacer()
-                TextField("Type a word you remember!", text: $text)
-                    .padding(10)
-                    .frame(width: proxy.size.width / 1.08, height: 33)
-                    .background(Color.textField)
-                    .cornerRadius(10)
-                    .disableAutocorrection(true)
+                GeometryReader { proxy in
+                    TextField("Type a word you remember!", text: $text)
+                        .frame(width: proxy.size.width)
+                        .padding(.leading,10)
+                        .padding(.top,5)
+                }
+                .frame(height: 33)
+                .padding(.bottom, 1)
+                .background(Color.textField)
+                .cornerRadius(10)
+                .disableAutocorrection(true)
+                
+                    
                    
                 
                 
@@ -147,14 +158,16 @@ struct RecallVocView: View {
                     //MARK: Free text field after submit
                     text = ""
                 } label: {
-                    LongButton(title: "Submit", width: proxy.size.width / 1.10, height:  23)
+                    GeometryReader { proxy in
+                        LongButton(title: "Submit", width: proxy.size.width / 1, height:  23)
+                    }
                 }
                 
                 
                 
             }
             //MARK: Alert for 100% Score
-            .alert("Congratulations.",
+            .alert("Congratulations!",
                    isPresented: $showAlert1) {
                    Button("Ok") {
                         dismiss()
@@ -191,13 +204,13 @@ struct RecallVocView: View {
                     .background(Rectangle().frame(height: 20).foregroundColor(.textField).cornerRadius(120).offset(x: 2, y: 2))
                     .padding(.top, 5)
                     .padding(.leading, -5)
-                    .alert("Wonderful.",
+                    .alert("Better luck next time!",
                            isPresented: $showAlert2) {
                            Button("Ok") {
                                 dismiss()
                            }
                     } message: {
-                           Text("You got \(scorePercentage)% score. Keep it up:)")
+                           Text("You got \(scorePercentage)% score.")
                     }
                     
                 }

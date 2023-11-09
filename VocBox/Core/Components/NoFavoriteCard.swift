@@ -22,7 +22,7 @@ struct NoFavoriteCard: View {
                 
                 Spacer()
                 
-                Text("You have no favorite yet.")
+                Text("You have no favorites yet.")
                
                 Spacer()
         

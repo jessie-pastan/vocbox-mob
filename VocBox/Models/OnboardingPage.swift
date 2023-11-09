@@ -16,6 +16,6 @@ struct OnboardingPage: Identifiable, Equatable {
     
     static var samplePage = OnboardingPage(title: "Title Sample", description1: "Sample description", description2: "Sample2", imageUrl: "box", tag: 0)
     static var pages: [OnboardingPage] = [
-        OnboardingPage(title: "Welcome to \n VocBox!", description1: "Effortlessly store", description2:  "personal vocabulary", imageUrl: "boxSpark", tag: 0),
+        OnboardingPage(title: "Welcome to \n VocBox!", description1: "Effortlessly store", description2:  "your personal vocabulary", imageUrl: "boxSpark", tag: 0),
         OnboardingPage(title: "     \n Voc Challenge", description1: "Train your vocabulary skills", description2:  "and track your progress" , imageUrl: "brainAnimate", tag: 1)]
 }
