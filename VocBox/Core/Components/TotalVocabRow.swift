@@ -27,7 +27,7 @@ struct TotalVocabRow: View {
                     Text("📦 \(vocabs.count) Vocabulary word in the box").bold()
                 }
                 
-                Text("✨ Total challenge score : \(totalRecalled)")
+                Text("🌟 Total challenge score : \(totalRecalled)")
                 
             }
             

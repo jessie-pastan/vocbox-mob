@@ -38,7 +38,7 @@ struct StatisticsCardRow: View {
                     Spacer()
                 }
                 Spacer()
-                Text("🌟 Latest Score")
+                Text("✨ Latest Score")
                     .bold()
                 HStack{
                     

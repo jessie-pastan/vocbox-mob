@@ -47,6 +47,7 @@ struct ReviewVocView: View {
        
            VStack {
                Spacer()
+               //MARK: Display CreateFirstVocabCard if Vocabulary storage empty
                if vocabs.isEmpty && isShowAll == false {
                    VStack{
                        Spacer()
@@ -59,20 +60,20 @@ struct ReviewVocView: View {
                        .padding(.top, 100)
                        Spacer()
                    }
-                   
+                   //MARK: show No favorite card
                }else if isShowAll && vocabs.isEmpty {
-                   VStack{
-                       Spacer()
+                 
                        GeometryReader { proxy in
-                           NoFavoriteCard()
+                           VStack{
+                               Spacer()
+                               NoFavoriteCard()
+                                   .frame(width: proxy.size.width, height: proxy.size.height * 1.25 )
+                                   .position(x: proxy.size.width / 2, y: proxy.size.height )
+                               Spacer()
+                           }
                        }
-                       .frame(maxWidth: .infinity)
-                       .frame(height: 400)
                        .padding(.horizontal)
-                       .padding(.top, 100)
-                       Spacer()
-                   }
-                   
+
                }
                     
                     //MARK: All vocabulary
@@ -175,7 +176,7 @@ struct ReviewVocView: View {
                             Button("Favorite") {
                                 // action: fetch favourite vocabulary
                                 isShowFavourite = true
-                                // isShowAll = true : is work around for fixing bug when delete last favorite code data detect it as empty storage
+                                // isShowAll = true : is work around for fixing bug happened when delete last favorite code data detect it as empty storage
                                 isShowAll = true
                                 
                                 vocabs.nsPredicate = isShowFavourite ?  NSPredicate(format: "favourite = 1") : nil
@@ -194,9 +195,6 @@ struct ReviewVocView: View {
                                 vocabs.sortDescriptors = [SortDescriptor(\.vocab)]
                                
                             }
-                             
-                            
-                            
                             //MARK: sort Z-A Order
                             Button("Z-A") {
                                 // action: sort Z-A Vocab

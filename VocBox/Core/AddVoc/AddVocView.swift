@@ -33,9 +33,13 @@ struct AddVocView: View {
                     Text("Add New Voc")
                         .font(.title2)
                     Text("Enter word and its definition")
-                    TextField("Word", text: $vocab)
+                    GeometryReader { proxy in
+                        TextField("Word", text: $vocab)
+                            .frame(width: proxy.size.width / 1.08)
+                    }
+                        .frame(height: 20)
                         .padding(10)
-                        .frame(width: proxy.size.width / 1.08, height: 33)
+                        .padding(.top, -5)
                         .background(Color.textField)
                         .cornerRadius(10)
                         
@@ -64,13 +68,18 @@ struct AddVocView: View {
                         }
                     }
                     
-                    TextField("Definition / e.g.", text: $definition, axis: .vertical)
+                    GeometryReader { proxy in
+                        TextField("Definition / e.g.", text: $definition, axis: .vertical)
+                            .frame(width: proxy.size.width / 1.08)
+                            
+                    }
+                        .frame(height: 40)
                         .padding(10)
-                        .frame(width: proxy.size.width / 1.08, height: 60)
+                        .padding(.top, 15)
                         .multilineTextAlignment(.leading)
                         .background(Color.textField)
                         .cornerRadius(10)
-                        .padding(.top,10)
+                        .padding(.top, 5)// padding between textfield elements
                         
                         
                     
@@ -91,9 +100,14 @@ struct AddVocView: View {
                         
                         
                     } label: {
-                        LongButton(title: "Save", width: proxy.size.width / 1.10, height: 35)
+                        GeometryReader { proxy in
+                            LongButton(title: "Save", width: proxy.size.width )
+                        }
+                      
+                        .frame(height: 30)
                         
                     }
+                    .disabled(vocab.isEmpty)
     
                         
                 }

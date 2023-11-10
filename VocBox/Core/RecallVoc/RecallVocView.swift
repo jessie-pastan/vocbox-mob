@@ -86,7 +86,7 @@ struct RecallVocView: View {
                 Spacer()
                 GeometryReader { proxy in
                     TextField("Type a word you remember!", text: $text)
-                        .frame(width: proxy.size.width)
+                        .frame(width: proxy.size.width / 1.10)
                         .padding(.leading,10)
                         .padding(.top,5)
                 }
@@ -159,9 +159,10 @@ struct RecallVocView: View {
                     text = ""
                 } label: {
                     GeometryReader { proxy in
-                        LongButton(title: "Submit", width: proxy.size.width / 1, height:  23)
+                        LongButton(title: "Submit", width: proxy.size.width, height: 35)
                     }
                 }
+                .disabled(text.isEmpty)
                 
                 
                 
