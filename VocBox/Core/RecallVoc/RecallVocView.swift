@@ -91,7 +91,7 @@ struct RecallVocView: View {
                         .padding(.top,5)
                 }
                 .frame(height: 33)
-                .padding(.bottom, 1)
+                .padding(.bottom, 2)
                 .background(Color.textField)
                 .cornerRadius(10)
                 .disableAutocorrection(true)

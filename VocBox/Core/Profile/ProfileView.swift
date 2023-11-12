@@ -14,7 +14,10 @@ struct ProfileView: View {
     
     @Environment(\.managedObjectContext) var moc
     
+    @EnvironmentObject var storeViewModel: StoreViewModel
+    
     @Environment(\.dismiss) var dismiss
+    
     @State private var isShowAlert = false
     
     @FetchRequest(sortDescriptors: [SortDescriptor(\.date, order: .reverse)]) private var scores: FetchedResults<Score>
@@ -40,16 +43,25 @@ struct ProfileView: View {
             
             
             List{
-                /*
+                
                  //MARK: Pro Upgrade
-                 NavigationLink {
-                 ProUpgradeView()
-                 } label: {
-                 Text("Pro Upgrade")
-                 }
-                 .foregroundColor(Color.text)
-                 .listRowBackground(Color.card)
-                 */
+                VStack{
+                    if storeViewModel.purchasedSubsriptions.isEmpty {
+                        NavigationLink {
+                            ProUpgradeView()
+                        } label: {
+                            Text("Pro Upgrade")
+                        }
+                       
+                    }else {
+                        //show that user already subscribed
+                        Text("Pro Upgraded")
+                        
+                    }
+                }
+                .foregroundColor(Color.text)
+                .listRowBackground(Color.card)
+                 
                 
                 //MARK: Statictics navigate bar
                 NavigationLink {

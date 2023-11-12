@@ -14,6 +14,7 @@ struct ReviewVocView: View {
     @FetchRequest(sortDescriptors: [SortDescriptor(\.createDate, order: .reverse)]) private var vocabs: FetchedResults<Vocab>
     
  
+    @EnvironmentObject var storeViewModel : StoreViewModel
     
     @Environment(\.managedObjectContext) var moc
     @Environment(\.colorScheme) var colorScheme
@@ -27,6 +28,8 @@ struct ReviewVocView: View {
     @State private var profileViewIsShow = false
     
     @State private var isShowNoFavoriteCard = false
+    
+    @State private var isShowUpgradeView = false
     
     let position = UUID()
     
@@ -102,19 +105,35 @@ struct ReviewVocView: View {
                     
                     Spacer()
                     
-                    if !vocabs.isEmpty {
+               if !vocabs.isEmpty  {
                         //MARK: Add new vocabulary button
                         HStack(spacing: 25) {
                             Spacer()
-                            NavigationLink {
-                                AddVocView()
-                            } label: {
-                                GeometryReader { proxy in
-                                    SmallButton(title: "Add")
+                            
+                            if vocabs.count == 20 && storeViewModel.purchasedSubsriptions.isEmpty {
+                                Button {
+                                    isShowUpgradeView = true
+                                } label: {
+                                    GeometryReader { proxy in
+                                        SmallButton(title: "Add")
+                                    }
+                                    .frame(height: 44)
                                 }
-                                
-                                .frame(height: 44)
-                                
+                                .sheet(isPresented: $isShowUpgradeView) {
+                                    
+                                } content: {
+                                    ProUpgradeView()
+                                }
+
+                            }else {
+                                NavigationLink {
+                                    AddVocView()
+                                } label: {
+                                    GeometryReader { proxy in
+                                        SmallButton(title: "Add")
+                                    }
+                                    .frame(height: 44)
+                                }
                             }
                            
                             
@@ -136,7 +155,7 @@ struct ReviewVocView: View {
                         Spacer()
                     }
                 }
-               
+                //.environmentObject(storeViewModel)
                 .navigationBarBackButtonHidden(true)
                 .padding(.bottom,30)
                 .padding(.leading, 2)

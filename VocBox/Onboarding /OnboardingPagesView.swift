@@ -43,7 +43,9 @@ struct OnboardingPagesView: View {
                                         .fontWeight(.heavy)
                                         .foregroundStyle(Color(.selectedPartOfSpeech))
                                 }
-                                .navigationDestination(isPresented: $readyToNavigate){ ReviewVocView()
+                                .navigationDestination(isPresented: $readyToNavigate){
+                                    ReviewVocView()
+                                    
                                 }
                                 
                               
