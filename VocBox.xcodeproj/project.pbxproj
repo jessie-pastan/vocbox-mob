@@ -22,6 +22,7 @@
 		7571F95B2B002BD900229DEA /* VocBoxProduct.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 7571F9592B002BD900229DEA /* VocBoxProduct.storekit */; };
 		7571F95D2B003D2F00229DEA /* TestSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7571F95C2B003D2F00229DEA /* TestSubscription.swift */; };
 		7571F95E2B003D2F00229DEA /* TestSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7571F95C2B003D2F00229DEA /* TestSubscription.swift */; };
+		7571F96D2B03D39800229DEA /* SubScriptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7571F96C2B03D39800229DEA /* SubScriptionButton.swift */; };
 		758FDFE82AF99EB70006B2C0 /* NoFavoriteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758FDFE72AF99EB70006B2C0 /* NoFavoriteCard.swift */; };
 		75BF2CAD2ACC8D11003A32E6 /* WidgetSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CAC2ACC8D11003A32E6 /* WidgetSettingView.swift */; };
 		75BF2CB12ACCB5FD003A32E6 /* MostRecallVocabRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CB02ACCB5FD003A32E6 /* MostRecallVocabRow.swift */; };
@@ -139,6 +140,7 @@
 		7571F9572B002AEA00229DEA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		7571F9592B002BD900229DEA /* VocBoxProduct.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = VocBoxProduct.storekit; sourceTree = "<group>"; };
 		7571F95C2B003D2F00229DEA /* TestSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSubscription.swift; sourceTree = "<group>"; };
+		7571F96C2B03D39800229DEA /* SubScriptionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubScriptionButton.swift; sourceTree = "<group>"; };
 		758FDFE72AF99EB70006B2C0 /* NoFavoriteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoFavoriteCard.swift; sourceTree = "<group>"; };
 		75BF2CAC2ACC8D11003A32E6 /* WidgetSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSettingView.swift; sourceTree = "<group>"; };
 		75BF2CB02ACCB5FD003A32E6 /* MostRecallVocabRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostRecallVocabRow.swift; sourceTree = "<group>"; };
@@ -525,6 +527,7 @@
 				75F9C7C32AE832BF008A0430 /* LongButton.swift */,
 				83E34A872AB677B600350CF7 /* SmallButton.swift */,
 				75F9C7C52AE838FF008A0430 /* CardButton .swift */,
+				7571F96C2B03D39800229DEA /* SubScriptionButton.swift */,
 				750D26AC2ABE8E1D00300914 /* CreateFirstVocabCard.swift */,
 				75621A772AC7AB4800B407A9 /* StatisticsCardRow.swift */,
 				75BF2CB02ACCB5FD003A32E6 /* MostRecallVocabRow.swift */,
@@ -695,6 +698,7 @@
 				75F9C8242AF42C52008A0430 /* WidgetCard.swift in Sources */,
 				75F9C81A2AF34010008A0430 /* VocBoxWidgets.swift in Sources */,
 				7571F9552B0029C300229DEA /* StoreKitManager .swift in Sources */,
+				7571F96D2B03D39800229DEA /* SubScriptionButton.swift in Sources */,
 				83E590BF2AB3E9D7002ABD04 /* CoredataController.swift in Sources */,
 				75621A6D2AC28D3600B407A9 /* Pronunciation.swift in Sources */,
 				75F9C7BE2AE20040008A0430 /* FontExtention.swift in Sources */,
