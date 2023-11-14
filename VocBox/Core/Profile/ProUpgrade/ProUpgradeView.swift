@@ -82,7 +82,7 @@ struct ProUpgradeView: View {
                     } label: {
                         
                         GeometryReader { proxy in
-                            CardButton(title: "Start 3 days free trial", subtitle: "then only $9.99 / year")
+                            SubScriptionButton(title: "Start 3 days free trial", subtitle: "then only $9.99 / year")
                         }
                         .frame(maxWidth: .infinity)
                         .frame(height: 70)

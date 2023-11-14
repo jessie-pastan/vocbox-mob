@@ -8,4 +8,6 @@
 import Foundation
 struct AppConstants {
     static let hasVisitedAppKey = "HasVisitedAppKey"
+    //static let reviewCountKey = "reviewCountKey"
+    //static let lastReviewedVersionKey = "lastReviewedVersionKey"
 }

@@ -45,6 +45,10 @@ extension Score {
         
     }
     
+    var viewPercentage: Double {
+        return percentage 
+    }
+    
 }
 
 extension User {

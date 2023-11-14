@@ -10,7 +10,7 @@ import SwiftUI
 struct CardButton: View {
     
     var title = ""
-    var subtitle = ""
+    
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 120)
@@ -21,9 +21,7 @@ struct CardButton: View {
                     .font(.body)
                     .bold()
                     
-                Text(subtitle)
-                    .font(.footnote)
-                    
+              
             }
             .foregroundColor(Color.text)
         }

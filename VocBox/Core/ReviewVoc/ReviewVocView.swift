@@ -7,17 +7,20 @@
 
 import SwiftUI
 import CoreData
+import StoreKit
 
 //@available(iOS 17.0, *)
 struct ReviewVocView: View {
 
     @FetchRequest(sortDescriptors: [SortDescriptor(\.createDate, order: .reverse)]) private var vocabs: FetchedResults<Vocab>
-    
+   // @FetchRequest(sortDescriptors: [SortDescriptor(\.date, order: .reverse)]) private var scores: FetchedResults<Score>
  
     @EnvironmentObject var storeViewModel : StoreViewModel
     
+    
     @Environment(\.managedObjectContext) var moc
     @Environment(\.colorScheme) var colorScheme
+    @Environment(\.requestReview) var requestReview
     
     @State private var text = ""
     @State private var isShowFavourite = false
@@ -155,12 +158,25 @@ struct ReviewVocView: View {
                         Spacer()
                     }
                 }
-                //.environmentObject(storeViewModel)
+               
                 .navigationBarBackButtonHidden(true)
                 .padding(.bottom,30)
                 .padding(.leading, 2)
                 .background(Color.background)
-                
+           
+                //MARK: Verify to display prompt review to user
+                //.onAppear(perform: {
+                    //if AppReviewManager().canAskForReview(userScore: scores.first?.viewPercentage) {
+                        //Task {
+                            //try await Task.sleep(until: .now + .seconds(1),
+                                                 //tolerance: .seconds(0.5),
+                                                 //clock: .suspending)
+                            
+                           // requestReview()
+                            
+                       // }
+                    //}
+                //})
             
                 //MARK: Right toolbar for setting profile
            

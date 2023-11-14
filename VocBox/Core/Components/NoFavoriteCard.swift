@@ -15,7 +15,7 @@ struct NoFavoriteCard: View {
             Rectangle()
             VStack{
                 Spacer()
-                Image(systemName: "heart")
+                Image("heart")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 100, height: 100)

@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct AddVocView: View {
+   
+    //@EnvironmentObject var appReviewManager: AppReviewManager
     
     @Environment(\.managedObjectContext) var moc
     @Environment(\.dismiss) var dismiss
@@ -96,6 +99,8 @@ struct AddVocView: View {
                             CoreDataController().addVocab(definition: definition, favourite: false, phonetic: phonetic, type: partOfSpeech.acronym, word: trimmedString.capitalized, context: moc)
                             dismiss()
                             
+                            //save count in user default
+                           // appReviewManager.increase()
                         }
                         
                         

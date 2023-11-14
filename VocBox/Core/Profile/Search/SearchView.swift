@@ -86,7 +86,7 @@ struct SearchView: View {
                                         .frame(width: 100, height: 100)
                                 }
                                 
-                                Text("Not found")
+                                Text(vocabs.count == 0 ? "No word yet" : "Not found")
                                     .bold()
                                     .padding(.top, -25)
                             }

@@ -14,33 +14,38 @@ import SwiftUI
     var body: some Scene {
         WindowGroup {
             
-            /*  this is for testing splash screen and on boarding screens
+            //  this is for testing splash screen and on boarding screens
             SplashScreenView()
                 .modifier(DarkModeViewModifier())
                 .environment(\.managedObjectContext,CoreDataController().container.viewContext)
                 .environmentObject(LocalNotificationManager())
+                .environmentObject(StoreViewModel())
+                //.environmentObject(AppReviewManager())
             
-             */
-            
+            /*
             if UserDefaults.standard.bool(forKey: AppConstants.hasVisitedAppKey) {
-                //TestSubscription()
+                
                 ReviewVocView()
                     .modifier(DarkModeViewModifier())
                     .environment(\.managedObjectContext,CoreDataController().container.viewContext)
                     .environmentObject(LocalNotificationManager())
                     .environmentObject(StoreViewModel())
-            }else {
+                    .environmentObject(AppReviewManager())
+             
+            } else {
+                
                 SplashScreenView()
                     .modifier(DarkModeViewModifier())
                     .environment(\.managedObjectContext,CoreDataController().container.viewContext)
                     .environmentObject(LocalNotificationManager())
                     .environmentObject(StoreViewModel())
+                    .environmentObject(AppReviewManager())
                     .onAppear{
                         UserDefaults.standard.set(true, forKey: AppConstants.hasVisitedAppKey)
                     }
             }
              
-             
+             */
         }
     }
 }

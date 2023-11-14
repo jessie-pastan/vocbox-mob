@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import StoreKit
 
 struct ProfileView: View {
     
@@ -16,7 +17,11 @@ struct ProfileView: View {
     
     @EnvironmentObject var storeViewModel: StoreViewModel
     
+    @EnvironmentObject var appReviewManager: AppReviewManager
+    
     @Environment(\.dismiss) var dismiss
+    
+    @Environment(\.openURL) var openURL
     
     @State private var isShowAlert = false
     
@@ -24,7 +29,7 @@ struct ProfileView: View {
     
     @FetchRequest(sortDescriptors: [SortDescriptor(\.joinedDate)]) private var user: FetchedResults<User>
     
-    //@FetchRequest(sortDescriptors: [SortDescriptor(\.reminderTime)]) private var user: FetchedResults<User>
+   
     
     var body: some View {
         
@@ -125,6 +130,20 @@ struct ProfileView: View {
                     .foregroundColor(Color.text)
                     .listRowBackground(Color.card)
                 }
+                
+                
+                
+                //MARK: Leave app review
+                Button {
+                    if let link = appReviewManager.linkReview {
+                        openURL(link)
+                    }
+                } label: {
+                    Text("Leave a review")
+                }
+                .foregroundColor(Color.text)
+                .listRowBackground(Color.card)
+
                 
                 
                 //MARK: Toggle Dark Mode
