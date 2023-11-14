@@ -72,6 +72,10 @@ struct CreateFirstVocabCard: View {
             //.frame(width: 300, height: 500 )
             .foregroundColor(Color(.card))
             .cornerRadius(15)
+        
+        
+        
+        
         /*
             //MARK: Button Animation
             //.offset(y: isBounce ? 1.5 : -1 )
