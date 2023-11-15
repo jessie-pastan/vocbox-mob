@@ -23,6 +23,7 @@ struct NoFavoriteCard: View {
                 Spacer()
                 
                 Text("You have no favorites yet.")
+                    .font(.custom(.playfairBold, size: 22))
                 Spacer()
         
             }

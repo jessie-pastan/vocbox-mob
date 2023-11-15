@@ -35,9 +35,10 @@ struct ProfileView: View {
         VStack(alignment: .leading) {
          
             HStack{
-                Image(systemName: "person.circle").resizable().scaledToFill().frame(width: 65, height: 65)
-                Text("Joined: \(user[0].viewJoinedDate)")
+                Image(systemName: "person.circle").resizable().scaledToFill().frame(width: 50, height: 50)
+                Text("Joined \(user[0].viewJoinedDate)")
             }
+            .font(.custom(.playfairBold, size: 17))
             .padding(.top,20)
             .padding(.bottom,-20)
             .padding(.horizontal)
@@ -75,6 +76,7 @@ struct ProfileView: View {
                 .id(UUID())
                 .foregroundColor(Color.text)
                 .listRowBackground(Color.card)
+                
                 
                 //MARK: Search Screen
                 NavigationLink {

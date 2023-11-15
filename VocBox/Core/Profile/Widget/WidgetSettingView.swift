@@ -21,7 +21,7 @@ struct WidgetSettingView: View {
                             Spacer()
                         }
                     }
-                    //.frame(maxWidth: .infinity)
+                    
                     .frame(height: 500)
                     .padding(.horizontal, 30)
                     .padding(.bottom, 50)

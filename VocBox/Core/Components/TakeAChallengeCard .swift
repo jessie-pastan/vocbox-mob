@@ -23,7 +23,8 @@ struct TakeAchallengeCard: View {
                     .scaledToFit()
                     .frame(width: 100, height: 100)
                 Text("Take a challenge to see your improvement!")
-                    .bold()
+                    .font(.custom(.playfairBold, size: 22))
+                    .padding(.horizontal)
                     .foregroundColor(.black)
                     .multilineTextAlignment(.center)
                 

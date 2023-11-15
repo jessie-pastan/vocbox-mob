@@ -13,7 +13,7 @@ struct ProUpgradeView: View {
     @EnvironmentObject var storeViewModel: StoreViewModel
     @Environment(\.colorScheme) var colorScheme
     @State var isPurchased = false
-    
+    @Environment(\.openURL) var openURL
     
     var body: some View {
         
@@ -79,22 +79,67 @@ struct ProUpgradeView: View {
                 
                 
                 ForEach(storeViewModel.subscriptions) { product in
-                    
-                    Button {
-                        Task {
-                            await buy(product: product)
+                    VStack(spacing: -5) {
+                        Button {
+                            Task {
+                                await buy(product: product)
+                            }
+                            
+                        } label: {
+                            
+                            GeometryReader { proxy in
+                                SubScriptionButton(title: "Start 3 days free trial", subtitle: "then $9.99 / year")
+                            }
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 70)
                         }
+                        .padding()
                         
-                    } label: {
-                        
-                        GeometryReader { proxy in
-                            SubScriptionButton(title: "Start 3 days free trial", subtitle: "then only $9.99 / year")
+                        //MARK: privacy policy / terms of use / restore subscribtion
+                        HStack {
+                            //privacy policy
+                            Spacer()
+                            Button {
+                                if let link = AppConstants.privacyPolicyLink {
+                                    openURL(link)
+                                }
+                            } label: {
+                                Text("Privacy policy")
+                            }
+                            Spacer()
+                            
+                            //restore
+                            Spacer()
+                            
+                            Button{
+                                //This call display a system prompt ask users to autheticate with their App stroe credentails.
+                                //Call this function only in response to a explicit user action, such as tapping a button
+                                Task {
+                                    try? await AppStore.sync()
+                                }
+                            } label: {
+                                Text("Restore")
+                            }
+                            Spacer()
+                            
+                            //terms of use
+                            Spacer()
+                            Button {
+                                if let link = AppConstants.termsOfUseLink {
+                                    openURL(link)
+                                }
+                            } label: {
+                                Text("Terms of use")
+                            }
+                            
+                            Spacer()
                         }
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 70)
+                        .foregroundStyle(Color(.card))
+                        .font(.footnote)
+                        .padding(.horizontal, 20)
+                        .padding(.bottom)
+                        
                     }
-                    .padding()
-                    
                     
                 }
             }

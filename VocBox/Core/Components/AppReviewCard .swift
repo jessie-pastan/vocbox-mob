@@ -22,7 +22,8 @@ struct AppReviewCard: View {
                     .scaledToFit()
                     .frame(width: 100, height: 100)
                 Text("We really appreciate your time for our app review!")
-                    .bold()
+                    .font(.custom(.playfairBold, size: 22))
+                    .padding(.horizontal)
                     .foregroundColor(.black)
                     .multilineTextAlignment(.center)
                 

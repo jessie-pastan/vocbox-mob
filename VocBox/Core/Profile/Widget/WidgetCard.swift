@@ -26,6 +26,7 @@ struct WidgetCard: View {
                 VStack{
                     
                     Text("Now you can add VocBox widget to home screen!")
+                        .font(.custom(.playfairBold, size: 22))
                         .bold()
                         .multilineTextAlignment(.center)
                         .padding(.bottom, 10)

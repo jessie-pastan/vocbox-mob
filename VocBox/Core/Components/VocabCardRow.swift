@@ -31,7 +31,7 @@ struct VocabCardRow: View {
                 HStack{
                     Spacer()
                     VStack {
-                        Text(vocab.viewVocab).fontWeight(.bold).font(.title2)
+                        Text(vocab.viewVocab) .font(.custom(.playfairBold, size: 22))
                             
                         Text(vocab.viewPhonetic)
                             
