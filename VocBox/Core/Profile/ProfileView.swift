@@ -18,6 +18,7 @@ struct ProfileView: View {
     
     
     @Environment(\.dismiss) var dismiss
+    @Environment(\.openURL) var openURL
     
     @State private var isShowAlert = false
     
@@ -121,6 +122,36 @@ struct ProfileView: View {
                 .foregroundColor(Color.text)
                 .listRowBackground(Color.card)
 
+                //MARK: Privacy policy
+                VStack {
+                    Button {
+                        //open link url
+                        if let link  =  AppConstants.privacyPolicyLink {
+                            openURL(link)
+                        }
+                    } label: {
+                        Text("Privacy policy")
+                    }
+                }
+                .id(UUID())
+                .foregroundColor(Color.text)
+                .listRowBackground(Color.card)
+                
+                //MARK: Terms of use
+                VStack {
+                    Button {
+                        //open link url
+                        if let link  =  AppConstants.termsOfUseLink {
+                            openURL(link)
+                        }
+                    } label: {
+                        Text("Terms of use")
+                    }
+                }
+                .id(UUID())
+                .foregroundColor(Color.text)
+                .listRowBackground(Color.card)
+                
                 
                 //MARK: Delete score history
                 if !scores.isEmpty {
