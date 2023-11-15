@@ -15,7 +15,7 @@ struct NoFavoriteCard: View {
             Rectangle()
             VStack{
                 Spacer()
-                Image("heart")
+                Image("hearty")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 100, height: 100)
@@ -23,7 +23,6 @@ struct NoFavoriteCard: View {
                 Spacer()
                 
                 Text("You have no favorites yet.")
-               
                 Spacer()
         
             }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@available(iOS 17.0, *)
+@available(iOS 17.0, *)   
 @main
   struct VocBoxApp: App {
   
