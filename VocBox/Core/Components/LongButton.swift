@@ -13,7 +13,7 @@ struct LongButton: View {
     var width: CGFloat = 120
     var height: CGFloat = 35
     
-    var body: some View {
+    var body: some View {      
         VStack{
             Text(title)
                 .lineLimit(1)

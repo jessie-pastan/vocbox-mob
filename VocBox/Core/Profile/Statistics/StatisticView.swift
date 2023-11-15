@@ -74,6 +74,7 @@ struct StatisticView: View {
                         //MARK: Display card to let user know that they have no record yet
                         
                         GeometryReader { proxy in
+                            
                             TakeAchallengeCard()
                         }
                         .frame(maxWidth: .infinity)

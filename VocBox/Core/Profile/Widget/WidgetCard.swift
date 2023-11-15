@@ -65,7 +65,7 @@ struct WidgetCard: View {
                 .padding(.bottom,20)
             }
         }
-        .foregroundColor(.white)
+        .foregroundColor(.card)
         .cornerRadius(10)
         
         

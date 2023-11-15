@@ -14,12 +14,17 @@ struct WidgetSettingView: View {
                 .edgesIgnoringSafeArea(.all)
                 .overlay {
                     GeometryReader { proxy in
-                        WidgetCard()
+                        VStack{
+                            Spacer()
+                            WidgetCard()
+                              .position(x: proxy.size.width / 2, y: proxy.size.height / 2 )
+                            Spacer()
+                        }
                     }
-                    .frame(maxWidth: .infinity)
+                    //.frame(maxWidth: .infinity)
                     .frame(height: 500)
                     .padding(.horizontal, 30)
-                    .padding(.bottom, 70)
+                    .padding(.bottom, 50)
                 }
            
         }

@@ -192,7 +192,7 @@ struct ReviewVocView: View {
                             
                            
                             //MARK: Filter favourite
-                            Button("Favorite") {
+                            Button("Favorites") {
                                 // action: fetch favourite vocabulary
                                 isShowFavourite = true
                                 // isShowAll = true : is work around for fixing bug happened when delete last favorite code data detect it as empty storage

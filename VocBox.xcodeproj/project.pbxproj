@@ -23,6 +23,9 @@
 		7571F95D2B003D2F00229DEA /* TestSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7571F95C2B003D2F00229DEA /* TestSubscription.swift */; };
 		7571F95E2B003D2F00229DEA /* TestSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7571F95C2B003D2F00229DEA /* TestSubscription.swift */; };
 		7571F96D2B03D39800229DEA /* SubScriptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7571F96C2B03D39800229DEA /* SubScriptionButton.swift */; };
+		7571F9702B03DBE300229DEA /* AppReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7571F96F2B03DBE300229DEA /* AppReviewManager.swift */; };
+		7571F9722B04071300229DEA /* AppReviewLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7571F9712B04071300229DEA /* AppReviewLinkView.swift */; };
+		7571F9742B0408A300229DEA /* AppReviewCard .swift in Sources */ = {isa = PBXBuildFile; fileRef = 7571F9732B0408A300229DEA /* AppReviewCard .swift */; };
 		758FDFE82AF99EB70006B2C0 /* NoFavoriteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758FDFE72AF99EB70006B2C0 /* NoFavoriteCard.swift */; };
 		75BF2CAD2ACC8D11003A32E6 /* WidgetSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CAC2ACC8D11003A32E6 /* WidgetSettingView.swift */; };
 		75BF2CB12ACCB5FD003A32E6 /* MostRecallVocabRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CB02ACCB5FD003A32E6 /* MostRecallVocabRow.swift */; };
@@ -141,6 +144,9 @@
 		7571F9592B002BD900229DEA /* VocBoxProduct.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = VocBoxProduct.storekit; sourceTree = "<group>"; };
 		7571F95C2B003D2F00229DEA /* TestSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSubscription.swift; sourceTree = "<group>"; };
 		7571F96C2B03D39800229DEA /* SubScriptionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubScriptionButton.swift; sourceTree = "<group>"; };
+		7571F96F2B03DBE300229DEA /* AppReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReviewManager.swift; sourceTree = "<group>"; };
+		7571F9712B04071300229DEA /* AppReviewLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReviewLinkView.swift; sourceTree = "<group>"; };
+		7571F9732B0408A300229DEA /* AppReviewCard .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppReviewCard .swift"; sourceTree = "<group>"; };
 		758FDFE72AF99EB70006B2C0 /* NoFavoriteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoFavoriteCard.swift; sourceTree = "<group>"; };
 		75BF2CAC2ACC8D11003A32E6 /* WidgetSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSettingView.swift; sourceTree = "<group>"; };
 		75BF2CB02ACCB5FD003A32E6 /* MostRecallVocabRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostRecallVocabRow.swift; sourceTree = "<group>"; };
@@ -247,6 +253,15 @@
 				7571F9592B002BD900229DEA /* VocBoxProduct.storekit */,
 			);
 			path = Subscription;
+			sourceTree = "<group>";
+		};
+		7571F96E2B03DBBD00229DEA /* AppReview */ = {
+			isa = PBXGroup;
+			children = (
+				7571F96F2B03DBE300229DEA /* AppReviewManager.swift */,
+				7571F9712B04071300229DEA /* AppReviewLinkView.swift */,
+			);
+			path = AppReview;
 			sourceTree = "<group>";
 		};
 		75BF2CA62ACC8C3C003A32E6 /* Statistics */ = {
@@ -434,6 +449,7 @@
 			children = (
 				83E590CC2AB52811002ABD04 /* ReviewVoc */,
 				8304D7F32AB3DD4B00C9A9B1 /* AddVoc */,
+				7571F96E2B03DBBD00229DEA /* AppReview */,
 				83E590CE2AB52912002ABD04 /* Components */,
 				8304D7F62AB3DD7000C9A9B1 /* EditVoc */,
 				75BF2CA92ACC8CCD003A32E6 /* Profile */,
@@ -536,6 +552,7 @@
 				75BF2CCF2AD24CDF003A32E6 /* HintCard.swift */,
 				75BF2CD42AD3ABB7003A32E6 /* TakeAChallengeCard .swift */,
 				758FDFE72AF99EB70006B2C0 /* NoFavoriteCard.swift */,
+				7571F9732B0408A300229DEA /* AppReviewCard .swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -723,6 +740,7 @@
 				75BF2CB32ACCB859003A32E6 /* RecallStatisticsViewModel.swift in Sources */,
 				83E590C12AB3E9FF002ABD04 /* EntityExtentions.swift in Sources */,
 				75F9C7D32AEB51FB008A0430 /* ReminderSetting.swift in Sources */,
+				7571F9742B0408A300229DEA /* AppReviewCard .swift in Sources */,
 				75621A7A2AC8D35A00B407A9 /* StatisticsViewModel.swift in Sources */,
 				75D816C22ADB34E0009D76B5 /* GetApiKey.swift in Sources */,
 				83E590C92AB52695002ABD04 /* Extentions .swift in Sources */,
@@ -732,9 +750,11 @@
 				75BF2CD32AD27464003A32E6 /* RegisterView.swift in Sources */,
 				75BF2CCE2AD1DEE1003A32E6 /* CustomSearchBar.swift in Sources */,
 				75BF2CC12ACF286D003A32E6 /* ReminderView.swift in Sources */,
+				7571F9722B04071300229DEA /* AppReviewLinkView.swift in Sources */,
 				75621A7C2AC8D9BB00B407A9 /* MockScore.swift in Sources */,
 				75D816B92ADAFB74009D76B5 /* VocabPronunciation.swift in Sources */,
 				8304D7FB2AB3DDD400C9A9B1 /* RecallVocView.swift in Sources */,
+				7571F9702B03DBE300229DEA /* AppReviewManager.swift in Sources */,
 				75F9C7AC2AE06007008A0430 /* OnboardingPage.swift in Sources */,
 				7571F95D2B003D2F00229DEA /* TestSubscription.swift in Sources */,
 				75621A722AC3A7C300B407A9 /* Confetti.swift in Sources */,
@@ -943,6 +963,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = VocBox/VocBox.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -954,7 +975,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashScreenView;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -974,6 +998,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = VocBox/VocBox.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -985,7 +1010,10 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashScreenView;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

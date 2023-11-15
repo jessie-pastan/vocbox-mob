@@ -30,12 +30,14 @@ import SwiftUI
                     .environment(\.managedObjectContext,CoreDataController().container.viewContext)
                     .environmentObject(LocalNotificationManager())
                     .environmentObject(StoreViewModel())
+                    .environmentObject(AppReviewManager())
             }else {
                 SplashScreenView()
                     .modifier(DarkModeViewModifier())
                     .environment(\.managedObjectContext,CoreDataController().container.viewContext)
                     .environmentObject(LocalNotificationManager())
                     .environmentObject(StoreViewModel())
+                    .environmentObject(AppReviewManager())
                     .onAppear{
                         UserDefaults.standard.set(true, forKey: AppConstants.hasVisitedAppKey)
                     }

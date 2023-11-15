@@ -24,6 +24,7 @@ struct SplashScreenView: View {
                 Color.background
                     .ignoresSafeArea()
                 VStack{
+                    
                     Image("VocBoxAppIcon1")
                         .resizable()
                         .scaledToFit()

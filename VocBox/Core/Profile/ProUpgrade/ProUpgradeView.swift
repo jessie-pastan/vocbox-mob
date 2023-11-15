@@ -17,7 +17,7 @@ struct ProUpgradeView: View {
     
     var body: some View {
         
-        VStack{
+        VStack {
             Spacer()
             if colorScheme == .light {
                 Image("unlocked_light")
@@ -33,30 +33,35 @@ struct ProUpgradeView: View {
             
             VStack {
                 VStack(alignment: .center) {
-                    Text("   Unlock limited vocabulary adding")
-                        .font(.custom(.playfairBold, size: 25))
+                    Text(" Unlock limited")
+                    Text("vocabulary adding")
                 }
+                .padding(.top, -30)
+                .font(.custom(.playfairBold, size: 30))
+                
                 Spacer()
                 
-                VStack(alignment: .leading, spacing: 20){
+                VStack(alignment: .leading, spacing: 30){
                     HStack {
                         Image(systemName: "checkmark.square")
-                        Text(" Expand your own vocabulary")
+                        Text("Expand your own vocabulary")
                     }
                     
                     HStack {
                         Image(systemName: "checkmark.square")
-                        Text(" Unlimited vocabulary adding")
+                        Text("Unlimited vocabulary adding")
                     }
                     
-                    HStack{
+                    HStack(alignment: .firstTextBaseline) {
                         Image(systemName: "checkmark.square")
-                        Text(" Reinforce memory with the challenge")
+                        Text("Reinforce vocabulary memory with fun challenge")
+                            .fixedSize(horizontal: false, vertical: true)
                     }
                     
-                    HStack {
+                    HStack(alignment: .firstTextBaseline){
                         Image(systemName: "checkmark.square")
-                        Text(" Set reminder for your daily study time")
+                        Text("Set reminder for your daily vocabulary study time")
+                            .fixedSize(horizontal: false, vertical: true)
                     }
                     
                     HStack(alignment: .firstTextBaseline) {
@@ -67,6 +72,7 @@ struct ProUpgradeView: View {
                       
                 }
                 .padding(.horizontal)
+                .padding(.top, 5)
                
                 
                 Spacer()

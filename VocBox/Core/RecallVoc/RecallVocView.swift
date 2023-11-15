@@ -8,11 +8,15 @@
 import SwiftUI
 //import CoreData
 import ConfettiSwiftUI
+import StoreKit
 
 struct RecallVocView: View {
     
     @FetchRequest(sortDescriptors: [SortDescriptor(\.createDate, order: .reverse)]) private var vocabs: FetchedResults<Vocab>
+    
     @Environment(\.managedObjectContext) var moc
+    @Environment(\.requestReview) var requestReview : RequestReviewAction
+    @EnvironmentObject var appReviewManager: AppReviewManager
 
     @ObservedObject var vm = RecallVocViewModel()
     
@@ -172,7 +176,16 @@ struct RecallVocView: View {
                    isPresented: $showAlert1) {
                    Button("Ok") {
                         dismiss()
+                       
                    }
+                   .onDisappear {
+                       //checking if we can show review prompt
+                       if appReviewManager.canAskForReview(userVocab: vocabs.count) {
+                           requestReview()
+                       }
+                   }
+                
+                
             } message: {
                    Text("Fantastic! You got 100% score.")
             }

@@ -16,6 +16,7 @@ struct ProfileView: View {
     
     @EnvironmentObject var storeViewModel: StoreViewModel
     
+    
     @Environment(\.dismiss) var dismiss
     
     @State private var isShowAlert = false
@@ -52,6 +53,7 @@ struct ProfileView: View {
                         } label: {
                             Text("Pro Upgrade")
                         }
+                        .id(UUID())
                        
                     }else {
                         //show that user already subscribed
@@ -69,6 +71,7 @@ struct ProfileView: View {
                 } label: {
                     Text("Statistics")
                 }
+                .id(UUID())
                 .foregroundColor(Color.text)
                 .listRowBackground(Color.card)
                 
@@ -78,6 +81,7 @@ struct ProfileView: View {
                 } label: {
                     Text("Search")
                 }
+                .id(UUID())
                 .foregroundColor(Color.text)
                 .listRowBackground(Color.card)
                 
@@ -87,6 +91,7 @@ struct ProfileView: View {
                 } label: {
                     Text("Widget")
                 }
+                .id(UUID())
                 .foregroundColor(Color.text)
                 .listRowBackground(Color.card)
                 
@@ -97,8 +102,25 @@ struct ProfileView: View {
                 } label: {
                     Text("Daily reminder")
                 }
+                .id(UUID())
                 .foregroundColor(Color.text)
                 .listRowBackground(Color.card)
+                
+                
+                //MARK: Review
+                 //got freeze when app not available in app store ??
+                VStack {
+                    
+                    NavigationLink {
+                        AppReviewLinkView()
+                    } label: {
+                        Text("Leave a review")
+                    }
+                }
+                .id(UUID())
+                .foregroundColor(Color.text)
+                .listRowBackground(Color.card)
+
                 
                 //MARK: Delete score history
                 if !scores.isEmpty {
@@ -127,6 +149,10 @@ struct ProfileView: View {
                 }
                 
                 
+               
+                
+                
+
                 //MARK: Toggle Dark Mode
                 Toggle(isOn: $isDarkMode) {
                     Text("Dark Mode")
