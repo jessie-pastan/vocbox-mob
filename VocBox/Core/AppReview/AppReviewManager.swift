@@ -14,7 +14,7 @@ class AppReviewManager : ObservableObject {
     
     private let userDefaults = UserDefaults.standard
     
-    private let thresholdSet: Set<Int> = [5, 25, 40]
+    private let thresholdSet: Set<Int> = [5, 15, 25]
     
 
     //MARK: Verify to prompt a write review to user
@@ -24,7 +24,7 @@ class AppReviewManager : ObservableObject {
         guard let currentVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String else {
             fatalError("Expected to find a bundle version in the info dictionary")
         }
-        //Verify if user hit 5th, 25th, 40th saved vocab in storage
+        //modify this function after user get 100% scrore and Verify if user hit 5th, 15th, 25th saved vocab in storage
         let reachedThreshold = thresholdSet.contains(userVocab)
         
         //Verify version is user's latest version

@@ -154,6 +154,18 @@ struct ProfileView: View {
                 .foregroundColor(Color.text)
                 .listRowBackground(Color.card)
                 
+                //MARK: Send Email to support
+                VStack{
+                    Button(action: {
+                       EmailController.shared.sendEmail(subject: "", body: "", to: "vocbox.contact@gmail.com")
+                     }) {
+                         Text("Contact us")
+                     }
+                }
+                .id(UUID())
+                .foregroundColor(Color.text)
+                .listRowBackground(Color.card)
+                
                 
                 //MARK: Delete score history
                 if !scores.isEmpty {

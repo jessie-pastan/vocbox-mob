@@ -24,7 +24,6 @@ import SwiftUI
          */
         
             if UserDefaults.standard.bool(forKey: AppConstants.hasVisitedAppKey) {
-                //TestSubscription()
                 ReviewVocView()
                     .modifier(DarkModeViewModifier())
                     .environment(\.managedObjectContext,CoreDataController().container.viewContext)

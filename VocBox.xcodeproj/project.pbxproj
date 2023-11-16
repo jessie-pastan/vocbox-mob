@@ -20,8 +20,6 @@
 		7571F9582B002AEA00229DEA /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7571F9572B002AEA00229DEA /* StoreKit.framework */; };
 		7571F95A2B002BD900229DEA /* VocBoxProduct.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 7571F9592B002BD900229DEA /* VocBoxProduct.storekit */; };
 		7571F95B2B002BD900229DEA /* VocBoxProduct.storekit in Resources */ = {isa = PBXBuildFile; fileRef = 7571F9592B002BD900229DEA /* VocBoxProduct.storekit */; };
-		7571F95D2B003D2F00229DEA /* TestSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7571F95C2B003D2F00229DEA /* TestSubscription.swift */; };
-		7571F95E2B003D2F00229DEA /* TestSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7571F95C2B003D2F00229DEA /* TestSubscription.swift */; };
 		7571F96D2B03D39800229DEA /* SubScriptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7571F96C2B03D39800229DEA /* SubScriptionButton.swift */; };
 		7571F9702B03DBE300229DEA /* AppReviewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7571F96F2B03DBE300229DEA /* AppReviewManager.swift */; };
 		7571F9722B04071300229DEA /* AppReviewLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7571F9712B04071300229DEA /* AppReviewLinkView.swift */; };
@@ -29,7 +27,6 @@
 		758FDFE82AF99EB70006B2C0 /* NoFavoriteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758FDFE72AF99EB70006B2C0 /* NoFavoriteCard.swift */; };
 		75BF2CAD2ACC8D11003A32E6 /* WidgetSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CAC2ACC8D11003A32E6 /* WidgetSettingView.swift */; };
 		75BF2CB12ACCB5FD003A32E6 /* MostRecallVocabRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CB02ACCB5FD003A32E6 /* MostRecallVocabRow.swift */; };
-		75BF2CB32ACCB859003A32E6 /* RecallStatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CB22ACCB859003A32E6 /* RecallStatisticsViewModel.swift */; };
 		75BF2CB52ACCF5EB003A32E6 /* LeastRecallVocabRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CB42ACCF5EB003A32E6 /* LeastRecallVocabRow.swift */; };
 		75BF2CB72ACD052B003A32E6 /* TotalVocabRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CB62ACD052B003A32E6 /* TotalVocabRow.swift */; };
 		75BF2CB92ACE47BB003A32E6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CB82ACE47BB003A32E6 /* ProfileView.swift */; };
@@ -44,7 +41,6 @@
 		75BF2CD52AD3ABB7003A32E6 /* TakeAChallengeCard .swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CD42AD3ABB7003A32E6 /* TakeAChallengeCard .swift */; };
 		75D816962AD7603E009D76B5 /* ReadWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D816952AD7603E009D76B5 /* ReadWord.swift */; };
 		75D816B52AD89C89009D76B5 /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D816B42AD89C89009D76B5 /* StatisticView.swift */; };
-		75D816B72AD8EB14009D76B5 /* TestStatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D816B62AD8EB14009D76B5 /* TestStatisticView.swift */; };
 		75D816B92ADAFB74009D76B5 /* VocabPronunciation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D816B82ADAFB74009D76B5 /* VocabPronunciation.swift */; };
 		75D816BB2ADB003B009D76B5 /* FetchPronunciation .swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D816BA2ADB003B009D76B5 /* FetchPronunciation .swift */; };
 		75D816C22ADB34E0009D76B5 /* GetApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D816C12ADB34E0009D76B5 /* GetApiKey.swift */; };
@@ -86,6 +82,7 @@
 		75F9C8212AF4215F008A0430 /* FontExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7BD2AE20040008A0430 /* FontExtention.swift */; };
 		75F9C8222AF421C5008A0430 /* CustomFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7BA2AE1FFAA008A0430 /* CustomFont.swift */; };
 		75F9C8242AF42C52008A0430 /* WidgetCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C8232AF42C52008A0430 /* WidgetCard.swift */; };
+		75FFDE632B059A67007E53B9 /* EmailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75FFDE622B059A67007E53B9 /* EmailController.swift */; };
 		8304D7E12AB3DC2D00C9A9B1 /* VocBoxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304D7E02AB3DC2D00C9A9B1 /* VocBoxApp.swift */; };
 		8304D7E52AB3DC2F00C9A9B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8304D7E42AB3DC2F00C9A9B1 /* Assets.xcassets */; };
 		8304D7E82AB3DC2F00C9A9B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8304D7E72AB3DC2F00C9A9B1 /* Preview Assets.xcassets */; };
@@ -142,7 +139,6 @@
 		7571F9542B0029C300229DEA /* StoreKitManager .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StoreKitManager .swift"; sourceTree = "<group>"; };
 		7571F9572B002AEA00229DEA /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		7571F9592B002BD900229DEA /* VocBoxProduct.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = VocBoxProduct.storekit; sourceTree = "<group>"; };
-		7571F95C2B003D2F00229DEA /* TestSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSubscription.swift; sourceTree = "<group>"; };
 		7571F96C2B03D39800229DEA /* SubScriptionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubScriptionButton.swift; sourceTree = "<group>"; };
 		7571F96F2B03DBE300229DEA /* AppReviewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReviewManager.swift; sourceTree = "<group>"; };
 		7571F9712B04071300229DEA /* AppReviewLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReviewLinkView.swift; sourceTree = "<group>"; };
@@ -150,7 +146,6 @@
 		758FDFE72AF99EB70006B2C0 /* NoFavoriteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoFavoriteCard.swift; sourceTree = "<group>"; };
 		75BF2CAC2ACC8D11003A32E6 /* WidgetSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSettingView.swift; sourceTree = "<group>"; };
 		75BF2CB02ACCB5FD003A32E6 /* MostRecallVocabRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostRecallVocabRow.swift; sourceTree = "<group>"; };
-		75BF2CB22ACCB859003A32E6 /* RecallStatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecallStatisticsViewModel.swift; sourceTree = "<group>"; };
 		75BF2CB42ACCF5EB003A32E6 /* LeastRecallVocabRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeastRecallVocabRow.swift; sourceTree = "<group>"; };
 		75BF2CB62ACD052B003A32E6 /* TotalVocabRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalVocabRow.swift; sourceTree = "<group>"; };
 		75BF2CB82ACE47BB003A32E6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -165,7 +160,6 @@
 		75BF2CD42AD3ABB7003A32E6 /* TakeAChallengeCard .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TakeAChallengeCard .swift"; sourceTree = "<group>"; };
 		75D816952AD7603E009D76B5 /* ReadWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadWord.swift; sourceTree = "<group>"; };
 		75D816B42AD89C89009D76B5 /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
-		75D816B62AD8EB14009D76B5 /* TestStatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStatisticView.swift; sourceTree = "<group>"; };
 		75D816B82ADAFB74009D76B5 /* VocabPronunciation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabPronunciation.swift; sourceTree = "<group>"; };
 		75D816BA2ADB003B009D76B5 /* FetchPronunciation .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FetchPronunciation .swift"; sourceTree = "<group>"; };
 		75D816C12ADB34E0009D76B5 /* GetApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetApiKey.swift; sourceTree = "<group>"; };
@@ -201,6 +195,7 @@
 		75F9C81B2AF34FA0008A0430 /* VocBox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VocBox.entitlements; sourceTree = "<group>"; };
 		75F9C81C2AF35048008A0430 /* VocBoxWidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VocBoxWidgetsExtension.entitlements; sourceTree = "<group>"; };
 		75F9C8232AF42C52008A0430 /* WidgetCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetCard.swift; sourceTree = "<group>"; };
+		75FFDE622B059A67007E53B9 /* EmailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailController.swift; sourceTree = "<group>"; };
 		8304D7DD2AB3DC2D00C9A9B1 /* VocBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8304D7E02AB3DC2D00C9A9B1 /* VocBoxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocBoxApp.swift; sourceTree = "<group>"; };
 		8304D7E42AB3DC2F00C9A9B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -269,8 +264,6 @@
 			children = (
 				75D816B42AD89C89009D76B5 /* StatisticView.swift */,
 				75621A792AC8D35A00B407A9 /* StatisticsViewModel.swift */,
-				75BF2CB22ACCB859003A32E6 /* RecallStatisticsViewModel.swift */,
-				75D816B62AD8EB14009D76B5 /* TestStatisticView.swift */,
 			);
 			path = Statistics;
 			sourceTree = "<group>";
@@ -394,6 +387,14 @@
 			path = VocBoxWidgets;
 			sourceTree = "<group>";
 		};
+		75FFDE592B05932D007E53B9 /* SendEmail */ = {
+			isa = PBXGroup;
+			children = (
+				75FFDE622B059A67007E53B9 /* EmailController.swift */,
+			);
+			path = SendEmail;
+			sourceTree = "<group>";
+		};
 		8304D7D42AB3DC2D00C9A9B1 = {
 			isa = PBXGroup;
 			children = (
@@ -454,6 +455,7 @@
 				8304D7F62AB3DD7000C9A9B1 /* EditVoc */,
 				75BF2CA92ACC8CCD003A32E6 /* Profile */,
 				8304D7F92AB3DD9A00C9A9B1 /* RecallVoc */,
+				75FFDE592B05932D007E53B9 /* SendEmail */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -530,7 +532,6 @@
 			isa = PBXGroup;
 			children = (
 				83E590CA2AB527FC002ABD04 /* ReviewVocView.swift */,
-				7571F95C2B003D2F00229DEA /* TestSubscription.swift */,
 			);
 			path = ReviewVoc;
 			sourceTree = "<group>";
@@ -682,7 +683,6 @@
 				75F9C8222AF421C5008A0430 /* CustomFont.swift in Sources */,
 				7571F9562B0029C300229DEA /* StoreKitManager .swift in Sources */,
 				75F9C8182AF34001008A0430 /* DataModel.xcdatamodeld in Sources */,
-				7571F95E2B003D2F00229DEA /* TestSubscription.swift in Sources */,
 				75F9C81D2AF417D9008A0430 /* Extentions .swift in Sources */,
 				75F9C80E2AF33FEC008A0430 /* VocBoxWidgets.swift in Sources */,
 				75F9C8212AF4215F008A0430 /* FontExtention.swift in Sources */,
@@ -721,12 +721,12 @@
 				75F9C7BE2AE20040008A0430 /* FontExtention.swift in Sources */,
 				75F9C7B22AE0DB45008A0430 /* AppConstant.swift in Sources */,
 				83E590D22AB571ED002ABD04 /* PartOfSpeech.swift in Sources */,
+				75FFDE632B059A67007E53B9 /* EmailController.swift in Sources */,
 				758FDFE82AF99EB70006B2C0 /* NoFavoriteCard.swift in Sources */,
 				75F9C7CB2AE99DCF008A0430 /* LottieView.swift in Sources */,
 				75D816962AD7603E009D76B5 /* ReadWord.swift in Sources */,
 				83E5AA562ABBD8BC00136C34 /* RecallVocViewModel.swift in Sources */,
 				75BF2CD52AD3ABB7003A32E6 /* TakeAChallengeCard .swift in Sources */,
-				75D816B72AD8EB14009D76B5 /* TestStatisticView.swift in Sources */,
 				8304D7F52AB3DD6500C9A9B1 /* AddVocView.swift in Sources */,
 				75621A6B2AC2606B00B407A9 /* Vocab.swift in Sources */,
 				75F9C7D12AEB104F008A0430 /* localNotification.swift in Sources */,
@@ -737,7 +737,6 @@
 				83E590BD2AB3E81F002ABD04 /* DataModel.xcdatamodeld in Sources */,
 				75BF2CB12ACCB5FD003A32E6 /* MostRecallVocabRow.swift in Sources */,
 				8304D7E12AB3DC2D00C9A9B1 /* VocBoxApp.swift in Sources */,
-				75BF2CB32ACCB859003A32E6 /* RecallStatisticsViewModel.swift in Sources */,
 				83E590C12AB3E9FF002ABD04 /* EntityExtentions.swift in Sources */,
 				75F9C7D32AEB51FB008A0430 /* ReminderSetting.swift in Sources */,
 				7571F9742B0408A300229DEA /* AppReviewCard .swift in Sources */,
@@ -756,7 +755,6 @@
 				8304D7FB2AB3DDD400C9A9B1 /* RecallVocView.swift in Sources */,
 				7571F9702B03DBE300229DEA /* AppReviewManager.swift in Sources */,
 				75F9C7AC2AE06007008A0430 /* OnboardingPage.swift in Sources */,
-				7571F95D2B003D2F00229DEA /* TestSubscription.swift in Sources */,
 				75621A722AC3A7C300B407A9 /* Confetti.swift in Sources */,
 				750D26AD2ABE8E1D00300914 /* CreateFirstVocabCard.swift in Sources */,
 				75D816BB2ADB003B009D76B5 /* FetchPronunciation .swift in Sources */,
