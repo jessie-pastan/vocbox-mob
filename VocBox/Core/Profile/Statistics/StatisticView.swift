@@ -41,7 +41,7 @@ struct StatisticView: View {
                     if !scores.isEmpty {
                         
                         VStack(alignment: .leading){
-                            Text("Statistic").bold().font(.title)
+                            Text("Statistic").font(.custom(.playfairBold, size: 28))
                                 .padding(.leading)
                             ScrollView {
                                 

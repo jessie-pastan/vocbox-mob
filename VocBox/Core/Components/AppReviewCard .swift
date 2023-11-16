@@ -21,7 +21,7 @@ struct AppReviewCard: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 100, height: 100)
-                Text("We really appreciate your time for our app review!")
+                Text("We really appreciate you taking the time to review our app!")
                     .font(.custom(.playfairBold, size: 22))
                     .padding(.horizontal)
                     .foregroundColor(.black)

@@ -21,7 +21,7 @@ struct MostRecallVocabRow: View {
                 HStack{
                     Text("💪 Most")+Text(mostRecalledArray.count > 1 ? " Words" : " Word")+Text(" Recalled")
                 }
-                .bold()
+                .font(.custom(.playfairBold, size: 17))
                 
                 ForEach(mostRecalledArray, id: \.0){ vocab in
                     HStack{

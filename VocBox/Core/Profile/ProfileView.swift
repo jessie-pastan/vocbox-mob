@@ -35,10 +35,10 @@ struct ProfileView: View {
         VStack(alignment: .leading) {
          
             HStack{
-                Image(systemName: "person.circle").resizable().scaledToFill().frame(width: 50, height: 50)
+                Image(systemName: "person.circle").resizable().scaledToFill().frame(width: 50      , height: 50)
                 Text("Joined \(user[0].viewJoinedDate)")
             }
-            .font(.custom(.playfairBold, size: 17))
+            .font(.custom(.playfairBold, size: 22))
             .padding(.top,20)
             .padding(.bottom,-20)
             .padding(.horizontal)
@@ -103,7 +103,7 @@ struct ProfileView: View {
                     ReminderView(user: user[0])
                     
                 } label: {
-                    Text("Daily reminder")
+                    Text("Daily Reminder")
                 }
                 .id(UUID())
                 .foregroundColor(Color.text)
@@ -132,7 +132,7 @@ struct ProfileView: View {
                             openURL(link)
                         }
                     } label: {
-                        Text("Privacy policy")
+                        Text("Privacy Policy")
                     }
                 }
                 .id(UUID())
@@ -147,7 +147,7 @@ struct ProfileView: View {
                             openURL(link)
                         }
                     } label: {
-                        Text("Terms of use")
+                        Text("Terms of Use")
                     }
                 }
                 .id(UUID())

@@ -12,6 +12,7 @@ struct ProUpgradeView: View {
     
     @EnvironmentObject var storeViewModel: StoreViewModel
     @Environment(\.colorScheme) var colorScheme
+    
     @State var isPurchased = false
     @Environment(\.openURL) var openURL
     
@@ -33,7 +34,7 @@ struct ProUpgradeView: View {
             
             VStack {
                 VStack(alignment: .center) {
-                    Text(" Unlock limited")
+                    Text(" Unlock unlimited")
                     Text("vocabulary adding")
                 }
                 .padding(.top, -30)
@@ -54,7 +55,7 @@ struct ProUpgradeView: View {
                     
                     HStack(alignment: .firstTextBaseline) {
                         Image(systemName: "checkmark.square")
-                        Text("Reinforce vocabulary memory with fun challenge")
+                        Text("Reinforce vocabulary memory with a fun challenge")
                             .fixedSize(horizontal: false, vertical: true)
                     }
                     

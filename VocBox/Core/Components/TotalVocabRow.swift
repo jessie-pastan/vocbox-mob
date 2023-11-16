@@ -21,14 +21,14 @@ struct TotalVocabRow: View {
             VStack(alignment: .center){
                 
                 if  vocabs.count > 1 {
-                    Text("📦 \(vocabs.count) Vocabulary words in the box").bold()
+                    Text("📦 \(vocabs.count)").font(.headline) + Text(" Vocabulary words in the box").font(.custom(.playfairBold, size: 17))
                 }
                 else {
-                    Text("📦 \(vocabs.count) Vocabulary word in the box").bold()
+                    Text("📦 \(vocabs.count)").font(.headline) + Text(" Vocabulary word in the box").font(.custom(.playfairBold, size: 17))
                 }
                 
                 HStack {
-                    Text("🌟 Total challenge score :").bold() + Text(" \(totalRecalled)")
+                    Text("🌟 Total challenge score :").font(.custom(.playfairBold, size: 17)) + Text(" \(totalRecalled)")
                 }
             }
             
