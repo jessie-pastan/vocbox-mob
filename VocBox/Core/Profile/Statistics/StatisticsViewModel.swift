@@ -71,26 +71,22 @@ class StatisticsViewModel: ObservableObject {
     }
     
     
-    func calculateSuccessRecalledVocab(vocabs: FetchedResults<Vocab>) {
-        var totalRecalled = 0
-        
-        for entity in vocabs {
-            totalRecalled += entity.viewRecall
-        }
-        
-        let wordUnit = addUnitOfRecallString(recall: totalRecalled)
-        self.totalRecalledString = "\(String(totalRecalled)) \(wordUnit)"
-    }
-    
-    
-    func addUnitOfRecallString(recall : Int) -> String {
-        if self.totalRecalled != 0 || self.totalRecalled != 1 {
-            return "points"
-        }else {
-            return "point"
+    //this func reach out to total challenge value in user defaults
+    func successRecalledVocab() {
+        // Reading the Int value from UserDefaults
+        if let savedScore = UserDefaults.standard.object(forKey: AppConstants.totalChallengeScore) as? Int {
+            // Value exists and is of the expected type (Int)
+            self.totalRecalled = savedScore
+            print("Retrieved Int value:", savedScore)
+        } else {
+            // Value doesn't exist or is not an Int
+            print("No valid Int value found for the key:", AppConstants.totalChallengeScore)
         }
     }
     
+    
+   
+
     func findMostRecallVocab(recalls: FetchedResults<Vocab>) {
         // find top3 vocabs that user recalled
         // or if there is less than 3 vocab, display all 

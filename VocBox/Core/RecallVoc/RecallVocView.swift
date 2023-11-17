@@ -124,6 +124,9 @@ struct RecallVocView: View {
                     //MARK: if user recall word successfully
                     else if  vm.vocabExistInCoreData(text: trimmedText, vocabs: arrayOfVocab) {
                         currentScore += 1
+                        // increase score in user defaults
+                        vm.increaseScoreInUserDefaults()
+                        
                         
                         //MARK: update recall amount if that Vocab
                         CoreDataController().updateVocabRecall(vocabs: vocabs, successfullRecalledVocab: trimmedText, context: moc)

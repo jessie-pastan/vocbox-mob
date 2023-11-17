@@ -20,16 +20,17 @@ struct ProUpgradeView: View {
         
         VStack {
             Spacer()
+            
             if colorScheme == .light {
                 Image("unlocked_light")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 200, height: 200)
+                    .frame(width: 150, height: 150)
             }else {
                 Image("unlocked_dark")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 200, height: 200)
+                    .frame(width: 150, height: 150)
             }
             
             VStack {
@@ -38,7 +39,7 @@ struct ProUpgradeView: View {
                     Text("vocabulary adding")
                 }
                 .padding(.top, -30)
-                .font(.custom(.playfairBold, size: 30))
+                .font(.custom(.playfairBold, size: 25))
                 
                 Spacer()
                 
@@ -92,7 +93,7 @@ struct ProUpgradeView: View {
                                 SubScriptionButton(title: "Start 3 days free trial", subtitle: "then $9.99 / year")
                             }
                             .frame(maxWidth: .infinity)
-                            .frame(height: 70)
+                            .frame(height: 60)
                         }
                         .padding()
                         
@@ -143,7 +144,7 @@ struct ProUpgradeView: View {
                     }
                     
                 }
-            }
+            }.foregroundColor(colorScheme == .light ? Color.black : Color.white)
            
         }
         .background(Color(.background))

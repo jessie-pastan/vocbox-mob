@@ -13,7 +13,7 @@ class AppReviewManager : ObservableObject {
     var linkReview = URL(string: "https://apps.apple.com/app/id6471903173?action=write-review")
     
     private let userDefaults = UserDefaults.standard
-    
+    private let limit: Int = 20
     private let thresholdSet: Set<Int> = [5, 15, 25]
     
 
@@ -21,17 +21,18 @@ class AppReviewManager : ObservableObject {
     func canAskForReview(userVocab: Int) -> Bool {
         
         let mostRecentReviewed = userDefaults.string(forKey: AppConstants.lastReviewedVersionKey)
+        let savedScore = userDefaults.integer(forKey: AppConstants.totalChallengeScore)
         guard let currentVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String else {
             fatalError("Expected to find a bundle version in the info dictionary")
         }
         //modify this function after user get 100% scrore and Verify if user hit 5th, 15th, 25th saved vocab in storage
         let reachedThreshold = thresholdSet.contains(userVocab)
-        
+        let scoreLimitHit =  savedScore.isMultiple(of: limit)
         //Verify version is user's latest version
         let isNewVersion = currentVersion != mostRecentReviewed
         
-        guard reachedThreshold && isNewVersion  else {
-            //if it's not reach threshold and if it's not new app version return false
+        guard reachedThreshold && isNewVersion || scoreLimitHit && isNewVersion  else {
+            //if it's not reach threshold and if it's not new app  or if it's not hit score limit and not new app version return false
             return false
         }
         //save current version to user default

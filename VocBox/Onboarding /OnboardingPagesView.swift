@@ -31,9 +31,8 @@ struct OnboardingPagesView: View {
                             if page == pages.last {
                                 Button {
                                     readyToNavigate = true
-                                    //TODO: UnComment this function for production testing
+                                    //TODO: Uncomment this function for production testing
                                     //Action: Save joined date of user
-                                    
                                     CoreDataController().addUserJoinedDate(context: moc)
                                     print("DeBug: Saved joined date")
                                     

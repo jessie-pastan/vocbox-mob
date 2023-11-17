@@ -11,7 +11,7 @@ struct TotalVocabRow: View {
     
     
     var vocabs: FetchedResults<Vocab>
-    var totalRecalled: String
+    var totalRecalled: Int
 
     
     var body: some View {

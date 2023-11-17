@@ -20,7 +20,20 @@ class RecallVocViewModel: ObservableObject {
     
     @Published var hint = ""
     
+    @Published var totalScore: Int = 0
+    
+    
     var DefinitionHints = [String]()
+    
+    
+    
+    // this function add 1 score to user defaults everytime user get correct answer and this will show in statistic total score
+    func increaseScoreInUserDefaults() {
+        var savedScore  = UserDefaults.standard.integer(forKey: AppConstants.totalChallengeScore)
+        savedScore += 1
+        UserDefaults.standard.set(savedScore, forKey: AppConstants.totalChallengeScore)
+    }
+    
     
     
     func vocabExistInCoreData(text: String, vocabs: [Vocab]) -> Bool {

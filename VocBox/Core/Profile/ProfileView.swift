@@ -26,8 +26,7 @@ struct ProfileView: View {
     
     @FetchRequest(sortDescriptors: [SortDescriptor(\.joinedDate)]) private var user: FetchedResults<User>
     
-    //@FetchRequest(sortDescriptors: [SortDescriptor(\.reminderTime)]) private var user: FetchedResults<User>
-    
+
     var body: some View {
         
      
@@ -56,6 +55,7 @@ struct ProfileView: View {
                             Text("Pro Upgrade")
                         }
                         .id(UUID())
+                        
                        
                     }else {
                         //show that user already subscribed
@@ -109,7 +109,7 @@ struct ProfileView: View {
                 .foregroundColor(Color.text)
                 .listRowBackground(Color.card)
                 
-                
+        
                 //MARK: Review
                  //got freeze when app not available in app store ??
                 VStack {
@@ -117,12 +117,28 @@ struct ProfileView: View {
                     NavigationLink {
                         AppReviewLinkView()
                     } label: {
-                        Text("Leave a review")
+                        Text("Leave Review")
                     }
                 }
                 .id(UUID())
                 .foregroundColor(Color.text)
                 .listRowBackground(Color.card)
+                
+                //MARK: Share app to a friend
+                VStack {
+                    NavigationLink {
+                        ShareAppView()
+                    }label: {
+                        Text("Share App")
+                    }
+                }
+                .id(UUID())
+                .foregroundColor(Color.text)
+                .listRowBackground(Color.card)
+                
+                
+                
+                
 
                 //MARK: Privacy policy
                 VStack {
@@ -183,6 +199,7 @@ struct ProfileView: View {
                             HStack{
                                 Button(role: .destructive) {
                                     CoreDataController().deleteScores(scores: scores, context: moc)
+                                    UserDefaults.standard.removeObject(forKey: AppConstants.totalChallengeScore)
                                 } label: {
                                     Text("Delete")
                                 }
@@ -205,6 +222,7 @@ struct ProfileView: View {
                 .tint(Color(.button))
                 .listRowBackground(Color.card)
             }
+            .id(UUID())
             .foregroundColor(Color.text)
             .scrollContentBackground(.hidden)
             .scrollDisabled(true)

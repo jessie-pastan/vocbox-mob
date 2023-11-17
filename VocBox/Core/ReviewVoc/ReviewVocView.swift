@@ -25,7 +25,7 @@ struct ReviewVocView: View {
     @State private var isShowAscending = false
     @State private var isShowDescending = false
 
-    @State private var profileViewIsShow = false
+    //@State private var profileViewIsShow = false
     
     @State private var isShowNoFavoriteCard = false
     
@@ -170,11 +170,11 @@ struct ReviewVocView: View {
                            ProfileView()
                         }label: {
                             Image(systemName: "person.crop.circle")
-                                .foregroundColor(Color(UIColor.label))
+                                .foregroundColor(vocabs.isEmpty ? Color.gray : Color(UIColor.label))
                         }
-                        
-                        
+                        .disabled(vocabs.isEmpty)
                     }
+                    
                 }
              
         

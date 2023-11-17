@@ -46,6 +46,7 @@
 		75D816C22ADB34E0009D76B5 /* GetApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D816C12ADB34E0009D76B5 /* GetApiKey.swift */; };
 		75D816C42ADB3662009D76B5 /* WNApiKey.json in Resources */ = {isa = PBXBuildFile; fileRef = 75D816C32ADB3662009D76B5 /* WNApiKey.json */; };
 		75D816C62ADB599D009D76B5 /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D816C52ADB599D009D76B5 /* ApiKey.swift */; };
+		75E5283A2B06A9F6001DFBD3 /* ShareAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E528392B06A9F6001DFBD3 /* ShareAppView.swift */; };
 		75F9C7A62ADF297B008A0430 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7A52ADF297B008A0430 /* SplashScreenView.swift */; };
 		75F9C7AC2AE06007008A0430 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7AB2AE06007008A0430 /* OnboardingPage.swift */; };
 		75F9C7AE2AE06198008A0430 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7AD2AE06198008A0430 /* OnboardingView.swift */; };
@@ -165,6 +166,7 @@
 		75D816C12ADB34E0009D76B5 /* GetApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetApiKey.swift; sourceTree = "<group>"; };
 		75D816C32ADB3662009D76B5 /* WNApiKey.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = WNApiKey.json; sourceTree = "<group>"; };
 		75D816C52ADB599D009D76B5 /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
+		75E528392B06A9F6001DFBD3 /* ShareAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareAppView.swift; sourceTree = "<group>"; };
 		75F9C7A52ADF297B008A0430 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		75F9C7AB2AE06007008A0430 /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
 		75F9C7AD2AE06198008A0430 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				75BF2CB82ACE47BB003A32E6 /* ProfileView.swift */,
+				75E528382B06A9D1001DFBD3 /* ShareApp */,
 				75BF2CC22ACF2AF6003A32E6 /* ProUpgrade */,
 				75BF2CBF2ACF2854003A32E6 /* Reminder */,
 				75BF2CAA2ACC8CE7003A32E6 /* Widget */,
@@ -332,6 +335,14 @@
 				75D816C32ADB3662009D76B5 /* WNApiKey.json */,
 			);
 			path = ApiKey;
+			sourceTree = "<group>";
+		};
+		75E528382B06A9D1001DFBD3 /* ShareApp */ = {
+			isa = PBXGroup;
+			children = (
+				75E528392B06A9F6001DFBD3 /* ShareAppView.swift */,
+			);
+			path = ShareApp;
 			sourceTree = "<group>";
 		};
 		75F9C7A12ADE17EC008A0430 /* GitIgnore */ = {
@@ -713,6 +724,7 @@
 				75BF2CCA2AD0C3D3003A32E6 /* DefinitionView .swift in Sources */,
 				75BF2CB72ACD052B003A32E6 /* TotalVocabRow.swift in Sources */,
 				75F9C8242AF42C52008A0430 /* WidgetCard.swift in Sources */,
+				75E5283A2B06A9F6001DFBD3 /* ShareAppView.swift in Sources */,
 				75F9C81A2AF34010008A0430 /* VocBoxWidgets.swift in Sources */,
 				7571F9552B0029C300229DEA /* StoreKitManager .swift in Sources */,
 				7571F96D2B03D39800229DEA /* SubScriptionButton.swift in Sources */,

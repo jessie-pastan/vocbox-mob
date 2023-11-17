@@ -9,6 +9,7 @@ import Foundation
 struct AppConstants {
     static let hasVisitedAppKey = "HasVisitedAppKey"
     static let lastReviewedVersionKey = "lastReviewedVersionKey"
+    static let totalChallengeScore = "totalChallengeScoreKey"
     static let privacyPolicyLink = URL(string: "https://sites.google.com/view/vocbox-privacy-policy/home")
     static let termsOfUseLink = URL(string: "https://sites.google.com/view/terms-of-use-for-vocbox/home")
 }

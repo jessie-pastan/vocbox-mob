@@ -40,9 +40,11 @@ struct StatisticView: View {
                 .overlay {
                     if !scores.isEmpty {
                         
-                        VStack(alignment: .leading){
+                        VStack(alignment: .leading) {
+                            
                             Text("Statistic").font(.custom(.playfairBold, size: 28))
                                 .padding(.leading)
+                            
                             ScrollView {
                                 
                                 GeometryReader { proxy in
@@ -50,7 +52,7 @@ struct StatisticView: View {
                                         
                                         StatisticsCardRow(heighestPercentage: vm.heighestPercentage, heighestDate: vm.heighestDate, heighestScore: vm.heighestScore, heighestScoreVocabAmount: vm.heighestScoreVocabAmount, lastestPercentage: vm.lastestPercentage, lastestDate: vm.lastestDate, lastestScore: vm.lastestScore, lastestScoreVocabAmount: vm.lastestScoreVocabAmount)
                                         
-                                        TotalVocabRow(vocabs: vocabs, totalRecalled: vm.totalRecalledString)
+                                        TotalVocabRow(vocabs: vocabs, totalRecalled: vm.totalRecalled)
                                         
                                         MostRecallVocabRow(mostRecalledArray: vm.mostRecalledArray)
                                         LeastRecallVocabRow(leastRecalledArray: vm.leastRecalledArray)
@@ -62,7 +64,7 @@ struct StatisticView: View {
                             }
                         }
                         .onAppear{
-                            vm.calculateSuccessRecalledVocab(vocabs: vocabs)
+                            vm.successRecalledVocab()
                             vm.findHighestPercentage(scores: scores, context: moc)
                             vm.findLastestPercentage(scores: scores, context: moc)
                             vm.findMostRecallVocab(recalls: mostRecalls)

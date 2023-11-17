@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DefinitionView: View {
     
-    @Environment(\.dismiss) var dissmiss
+    @Environment(\.dismiss) var dismiss
     
     
     @Binding var selectedVocab: Vocab?
@@ -24,7 +24,7 @@ struct DefinitionView: View {
                 HStack{
                     Spacer()
                     Button {
-                        dissmiss()
+                        dismiss()
                     } label: {
                         Image(systemName: "x.circle.fill")
                             .foregroundColor(Color(UIColor.label))
