@@ -56,10 +56,10 @@ struct ProUpgradeView: View {
                     
                     HStack(alignment: .firstTextBaseline) {
                         Image(systemName: "checkmark.square")
-                        Text("Reinforce vocabulary memory with a fun challenge")
+                        Text("Reinforce more vocabulary memory with the fun challenge")
                             .fixedSize(horizontal: false, vertical: true)
                     }
-                    
+                    /*
                     HStack(alignment: .firstTextBaseline){
                         Image(systemName: "checkmark.square")
                         Text("Set reminder for your daily vocabulary study time")
@@ -71,7 +71,7 @@ struct ProUpgradeView: View {
                             Text("Quick vocabulary glance on the widget screen")
                             .fixedSize(horizontal: false, vertical: true)
                         }
-                      
+                      */
                 }
                 .padding(.horizontal)
                 .padding(.top, 5)

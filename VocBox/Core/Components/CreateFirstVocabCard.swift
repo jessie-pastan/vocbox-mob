@@ -21,9 +21,9 @@ struct CreateFirstVocabCard: View {
                 VStack{
                     Spacer()
                     
-                    Image("open-box")
+                    Image("openEmptyBox")
                         .resizable().aspectRatio(contentMode: .fill)
-                        .frame(width: 200, height: 200)
+                        .frame(width: 220, height: 220)
                         .offset(y: yOffset)
                         //.animation(.spring(response: 1.3, dampingFraction: 0), value: isBounce)
                         .onAppear{

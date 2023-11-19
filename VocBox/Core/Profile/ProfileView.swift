@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreData
+import StoreKit
 
 struct ProfileView: View {
     
@@ -16,14 +17,13 @@ struct ProfileView: View {
     
     @EnvironmentObject var storeViewModel: StoreViewModel
     
-    
     @Environment(\.dismiss) var dismiss
     @Environment(\.openURL) var openURL
     
     @State private var isShowAlert = false
     
     @FetchRequest(sortDescriptors: [SortDescriptor(\.date, order: .reverse)]) private var scores: FetchedResults<Score>
-    
+
     @FetchRequest(sortDescriptors: [SortDescriptor(\.joinedDate)]) private var user: FetchedResults<User>
     
 
@@ -43,189 +43,174 @@ struct ProfileView: View {
             .padding(.horizontal)
             .foregroundColor(Color(UIColor.label))
             
-            
-            List{
-                
-                 //MARK: Pro Upgrade
-                VStack{
-                    if storeViewModel.purchasedSubsriptions.isEmpty {
-                        NavigationLink {
-                            ProUpgradeView()
-                        } label: {
-                            Text("Pro Upgrade")
-                        }
-                        .id(UUID())
-                        
-                       
-                    }else {
-                        //show that user already subscribed
-                        Text("Pro Upgraded")
-                        
-                    }
-                }
-                .foregroundColor(Color.text)
-                .listRowBackground(Color.card)
-                 
-                
-                //MARK: Statictics navigate bar
-                NavigationLink {
-                    StatisticView()
-                } label: {
-                    Text("Statistics")
-                }
-                .id(UUID())
-                .foregroundColor(Color.text)
-                .listRowBackground(Color.card)
-                
-                
-                //MARK: Search Screen
-                NavigationLink {
-                    SearchView()
-                } label: {
-                    Text("Search")
-                }
-                .id(UUID())
-                .foregroundColor(Color.text)
-                .listRowBackground(Color.card)
-                
-                //MARK: Widget setting
-                NavigationLink {
-                    WidgetSettingView()
-                } label: {
-                    Text("Widget")
-                }
-                .id(UUID())
-                .foregroundColor(Color.text)
-                .listRowBackground(Color.card)
-                
-                //MARK: Reminder
-                NavigationLink {
-                    ReminderView(user: user[0])
-                    
-                } label: {
-                    Text("Daily Reminder")
-                }
-                .id(UUID())
-                .foregroundColor(Color.text)
-                .listRowBackground(Color.card)
-                
-        
-                //MARK: Review
-                 //got freeze when app not available in app store ??
-                VStack {
-                    
+           
+                List{
+                    //MARK: Statictics navigate bar
                     NavigationLink {
-                        AppReviewLinkView()
+                        StatisticView()
                     } label: {
-                        Text("Leave Review")
+                        Text("Statistics")
                     }
-                }
-                .id(UUID())
-                .foregroundColor(Color.text)
-                .listRowBackground(Color.card)
-                
-                //MARK: Share app to a friend
-                VStack {
+                    //.id(UUID())
+                    .foregroundColor(Color.text)
+                    .listRowBackground(Color.card)
+                    
+                    
+                    //MARK: Search Screen
                     NavigationLink {
-                        ShareAppView()
-                    }label: {
-                        Text("Share App")
-                    }
-                }
-                .id(UUID())
-                .foregroundColor(Color.text)
-                .listRowBackground(Color.card)
-                
-                
-                
-                
-
-                //MARK: Privacy policy
-                VStack {
-                    Button {
-                        //open link url
-                        if let link  =  AppConstants.privacyPolicyLink {
-                            openURL(link)
-                        }
+                        SearchView()
                     } label: {
-                        Text("Privacy Policy")
+                        Text("Search")
                     }
-                }
-                .id(UUID())
-                .foregroundColor(Color.text)
-                .listRowBackground(Color.card)
-                
-                //MARK: Terms of use
-                VStack {
-                    Button {
-                        //open link url
-                        if let link  =  AppConstants.termsOfUseLink {
-                            openURL(link)
-                        }
+                    //.id(UUID())
+                    .foregroundColor(Color.text)
+                    .listRowBackground(Color.card)
+                    
+                    //MARK: Widget setting
+                    NavigationLink {
+                        WidgetSettingView()
                     } label: {
-                        Text("Terms of Use")
+                        Text("Widget")
                     }
-                }
-                .id(UUID())
-                .foregroundColor(Color.text)
-                .listRowBackground(Color.card)
-                
-                //MARK: Send Email to support
-                VStack{
-                    Button(action: {
-                       EmailController.shared.sendEmail(subject: "", body: "", to: "vocbox.contact@gmail.com")
-                     }) {
-                         Text("Contact us")
-                     }
-                }
-                .id(UUID())
-                .foregroundColor(Color.text)
-                .listRowBackground(Color.card)
-                
-                
-                //MARK: Delete score history
-                if !scores.isEmpty {
+                    //.id(UUID())
+                    .foregroundColor(Color.text)
+                    .listRowBackground(Color.card)
+                    
+                    //MARK: Reminder
+                    NavigationLink {
+                        ReminderView(user: user[0])
+                        
+                    } label: {
+                        Text("Daily Reminder")
+                    }
+                    //.id(UUID())
+                    .foregroundColor(Color.text)
+                    .listRowBackground(Color.card)
+                    
+                    
+                    //MARK: Review
                     VStack {
-                        Button {
-                            // show alert
-                            isShowAlert = true
+                        
+                        NavigationLink {
+                            AppReviewLinkView()
                         } label: {
-                            HStack{
-                                Text("Delete all score records")
-                            }
+                            Text("Leave Review")
                         }
-                        .alert("Are you sure you want to delete all score records?",
-                               isPresented: $isShowAlert) {
-                            HStack{
-                                Button(role: .destructive) {
-                                    CoreDataController().deleteScores(scores: scores, context: moc)
-                                    UserDefaults.standard.removeObject(forKey: AppConstants.totalChallengeScore)
-                                } label: {
-                                    Text("Delete")
-                                }
+                    }
+                    //.id(UUID())
+                    .foregroundColor(Color.text)
+                    .listRowBackground(Color.card)
+                    
+                    //MARK: Share app to a friend
+                    VStack {
+                        NavigationLink {
+                            ShareAppView()
+                        }label: {
+                            Text("Share App")
+                        }
+                    }
+                    //.id(UUID())
+                    .foregroundColor(Color.text)
+                    .listRowBackground(Color.card)
+                    
+                    
+                    //MARK: Pro Upgrade
+                    VStack{
+                        if storeViewModel.purchasedSubsriptions.isEmpty {
+                            NavigationLink {
+                                ProUpgradeView()
+                            } label: {
+                                Text("Pro Upgrade")
                             }
+                            //.id(UUID())
+                            
+                            
+                        }else {
+                            //show that user already subscribed
+                            Text("Pro Upgraded")
+                            
                         }
                     }
                     .foregroundColor(Color.text)
                     .listRowBackground(Color.card)
+                    
+                    
+                    
+                    //MARK: Delete score history
+                    if !scores.isEmpty {
+                        VStack {
+                            NavigationLink {
+                                ScoreDeleteView()
+                                
+                            } label: {
+                                HStack{
+                                    Text("Delete all score records")
+                                }
+                            }
+                        }
+                        .foregroundColor(Color.text)
+                        .listRowBackground(Color.card)
+                    }
+                    
+                    //MARK: Privacy policy
+                    VStack {
+                        Button {
+                            //open link url
+                            if let link  =  AppConstants.privacyPolicyLink {
+                                openURL(link)
+                            }
+                        } label: {
+                            Text("Privacy Policy")
+                        }
+                    }
+                    
+                    .foregroundColor(Color.text)
+                    .listRowBackground(Color.card)
+                    
+                    //MARK: Terms of use
+                    VStack {
+                        Button {
+                            //open link url
+                            if let link  =  AppConstants.termsOfUseLink {
+                                openURL(link)
+                            }
+                        } label: {
+                            Text("Terms of Use")
+                        }
+                    }
+                    
+                    .foregroundColor(Color.text)
+                    .listRowBackground(Color.card)
+                    
+                    //MARK: Send Email to support
+                    VStack{
+                        Button(action: {
+                            EmailController.shared.sendEmail(subject: "", body: "", to: "vocbox.contact@gmail.com")
+                        }) {
+                            Text("Contact us")
+                        }
+                    }
+                    
+                    .foregroundColor(Color.text)
+                    .listRowBackground(Color.card)
+                    
+                    
+                    
+                    
+                    
+                    //MARK: Toggle Dark Mode
+                    Toggle(isOn: $isDarkMode) {
+                        Text("Dark Mode")
+                    }
+                    .tint(Color(.button))
+                    .listRowBackground(Color.card)
                 }
+                //need below id(UUID()) to prevent Nav links freeze
+                .id(UUID())
+                .foregroundColor(Color.text)
+                .scrollContentBackground(.hidden)
                 
-                
-               
-                
-                
-
-                //MARK: Toggle Dark Mode
-                Toggle(isOn: $isDarkMode) {
-                    Text("Dark Mode")
-                }
-                .tint(Color(.button))
-                .listRowBackground(Color.card)
-            }
-            .id(UUID())
-            .foregroundColor(Color.text)
-            .scrollContentBackground(.hidden)
-            .scrollDisabled(true)
+        
             
         }
         .background(Color.background)

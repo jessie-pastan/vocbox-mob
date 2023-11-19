@@ -21,7 +21,8 @@ import SwiftUI
                 .environment(\.managedObjectContext,CoreDataController().container.viewContext)
                 .environmentObject(LocalNotificationManager())
                 .environmentObject(StoreViewModel())
-         */
+                .environmentObject(AppReviewManager())
+        */
         
             if UserDefaults.standard.bool(forKey: AppConstants.hasVisitedAppKey) {
                 ReviewVocView()

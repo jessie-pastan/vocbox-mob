@@ -9,8 +9,10 @@ import SwiftUI
 import Lottie
 
 struct LottieView: UIViewRepresentable {
+    
+    
     var name = "defaultName"
-    //var loopMode: LottieLoopMode = .loop
+    var loopMode: LottieLoopMode = .loop
 
     func makeUIView(context: UIViewRepresentableContext<LottieView>) -> UIView {
         let view = UIView(frame: .zero)
@@ -19,7 +21,7 @@ struct LottieView: UIViewRepresentable {
         let animation = LottieAnimation.named(name)
         animationView.animation = animation
         animationView.contentMode = .scaleAspectFit
-        animationView.loopMode = .loop
+        animationView.loopMode = loopMode
         animationView.play()
 
         animationView.translatesAutoresizingMaskIntoConstraints = false
@@ -34,6 +36,7 @@ struct LottieView: UIViewRepresentable {
 
     func updateUIView(_ uiView: UIViewType, context: Context) {
     }
+   
 }
 
 

@@ -63,7 +63,7 @@ struct StatisticView: View {
                                 .padding(.horizontal)
                             }
                         }
-                        .onAppear{
+                        .task {
                             vm.successRecalledVocab()
                             vm.findHighestPercentage(scores: scores, context: moc)
                             vm.findLastestPercentage(scores: scores, context: moc)

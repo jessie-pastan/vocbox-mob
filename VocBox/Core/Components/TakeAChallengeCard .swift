@@ -18,10 +18,10 @@ struct TakeAchallengeCard: View {
             Rectangle()
             VStack{
                 Spacer()
-                Image("brain")
+                Image("brainSmile")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 100, height: 100)
+                    .frame(width: 200, height: 200)
                 Text("Take a challenge to see your improvement!")
                     .font(.custom(.playfairBold, size: 22))
                     .padding(.horizontal)
@@ -47,10 +47,6 @@ struct TakeAchallengeCard: View {
         }
         .foregroundColor(.card)
         .cornerRadius(10)
-        
-        
-        
-       
     }
     
     

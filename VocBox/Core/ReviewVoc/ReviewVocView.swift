@@ -7,13 +7,13 @@
 
 import SwiftUI
 import CoreData
+import StoreKit
 
 //@available(iOS 17.0, *)
 struct ReviewVocView: View {
 
     @FetchRequest(sortDescriptors: [SortDescriptor(\.createDate, order: .reverse)]) private var vocabs: FetchedResults<Vocab>
     
- 
     @EnvironmentObject var storeViewModel : StoreViewModel
     
     @Environment(\.managedObjectContext) var moc
@@ -24,25 +24,11 @@ struct ReviewVocView: View {
     @State private var isShowAll = false
     @State private var isShowAscending = false
     @State private var isShowDescending = false
-
-    //@State private var profileViewIsShow = false
     
     @State private var isShowNoFavoriteCard = false
-    
     @State private var isShowUpgradeView = false
     
     let position = UUID()
-    
-    /*
-    init() {
-        for familyName in UIFont.familyNames {
-            print(familyName)
-            for fontName in UIFont.fontNames(forFamilyName: familyName) {
-                print("-- \(fontName)")
-            }
-        }
-    }
-     */
     
     var body: some View {
         
@@ -155,7 +141,7 @@ struct ReviewVocView: View {
                         Spacer()
                     }
                 }
-                //.environmentObject(storeViewModel)
+               
                 .navigationBarBackButtonHidden(true)
                 .padding(.bottom,30)
                 .padding(.leading, 2)

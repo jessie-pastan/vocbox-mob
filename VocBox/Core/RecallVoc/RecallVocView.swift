@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-//import CoreData
 import ConfettiSwiftUI
 import StoreKit
 
@@ -226,9 +225,16 @@ struct RecallVocView: View {
                            Button("Ok") {
                                 dismiss()
                            }
+                           .onDisappear {
+                               //checking if we can show review prompt
+                               if appReviewManager.askForReview() {
+                                   requestReview()
+                              }
+                          }
                     } message: {
                            Text("You got \(scorePercentage)% score.")
                     }
+                    
                     
                 }
                 

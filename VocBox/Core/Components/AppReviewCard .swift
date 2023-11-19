@@ -20,7 +20,7 @@ struct AppReviewCard: View {
                 Image("five-stars")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 100, height: 100)
+                    .frame(width: 150, height: 150)
                 Text("We really appreciate you taking the time to review our app!")
                     .font(.custom(.playfairBold, size: 22))
                     .padding(.horizontal)

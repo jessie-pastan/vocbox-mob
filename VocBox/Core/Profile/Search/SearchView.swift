@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct SearchView: View {
     
     
@@ -22,6 +23,7 @@ struct SearchView: View {
     
     @State var selectedVocab: Vocab?
     
+   
     
     var searchResults: [Vocab] {
         if searchedVocabs.isEmpty {
@@ -115,6 +117,7 @@ struct SearchView: View {
                 
                 
             }
+            
             .scrollContentBackground(.hidden)
             .background(Color.background)
             

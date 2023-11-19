@@ -114,6 +114,7 @@ class StatisticsViewModel: ObservableObject {
             for index in 0..<1 {
                 let leastRecall = recalls[index].viewVocab
                 let recallTime = recalls[index].viewRecall
+
                 leastRecalledArray.append((leastRecall, recallTime))
             }
         }else {
@@ -124,6 +125,17 @@ class StatisticsViewModel: ObservableObject {
             }
             
         }
+    }
+    
+    // this function verify whether string in least vocab is not redundant in mostRecalledword
+    func removedEqualValues(leastRecall: inout [(String, Int)], mostRecall: inout [(String, Int)]) {
+        // using inout to be able to update value in array
+                leastRecall = leastRecall.filter { aValue in
+                    !mostRecall.contains { bValue in
+                        aValue == bValue
+                    }
+                }
+        
     }
     
     

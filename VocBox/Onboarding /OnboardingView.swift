@@ -30,18 +30,12 @@ struct OnboardingView: View {
                 Spacer()
                 
                 VStack{
-                LottieView(name: page.imageUrl)
-                   .frame(width: width, height: height)
-                
-                /*
-                Image("\(page.imageUrl)")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 300, height: 300)
-                    .padding()
-                 */
-                
-                
+                    VStack{
+                        LottieView(name: page.imageUrl)
+                            .frame(width: width , height: height)
+                    }
+                    .offset(y: 60)
+                    
                     Text(page.description1)
                     Text(page.description2)
                 }

@@ -25,6 +25,8 @@
 		7571F9722B04071300229DEA /* AppReviewLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7571F9712B04071300229DEA /* AppReviewLinkView.swift */; };
 		7571F9742B0408A300229DEA /* AppReviewCard .swift in Sources */ = {isa = PBXBuildFile; fileRef = 7571F9732B0408A300229DEA /* AppReviewCard .swift */; };
 		758FDFE82AF99EB70006B2C0 /* NoFavoriteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758FDFE72AF99EB70006B2C0 /* NoFavoriteCard.swift */; };
+		759E201B2B098E4800D78261 /* DeleteScoreCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759E201A2B098E4800D78261 /* DeleteScoreCard.swift */; };
+		759E201F2B0992CF00D78261 /* ScoreDeleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759E201E2B0992CF00D78261 /* ScoreDeleteView.swift */; };
 		75BF2CAD2ACC8D11003A32E6 /* WidgetSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CAC2ACC8D11003A32E6 /* WidgetSettingView.swift */; };
 		75BF2CB12ACCB5FD003A32E6 /* MostRecallVocabRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CB02ACCB5FD003A32E6 /* MostRecallVocabRow.swift */; };
 		75BF2CB52ACCF5EB003A32E6 /* LeastRecallVocabRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CB42ACCF5EB003A32E6 /* LeastRecallVocabRow.swift */; };
@@ -39,6 +41,7 @@
 		75BF2CD02AD24CDF003A32E6 /* HintCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CCF2AD24CDF003A32E6 /* HintCard.swift */; };
 		75BF2CD32AD27464003A32E6 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CD22AD27464003A32E6 /* RegisterView.swift */; };
 		75BF2CD52AD3ABB7003A32E6 /* TakeAChallengeCard .swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CD42AD3ABB7003A32E6 /* TakeAChallengeCard .swift */; };
+		75D3703C2B0844E400D6B23A /* brain_lift_up.json in Resources */ = {isa = PBXBuildFile; fileRef = 75D3703B2B0844E300D6B23A /* brain_lift_up.json */; };
 		75D816962AD7603E009D76B5 /* ReadWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D816952AD7603E009D76B5 /* ReadWord.swift */; };
 		75D816B52AD89C89009D76B5 /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D816B42AD89C89009D76B5 /* StatisticView.swift */; };
 		75D816B92ADAFB74009D76B5 /* VocabPronunciation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D816B82ADAFB74009D76B5 /* VocabPronunciation.swift */; };
@@ -47,6 +50,7 @@
 		75D816C42ADB3662009D76B5 /* WNApiKey.json in Resources */ = {isa = PBXBuildFile; fileRef = 75D816C32ADB3662009D76B5 /* WNApiKey.json */; };
 		75D816C62ADB599D009D76B5 /* ApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D816C52ADB599D009D76B5 /* ApiKey.swift */; };
 		75E5283A2B06A9F6001DFBD3 /* ShareAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E528392B06A9F6001DFBD3 /* ShareAppView.swift */; };
+		75E528482B079632001DFBD3 /* boxLetterDropp.json in Resources */ = {isa = PBXBuildFile; fileRef = 75E528472B079632001DFBD3 /* boxLetterDropp.json */; };
 		75F9C7A62ADF297B008A0430 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7A52ADF297B008A0430 /* SplashScreenView.swift */; };
 		75F9C7AC2AE06007008A0430 /* OnboardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7AB2AE06007008A0430 /* OnboardingPage.swift */; };
 		75F9C7AE2AE06198008A0430 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7AD2AE06198008A0430 /* OnboardingView.swift */; };
@@ -61,12 +65,8 @@
 		75F9C7C62AE838FF008A0430 /* CardButton .swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7C52AE838FF008A0430 /* CardButton .swift */; };
 		75F9C7C92AE99D92008A0430 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 75F9C7C82AE99D92008A0430 /* Lottie */; };
 		75F9C7CB2AE99DCF008A0430 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7CA2AE99DCF008A0430 /* LottieView.swift */; };
-		75F9C7CD2AE9A7CB008A0430 /* brainAnimate.json in Resources */ = {isa = PBXBuildFile; fileRef = 75F9C7CC2AE9A7CB008A0430 /* brainAnimate.json */; };
-		75F9C7CF2AE9A7D3008A0430 /* boxAnimate.json in Resources */ = {isa = PBXBuildFile; fileRef = 75F9C7CE2AE9A7D3008A0430 /* boxAnimate.json */; };
 		75F9C7D12AEB104F008A0430 /* localNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7D02AEB104F008A0430 /* localNotification.swift */; };
 		75F9C7D32AEB51FB008A0430 /* ReminderSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C7D22AEB51FB008A0430 /* ReminderSetting.swift */; };
-		75F9C7D52AEDE3EE008A0430 /* boxSmileAnimate.json in Resources */ = {isa = PBXBuildFile; fileRef = 75F9C7D42AEDE3EE008A0430 /* boxSmileAnimate.json */; };
-		75F9C7D72AEDEC13008A0430 /* boxSpark.json in Resources */ = {isa = PBXBuildFile; fileRef = 75F9C7D62AEDEC13008A0430 /* boxSpark.json */; };
 		75F9C8082AF33FEC008A0430 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F9C7E02AF326D2008A0430 /* WidgetKit.framework */; };
 		75F9C8092AF33FEC008A0430 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75F9C7E22AF326D2008A0430 /* SwiftUI.framework */; };
 		75F9C80C2AF33FEC008A0430 /* VocBoxWidgetsBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F9C80B2AF33FEC008A0430 /* VocBoxWidgetsBundle.swift */; };
@@ -145,6 +145,8 @@
 		7571F9712B04071300229DEA /* AppReviewLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReviewLinkView.swift; sourceTree = "<group>"; };
 		7571F9732B0408A300229DEA /* AppReviewCard .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppReviewCard .swift"; sourceTree = "<group>"; };
 		758FDFE72AF99EB70006B2C0 /* NoFavoriteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoFavoriteCard.swift; sourceTree = "<group>"; };
+		759E201A2B098E4800D78261 /* DeleteScoreCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteScoreCard.swift; sourceTree = "<group>"; };
+		759E201E2B0992CF00D78261 /* ScoreDeleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreDeleteView.swift; sourceTree = "<group>"; };
 		75BF2CAC2ACC8D11003A32E6 /* WidgetSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSettingView.swift; sourceTree = "<group>"; };
 		75BF2CB02ACCB5FD003A32E6 /* MostRecallVocabRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostRecallVocabRow.swift; sourceTree = "<group>"; };
 		75BF2CB42ACCF5EB003A32E6 /* LeastRecallVocabRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeastRecallVocabRow.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		75BF2CCF2AD24CDF003A32E6 /* HintCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintCard.swift; sourceTree = "<group>"; };
 		75BF2CD22AD27464003A32E6 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		75BF2CD42AD3ABB7003A32E6 /* TakeAChallengeCard .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TakeAChallengeCard .swift"; sourceTree = "<group>"; };
+		75D3703B2B0844E300D6B23A /* brain_lift_up.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brain_lift_up.json; sourceTree = "<group>"; };
 		75D816952AD7603E009D76B5 /* ReadWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadWord.swift; sourceTree = "<group>"; };
 		75D816B42AD89C89009D76B5 /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
 		75D816B82ADAFB74009D76B5 /* VocabPronunciation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VocabPronunciation.swift; sourceTree = "<group>"; };
@@ -167,6 +170,7 @@
 		75D816C32ADB3662009D76B5 /* WNApiKey.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = WNApiKey.json; sourceTree = "<group>"; };
 		75D816C52ADB599D009D76B5 /* ApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiKey.swift; sourceTree = "<group>"; };
 		75E528392B06A9F6001DFBD3 /* ShareAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareAppView.swift; sourceTree = "<group>"; };
+		75E528472B079632001DFBD3 /* boxLetterDropp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = boxLetterDropp.json; sourceTree = "<group>"; };
 		75F9C7A52ADF297B008A0430 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		75F9C7AB2AE06007008A0430 /* OnboardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPage.swift; sourceTree = "<group>"; };
 		75F9C7AD2AE06198008A0430 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -181,12 +185,8 @@
 		75F9C7C32AE832BF008A0430 /* LongButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongButton.swift; sourceTree = "<group>"; };
 		75F9C7C52AE838FF008A0430 /* CardButton .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardButton .swift"; sourceTree = "<group>"; };
 		75F9C7CA2AE99DCF008A0430 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
-		75F9C7CC2AE9A7CB008A0430 /* brainAnimate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brainAnimate.json; sourceTree = "<group>"; };
-		75F9C7CE2AE9A7D3008A0430 /* boxAnimate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = boxAnimate.json; sourceTree = "<group>"; };
 		75F9C7D02AEB104F008A0430 /* localNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = localNotification.swift; sourceTree = "<group>"; };
 		75F9C7D22AEB51FB008A0430 /* ReminderSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderSetting.swift; sourceTree = "<group>"; };
-		75F9C7D42AEDE3EE008A0430 /* boxSmileAnimate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = boxSmileAnimate.json; sourceTree = "<group>"; };
-		75F9C7D62AEDEC13008A0430 /* boxSpark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = boxSpark.json; sourceTree = "<group>"; };
 		75F9C7E02AF326D2008A0430 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		75F9C7E22AF326D2008A0430 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		75F9C8072AF33FEC008A0430 /* VocBoxWidgetsExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VocBoxWidgetsExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -274,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				75BF2CB82ACE47BB003A32E6 /* ProfileView.swift */,
+				759E201E2B0992CF00D78261 /* ScoreDeleteView.swift */,
 				75E528382B06A9D1001DFBD3 /* ShareApp */,
 				75BF2CC22ACF2AF6003A32E6 /* ProUpgrade */,
 				75BF2CBF2ACF2854003A32E6 /* Reminder */,
@@ -359,10 +360,8 @@
 				75F9C7AD2AE06198008A0430 /* OnboardingView.swift */,
 				75F9C7AF2AE06361008A0430 /* OnboardingPagesView.swift */,
 				75F9C7CA2AE99DCF008A0430 /* LottieView.swift */,
-				75F9C7CC2AE9A7CB008A0430 /* brainAnimate.json */,
-				75F9C7CE2AE9A7D3008A0430 /* boxAnimate.json */,
-				75F9C7D42AEDE3EE008A0430 /* boxSmileAnimate.json */,
-				75F9C7D62AEDEC13008A0430 /* boxSpark.json */,
+				75E528472B079632001DFBD3 /* boxLetterDropp.json */,
+				75D3703B2B0844E300D6B23A /* brain_lift_up.json */,
 			);
 			path = "Onboarding ";
 			sourceTree = "<group>";
@@ -565,6 +564,7 @@
 				75BF2CD42AD3ABB7003A32E6 /* TakeAChallengeCard .swift */,
 				758FDFE72AF99EB70006B2C0 /* NoFavoriteCard.swift */,
 				7571F9732B0408A300229DEA /* AppReviewCard .swift */,
+				759E201A2B098E4800D78261 /* DeleteScoreCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -670,17 +670,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75F9C7D52AEDE3EE008A0430 /* boxSmileAnimate.json in Resources */,
-				75F9C7CD2AE9A7CB008A0430 /* brainAnimate.json in Resources */,
 				8304D7E82AB3DC2F00C9A9B1 /* Preview Assets.xcassets in Resources */,
-				75F9C7D72AEDEC13008A0430 /* boxSpark.json in Resources */,
+				75D3703C2B0844E400D6B23A /* brain_lift_up.json in Resources */,
 				7571F95A2B002BD900229DEA /* VocBoxProduct.storekit in Resources */,
+				75E528482B079632001DFBD3 /* boxLetterDropp.json in Resources */,
 				75D816C42ADB3662009D76B5 /* WNApiKey.json in Resources */,
 				8304D7E52AB3DC2F00C9A9B1 /* Assets.xcassets in Resources */,
 				75F9C7C02AE20B81008A0430 /* ZillaSlab-Regular.ttf in Resources */,
 				75F9C7C22AE2DB39008A0430 /* PlayfairDisplay-VariableFont_wght.ttf in Resources */,
 				75F9C7B52AE1AED4008A0430 /* AbrilFatface-Regular.ttf in Resources */,
-				75F9C7CF2AE9A7D3008A0430 /* boxAnimate.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,6 +706,7 @@
 			files = (
 				83E5AA612ABD2C9A00136C34 /* RecallProgressView.swift in Sources */,
 				75D816C62ADB599D009D76B5 /* ApiKey.swift in Sources */,
+				759E201F2B0992CF00D78261 /* ScoreDeleteView.swift in Sources */,
 				75F9C7C62AE838FF008A0430 /* CardButton .swift in Sources */,
 				75F9C7C42AE832BF008A0430 /* LongButton.swift in Sources */,
 				75D816B52AD89C89009D76B5 /* StatisticView.swift in Sources */,
@@ -758,6 +757,7 @@
 				75F9C7BB2AE1FFAA008A0430 /* CustomFont.swift in Sources */,
 				75BF2CD02AD24CDF003A32E6 /* HintCard.swift in Sources */,
 				75621A782AC7AB4800B407A9 /* StatisticsCardRow.swift in Sources */,
+				759E201B2B098E4800D78261 /* DeleteScoreCard.swift in Sources */,
 				75BF2CD32AD27464003A32E6 /* RegisterView.swift in Sources */,
 				75BF2CCE2AD1DEE1003A32E6 /* CustomSearchBar.swift in Sources */,
 				75BF2CC12ACF286D003A32E6 /* ReminderView.swift in Sources */,
