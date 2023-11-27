@@ -157,8 +157,8 @@ struct RecallVocView: View {
                         
                         
                     }else{
-                        feedback = "Opps! Try again"
-                        print("Opps! Try again")
+                        feedback = "Oops! Try again"
+                        print("Oops! Try again")
                     }
                     
                     //MARK: Free text field after submit

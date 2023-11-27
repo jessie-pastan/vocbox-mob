@@ -21,6 +21,7 @@ struct DeleteScoreCard: View {
             Rectangle()
             VStack{
                 Text("All score got deleted!")
+                    .padding()
                     .bold()
                     .foregroundStyle(.red)
                     .opacity(animationTrigger ? 1 : 0)
@@ -83,13 +84,18 @@ struct DeleteScoreCard: View {
                                 .foregroundColor(Color.button)
                             
                             HStack{
+                               
                                 Image(systemName: "trash")
                                     .foregroundStyle(.red)
+                                   
                                 Text("Delete")
                                     .font(.body)
                                     .bold()
                                     .foregroundColor(Color.text)
+                                 
+                                
                             }
+                            
                             
                         }
                         .background(Rectangle().foregroundColor(.textField).cornerRadius(120).offset(x: 2, y: 2))

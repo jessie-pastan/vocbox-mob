@@ -49,9 +49,10 @@ struct ProUpgradeView: View {
                         Text("Expand your own vocabulary")
                     }
                     
-                    HStack {
+                    HStack(alignment: .firstTextBaseline) {
                         Image(systemName: "checkmark.square")
-                        Text("Unlimited vocabulary adding")
+                        Text("Unlimited vocabulary in your personal storage")
+                            .fixedSize(horizontal: false, vertical: true)
                     }
                     
                     HStack(alignment: .firstTextBaseline) {

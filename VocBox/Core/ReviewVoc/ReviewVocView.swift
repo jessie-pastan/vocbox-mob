@@ -9,12 +9,12 @@ import SwiftUI
 import CoreData
 import StoreKit
 
-//@available(iOS 17.0, *)
+
 struct ReviewVocView: View {
 
     @FetchRequest(sortDescriptors: [SortDescriptor(\.createDate, order: .reverse)]) private var vocabs: FetchedResults<Vocab>
-    
-    @EnvironmentObject var storeViewModel : StoreViewModel
+
+    @EnvironmentObject var storeViewModel: StoreViewModel
     
     @Environment(\.managedObjectContext) var moc
     @Environment(\.colorScheme) var colorScheme
@@ -27,6 +27,7 @@ struct ReviewVocView: View {
     
     @State private var isShowNoFavoriteCard = false
     @State private var isShowUpgradeView = false
+    @State private var allVocab = [Vocab]()
     
     let position = UUID()
     
@@ -50,7 +51,7 @@ struct ReviewVocView: View {
                        Spacer()
                    }
                    //MARK: show No favorite card
-               }else if isShowAll && vocabs.isEmpty {
+               }else if isShowFavourite && vocabs.isEmpty {
                  
                        GeometryReader { proxy in
                            VStack{
@@ -65,7 +66,7 @@ struct ReviewVocView: View {
 
                }
                     
-                    //MARK: All vocabulary
+                    //MARK: Display All vocabulary
                         ScrollViewReader { proxy in
                         ScrollView {
                             LazyVStack{
@@ -96,7 +97,7 @@ struct ReviewVocView: View {
                         HStack(spacing: 25) {
                             Spacer()
                             
-                            if vocabs.count == 20 && storeViewModel.purchasedSubsriptions.isEmpty {
+                            if allVocab.count == 20 || vocabs.count == 20 && storeViewModel.purchasedSubsriptions.isEmpty {
                                 Button {
                                     isShowUpgradeView = true
                                 } label: {
@@ -141,7 +142,6 @@ struct ReviewVocView: View {
                         Spacer()
                     }
                 }
-               
                 .navigationBarBackButtonHidden(true)
                 .padding(.bottom,30)
                 .padding(.leading, 2)
@@ -167,12 +167,13 @@ struct ReviewVocView: View {
                 //MARK: Left toolbar for filtering vocabulary
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading){
+                    
                         Menu {
                             //MARK: All Vocab
                            
                             Button("All") {
                                 // action: sort Vocab by recently added
-                                isShowAll.toggle()
+                                //isShowAll.toggle()
                                 vocabs.nsPredicate = isShowAll ? NSPredicate(value: true) : NSPredicate(value: true)
                             }
                             
@@ -184,54 +185,29 @@ struct ReviewVocView: View {
                                 // isShowAll = true : is work around for fixing bug happened when delete last favorite code data detect it as empty storage
                                 isShowAll = true
                                 
+                                //counting vocab when user tap on favourites to verify pro upgrade
+                                allVocab = ReviewVocViewModel().fetchData(viewContext: moc)
+                                
                                 vocabs.nsPredicate = isShowFavourite ?  NSPredicate(format: "favourite = 1") : nil
                                 
                             }
-                            
-                            /*
-                            //MARK: sort A-Z Order
-                            Button("A-Z") {
-                                // action: sort A-Z Vocab
-                                
-                                isShowAscending = true
-                                
-                                
-                                vocabs.nsPredicate = isShowAscending ? NSPredicate(value: true) : NSPredicate(value: true)
-                                vocabs.sortDescriptors = [SortDescriptor(\.vocab)]
-                               
-                            }
-                            //MARK: sort Z-A Order
-                            Button("Z-A") {
-                                // action: sort Z-A Vocab
-                               isShowDescending = true
-                                vocabs.nsPredicate = isShowDescending ? NSPredicate(value: true) : NSPredicate(value: true)
-                                vocabs.sortDescriptors = [SortDescriptor(\.vocab, order: .reverse)]
-                            }
-                             */
                             
                         } label: {
                             Image(systemName: "line.3.horizontal")
                                 .foregroundColor(Color(UIColor.label))
                         }
+                         
                     }
                 }
         }
+      
        .tint(Color(UIColor.label))
        
-           
-     
-       
-        
-            
-       
-    
-        
-        
-        
     }
+    
 }
 
-@available(iOS 17.0, *)
+
 struct ReviewVocView_Previews: PreviewProvider {
     static var previews: some View {
         ReviewVocView()

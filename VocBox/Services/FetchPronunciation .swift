@@ -61,9 +61,9 @@ case unknown(Error)
 var errorDescription: String? {
     switch self{
     case .invalidURL:
-        return " The URL was invalid"
+        return " The URL pronunciation fetching was invalid"
     case .serverError:
-        return "There was an errir with the server, please try again"
+        return "There was an error with the server for fetching pronunciation, please try again"
         
     case .parsingJson:
         return "Cannot parsing JsonData"

@@ -51,7 +51,7 @@ class AppReviewManager : ObservableObject {
         //modify this function after user get 100% scrore and Verify if user hit 5th, 15th, 25th saved vocab in storage
         let scoreLimitHit =  savedScore.isMultiple(of: limit)
     
-        //Verify version is user's latest version
+       
         let isNewVersion = currentVersion != mostRecentReviewed
         
         guard scoreLimitHit && isNewVersion else {

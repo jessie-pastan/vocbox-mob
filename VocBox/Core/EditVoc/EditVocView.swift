@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import CoreData
+import UIKit
 
 struct EditVocView: View {
     
@@ -103,8 +105,9 @@ struct EditVocView: View {
                         self.phonetic = try await vm.fetchPhonetic(vocab: trimmedString)
                         
                         // save edited in coreData
-                        CoreDataController().editVocab(item: item, vocab: trimmedString, favourite: false, definition: definition, phonetic: self.phonetic, type: partOfSpeech.acronym, context: moc)
+                        CoreDataController().editVocab(item: item, vocab: trimmedString, favourite: item.viewFavourite, definition: definition, phonetic: self.phonetic, type: partOfSpeech.acronym, context: moc)
                         
+                       
                         dismiss()
                         
                     }
@@ -131,6 +134,11 @@ struct EditVocView: View {
         
         
     }
+    
+   
+    
+    
+    
 }
 
 /*

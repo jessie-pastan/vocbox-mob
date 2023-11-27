@@ -27,6 +27,7 @@
 		758FDFE82AF99EB70006B2C0 /* NoFavoriteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 758FDFE72AF99EB70006B2C0 /* NoFavoriteCard.swift */; };
 		759E201B2B098E4800D78261 /* DeleteScoreCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759E201A2B098E4800D78261 /* DeleteScoreCard.swift */; };
 		759E201F2B0992CF00D78261 /* ScoreDeleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759E201E2B0992CF00D78261 /* ScoreDeleteView.swift */; };
+		75B90FE32B12CDA2007B7FDE /* ReviewVocViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B90FE22B12CDA2007B7FDE /* ReviewVocViewModel.swift */; };
 		75BF2CAD2ACC8D11003A32E6 /* WidgetSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CAC2ACC8D11003A32E6 /* WidgetSettingView.swift */; };
 		75BF2CB12ACCB5FD003A32E6 /* MostRecallVocabRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CB02ACCB5FD003A32E6 /* MostRecallVocabRow.swift */; };
 		75BF2CB52ACCF5EB003A32E6 /* LeastRecallVocabRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF2CB42ACCF5EB003A32E6 /* LeastRecallVocabRow.swift */; };
@@ -147,6 +148,7 @@
 		758FDFE72AF99EB70006B2C0 /* NoFavoriteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoFavoriteCard.swift; sourceTree = "<group>"; };
 		759E201A2B098E4800D78261 /* DeleteScoreCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteScoreCard.swift; sourceTree = "<group>"; };
 		759E201E2B0992CF00D78261 /* ScoreDeleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreDeleteView.swift; sourceTree = "<group>"; };
+		75B90FE22B12CDA2007B7FDE /* ReviewVocViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVocViewModel.swift; sourceTree = "<group>"; };
 		75BF2CAC2ACC8D11003A32E6 /* WidgetSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetSettingView.swift; sourceTree = "<group>"; };
 		75BF2CB02ACCB5FD003A32E6 /* MostRecallVocabRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MostRecallVocabRow.swift; sourceTree = "<group>"; };
 		75BF2CB42ACCF5EB003A32E6 /* LeastRecallVocabRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeastRecallVocabRow.swift; sourceTree = "<group>"; };
@@ -542,6 +544,7 @@
 			isa = PBXGroup;
 			children = (
 				83E590CA2AB527FC002ABD04 /* ReviewVocView.swift */,
+				75B90FE22B12CDA2007B7FDE /* ReviewVocViewModel.swift */,
 			);
 			path = ReviewVoc;
 			sourceTree = "<group>";
@@ -747,6 +750,7 @@
 				83E590CB2AB527FC002ABD04 /* ReviewVocView.swift in Sources */,
 				83E590BD2AB3E81F002ABD04 /* DataModel.xcdatamodeld in Sources */,
 				75BF2CB12ACCB5FD003A32E6 /* MostRecallVocabRow.swift in Sources */,
+				75B90FE32B12CDA2007B7FDE /* ReviewVocViewModel.swift in Sources */,
 				8304D7E12AB3DC2D00C9A9B1 /* VocBoxApp.swift in Sources */,
 				83E590C12AB3E9FF002ABD04 /* EntityExtentions.swift in Sources */,
 				75F9C7D32AEB51FB008A0430 /* ReminderSetting.swift in Sources */,

@@ -56,6 +56,9 @@ struct VocabCardRow: View {
                                     Image(systemName: "pencil")
                                 }
                             }
+                            .onDisappear {
+                                moc.refreshAllObjects()
+                            }
                             
                             Button(role: .destructive) {
                                 //Delete word
