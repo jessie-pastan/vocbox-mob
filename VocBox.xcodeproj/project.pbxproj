@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		750D26AD2ABE8E1D00300914 /* CreateFirstVocabCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750D26AC2ABE8E1D00300914 /* CreateFirstVocabCard.swift */; };
+		754105A32B1586490000DE2E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 754105A22B1586490000DE2E /* FirebaseAnalytics */; };
+		754105A52B1586490000DE2E /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 754105A42B1586490000DE2E /* FirebaseCrashlytics */; };
+		754105A72B15873D0000DE2E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 754105A62B15873D0000DE2E /* GoogleService-Info.plist */; };
+		754105A92B1592F10000DE2E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 754105A62B15873D0000DE2E /* GoogleService-Info.plist */; };
+		754105AE2B16786B0000DE2E /* CrashManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754105AD2B16786B0000DE2E /* CrashManager.swift */; };
+		754105AF2B16786B0000DE2E /* CrashManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754105AD2B16786B0000DE2E /* CrashManager.swift */; };
+		754105B12B1683CE0000DE2E /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 754105B02B1683CE0000DE2E /* FirebaseCrashlytics */; };
 		75621A6B2AC2606B00B407A9 /* Vocab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75621A6A2AC2606B00B407A9 /* Vocab.swift */; };
 		75621A6D2AC28D3600B407A9 /* Pronunciation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75621A6C2AC28D3600B407A9 /* Pronunciation.swift */; };
 		75621A702AC3A72000B407A9 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 75621A6F2AC3A72000B407A9 /* ConfettiSwiftUI */; };
@@ -132,6 +139,8 @@
 
 /* Begin PBXFileReference section */
 		750D26AC2ABE8E1D00300914 /* CreateFirstVocabCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFirstVocabCard.swift; sourceTree = "<group>"; };
+		754105A62B15873D0000DE2E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		754105AD2B16786B0000DE2E /* CrashManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrashManager.swift; sourceTree = "<group>"; };
 		75621A6A2AC2606B00B407A9 /* Vocab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vocab.swift; sourceTree = "<group>"; };
 		75621A6C2AC28D3600B407A9 /* Pronunciation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pronunciation.swift; sourceTree = "<group>"; };
 		75621A712AC3A7C300B407A9 /* Confetti.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Confetti.swift; sourceTree = "<group>"; };
@@ -227,6 +236,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				754105B12B1683CE0000DE2E /* FirebaseCrashlytics in Frameworks */,
 				75F9C8092AF33FEC008A0430 /* SwiftUI.framework in Frameworks */,
 				75F9C8082AF33FEC008A0430 /* WidgetKit.framework in Frameworks */,
 			);
@@ -238,6 +248,8 @@
 			files = (
 				7571F9582B002AEA00229DEA /* StoreKit.framework in Frameworks */,
 				75621A702AC3A72000B407A9 /* ConfettiSwiftUI in Frameworks */,
+				754105A52B1586490000DE2E /* FirebaseCrashlytics in Frameworks */,
+				754105A32B1586490000DE2E /* FirebaseAnalytics in Frameworks */,
 				75F9C7C92AE99D92008A0430 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,6 +257,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		754105AC2B1678400000DE2E /* CrashManager */ = {
+			isa = PBXGroup;
+			children = (
+				754105AD2B16786B0000DE2E /* CrashManager.swift */,
+			);
+			path = CrashManager;
+			sourceTree = "<group>";
+		};
 		7571F9532B00295C00229DEA /* Subscription */ = {
 			isa = PBXGroup;
 			children = (
@@ -410,6 +430,7 @@
 		8304D7D42AB3DC2D00C9A9B1 = {
 			isa = PBXGroup;
 			children = (
+				754105A62B15873D0000DE2E /* GoogleService-Info.plist */,
 				75F9C81C2AF35048008A0430 /* VocBoxWidgetsExtension.entitlements */,
 				8304D7DF2AB3DC2D00C9A9B1 /* VocBox */,
 				75F9C80A2AF33FEC008A0430 /* VocBoxWidgets */,
@@ -435,6 +456,7 @@
 				8304D7E02AB3DC2D00C9A9B1 /* VocBoxApp.swift */,
 				75D816BC2ADB3345009D76B5 /* ApiKey */,
 				8304D7EE2AB3DC4500C9A9B1 /* Core */,
+				754105AC2B1678400000DE2E /* CrashManager */,
 				7571F9532B00295C00229DEA /* Subscription */,
 				75F9C7B32AE1AE71008A0430 /* Fonts */,
 				83E590C72AB52677002ABD04 /* Helpers */,
@@ -582,12 +604,16 @@
 				75F9C8032AF33FEC008A0430 /* Sources */,
 				75F9C8042AF33FEC008A0430 /* Frameworks */,
 				75F9C8052AF33FEC008A0430 /* Resources */,
+				754105AB2B1593690000DE2E /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = VocBoxWidgetsExtension;
+			packageProductDependencies = (
+				754105B02B1683CE0000DE2E /* FirebaseCrashlytics */,
+			);
 			productName = VocBoxWidgetsExtension;
 			productReference = 75F9C8072AF33FEC008A0430 /* VocBoxWidgetsExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
@@ -600,6 +626,7 @@
 				8304D7DA2AB3DC2D00C9A9B1 /* Frameworks */,
 				8304D7DB2AB3DC2D00C9A9B1 /* Resources */,
 				75F9C7F62AF326D3008A0430 /* Embed Foundation Extensions */,
+				754105AA2B1593640000DE2E /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -610,6 +637,8 @@
 			packageProductDependencies = (
 				75621A6F2AC3A72000B407A9 /* ConfettiSwiftUI */,
 				75F9C7C82AE99D92008A0430 /* Lottie */,
+				754105A22B1586490000DE2E /* FirebaseAnalytics */,
+				754105A42B1586490000DE2E /* FirebaseCrashlytics */,
 			);
 			productName = VocBox;
 			productReference = 8304D7DD2AB3DC2D00C9A9B1 /* VocBox.app */;
@@ -645,6 +674,7 @@
 			packageReferences = (
 				75621A6E2AC3A72000B407A9 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
 				75F9C7C72AE99D92008A0430 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				754105A12B1586490000DE2E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 8304D7DE2AB3DC2D00C9A9B1 /* Products */;
 			projectDirPath = "";
@@ -661,6 +691,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				754105A92B1592F10000DE2E /* GoogleService-Info.plist in Resources */,
 				75F9C81F2AF42114008A0430 /* ZillaSlab-Regular.ttf in Resources */,
 				75F9C8102AF33FED008A0430 /* Assets.xcassets in Resources */,
 				7571F95B2B002BD900229DEA /* VocBoxProduct.storekit in Resources */,
@@ -680,12 +711,63 @@
 				75D816C42ADB3662009D76B5 /* WNApiKey.json in Resources */,
 				8304D7E52AB3DC2F00C9A9B1 /* Assets.xcassets in Resources */,
 				75F9C7C02AE20B81008A0430 /* ZillaSlab-Regular.ttf in Resources */,
+				754105A72B15873D0000DE2E /* GoogleService-Info.plist in Resources */,
 				75F9C7C22AE2DB39008A0430 /* PlayfairDisplay-VariableFont_wght.ttf in Resources */,
 				75F9C7B52AE1AED4008A0430 /* AbrilFatface-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		754105AA2B1593640000DE2E /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+		754105AB2B1593690000DE2E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		75F9C8032AF33FEC008A0430 /* Sources */ = {
@@ -699,6 +781,7 @@
 				75F9C80E2AF33FEC008A0430 /* VocBoxWidgets.swift in Sources */,
 				75F9C8212AF4215F008A0430 /* FontExtention.swift in Sources */,
 				75F9C8192AF34005008A0430 /* CoredataController.swift in Sources */,
+				754105AF2B16786B0000DE2E /* CrashManager.swift in Sources */,
 				75F9C80C2AF33FEC008A0430 /* VocBoxWidgetsBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -728,6 +811,7 @@
 				75F9C8242AF42C52008A0430 /* WidgetCard.swift in Sources */,
 				75E5283A2B06A9F6001DFBD3 /* ShareAppView.swift in Sources */,
 				75F9C81A2AF34010008A0430 /* VocBoxWidgets.swift in Sources */,
+				754105AE2B16786B0000DE2E /* CrashManager.swift in Sources */,
 				7571F9552B0029C300229DEA /* StoreKitManager .swift in Sources */,
 				7571F96D2B03D39800229DEA /* SubScriptionButton.swift in Sources */,
 				83E590BF2AB3E9D7002ABD04 /* CoredataController.swift in Sources */,
@@ -799,6 +883,7 @@
 				CODE_SIGN_ENTITLEMENTS = VocBoxWidgetsExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = M538P8S5RA;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -981,6 +1066,7 @@
 				CODE_SIGN_ENTITLEMENTS = VocBox/VocBox.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"VocBox/Preview Content\"";
 				DEVELOPMENT_TEAM = M538P8S5RA;
 				ENABLE_PREVIEWS = YES;
@@ -993,11 +1079,13 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-Wl,-ld_classic";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Jessie.VocBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1028,11 +1116,13 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-Wl,-ld_classic";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Jessie.VocBox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1074,6 +1164,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		754105A12B1586490000DE2E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.18.0;
+			};
+		};
 		75621A6E2AC3A72000B407A9 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI";
@@ -1093,6 +1191,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		754105A22B1586490000DE2E /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 754105A12B1586490000DE2E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		754105A42B1586490000DE2E /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 754105A12B1586490000DE2E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		754105B02B1683CE0000DE2E /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 754105A12B1586490000DE2E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
 		75621A6F2AC3A72000B407A9 /* ConfettiSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 75621A6E2AC3A72000B407A9 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;

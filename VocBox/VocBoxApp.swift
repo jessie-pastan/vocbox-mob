@@ -6,10 +6,16 @@
 //
 
 import SwiftUI
+import FirebaseCore
 
-@available(iOS 17.0, *)   
+  
 @main
   struct VocBoxApp: App {
+      
+      init() {
+          FirebaseApp.configure()
+          print("Configured Firebase!")
+      }
   
     var body: some Scene {
         WindowGroup {
