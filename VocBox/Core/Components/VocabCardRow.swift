@@ -9,7 +9,6 @@ import SwiftUI
 import AVFoundation
 
 
-//@available(iOS 17.0, *)
 struct VocabCardRow: View {
     @Environment(\.managedObjectContext) var moc
     let synthesizer = AVSpeechSynthesizer()
@@ -56,11 +55,15 @@ struct VocabCardRow: View {
                                     Image(systemName: "pencil")
                                 }
                             }
+                            .onTapGesture {
+                                CrashManager.shared.addLog(message: "Edit vocab button tapped")
+                            }
                             .onDisappear {
                                 moc.refreshAllObjects()
                             }
                             
                             Button(role: .destructive) {
+                                CrashManager.shared.addLog(message: "Delete vocab button tapped")
                                 //Delete word
                                 CoreDataController().deleteVocab(item: vocab, context: moc)
                             } label: {
@@ -81,9 +84,10 @@ struct VocabCardRow: View {
                         
                         
                         
-                    //This function is not working on iOS17 at 11/2/23 
+                    //This function is not working on simulator iOS17 at 11/2/23
                     //MARK: Pronunciation speaker
                         Button {
+                            CrashManager.shared.addLog(message: "Pronunciation speaker button tapped")
                             // pronounce word when user tap stereo button
                             ReadWord.speakWord(vocabPronunciation: vocab.viewVocab, speechSynthesizer: synthesizer)
                         } label: {
@@ -95,6 +99,7 @@ struct VocabCardRow: View {
                         
                         //MARK: Favourite word
                         Button {
+                            CrashManager.shared.addLog(message: "Heart to favorite vocab button tapped")
                             trigger += 1
                             isfavourite = vocab.favourite
                             isfavourite.toggle()
@@ -121,9 +126,3 @@ struct VocabCardRow: View {
     
     }
 
-
-//struct VocabCardRow_Previews: PreviewProvider {
-    //static var previews: some View {
-        //VocabCardRow()
-    //}
-//}

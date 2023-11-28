@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 import StoreKit
-import FirebaseCrashlytics
+
 
 struct ReviewVocView: View {
 

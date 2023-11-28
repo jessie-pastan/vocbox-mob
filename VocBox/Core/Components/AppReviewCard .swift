@@ -32,7 +32,7 @@ struct AppReviewCard: View {
                 //MARK: Navigate back to profile view
             
                 Button {
-                    
+                    CrashManager.shared.addLog(message: "Review button tapped")
                         if let link = appReviewManager.linkReview {
                          openURL(link)
                             

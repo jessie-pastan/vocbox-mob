@@ -47,10 +47,10 @@ struct CreateFirstVocabCard: View {
                     
                     Spacer()
                     
-                    //MARK: Got it Button'
+                    //MARK: Add first vocab Button'
                     
                     NavigationLink {
-                        //dismiss card or link to add voc card
+                        //Navigate to add voc card
                         AddVocView()
                     } label: {
                         GeometryReader { proxy in
@@ -60,7 +60,9 @@ struct CreateFirstVocabCard: View {
                         .frame(height: 44)
                         .padding(.horizontal)
                     }
-                    
+                    .onTapGesture {
+                        CrashManager.shared.addLog(message: "Add first vocabulary button tapped")
+                    }
                     .padding(.bottom, 20)
                     .accentColor(.black)
                     

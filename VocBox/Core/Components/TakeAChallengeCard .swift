@@ -33,6 +33,7 @@ struct TakeAchallengeCard: View {
                 //MARK: Navigate back to profile view 
             
                 Button {
+                    CrashManager.shared.addLog(message: "'Got it' from take a challenge card tapped")
                     dismiss()
                 }
                 label: {

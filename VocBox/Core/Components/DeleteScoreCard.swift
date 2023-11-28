@@ -39,6 +39,7 @@ struct DeleteScoreCard: View {
                 HStack {
                     Spacer()
                     Button {
+                        CrashManager.shared.addLog(message: "Cancel button in delete score tapped")
                         //dismiss
                         dismiss()
                     } label: {
@@ -66,6 +67,7 @@ struct DeleteScoreCard: View {
                     Spacer()
                     
                     Button {
+                        CrashManager.shared.addLog(message: "User tapped to Delete score")
                         //action: delete score
                         CoreDataController().deleteScores(scores: scores, context: moc)
                         UserDefaults.standard.removeObject(forKey: AppConstants.totalChallengeScore)
