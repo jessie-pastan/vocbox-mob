@@ -85,6 +85,7 @@ struct VocabCardRow: View {
                     //This function is not working on simulator iOS17 at 11/2/23
                     //MARK: Pronunciation speaker
                         Button {
+                            CrashManager.shared.addLog(message: "Stereo button tapped")
                             // pronounce word when user tap stereo button
                             ReadWord.speakWord(vocabPronunciation: vocab.viewVocab, speechSynthesizer: synthesizer)
                         } label: {
