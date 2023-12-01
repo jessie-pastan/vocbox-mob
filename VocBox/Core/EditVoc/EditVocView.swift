@@ -63,6 +63,7 @@ struct EditVocView: View {
                     ForEach(PartOfSpeechType.types) { item in
                         HStack{
                             Button {
+                              
                                 withAnimation(.spring()) {
                                     partOfSpeech = item
                                 }
@@ -84,6 +85,7 @@ struct EditVocView: View {
                 GeometryReader { proxy in
                     TextField("Definition / e.g.", text: $definition, axis: .vertical)
                         .frame(width: proxy.size.width / 1.08)
+                        
                 }
                     .frame(height: 40)
                     .padding(10)
@@ -97,6 +99,8 @@ struct EditVocView: View {
                 
                 //MARK: Save button
                 Button {
+                    
+                    
                     //trim vocab to uniform String with no space and "" from predictive keyboard
                     let trimmedString = TrimString.trimString(input: vocab)
                     

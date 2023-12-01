@@ -60,9 +60,7 @@ struct CreateFirstVocabCard: View {
                         .frame(height: 44)
                         .padding(.horizontal)
                     }
-                    .onTapGesture {
-                        CrashManager.shared.addLog(message: "Add first vocabulary button tapped")
-                    }
+                
                     .padding(.bottom, 20)
                     .accentColor(.black)
                     

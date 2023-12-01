@@ -39,7 +39,7 @@ struct DeleteScoreCard: View {
                 HStack {
                     Spacer()
                     Button {
-                        CrashManager.shared.addLog(message: "Cancel button in delete score tapped")
+                      
                         //dismiss
                         dismiss()
                     } label: {

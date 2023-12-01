@@ -97,10 +97,10 @@ struct ReviewVocView: View {
                         HStack(spacing: 25) {
                             Spacer()
                             
-                            if allVocab.count == 20 || vocabs.count == 20 && storeViewModel.purchasedSubsriptions.isEmpty {
+                            if (allVocab.count == 20 || vocabs.count == 20) && storeViewModel.purchasedSubsriptions.isEmpty {
                                 Button {
                                     isShowUpgradeView = true
-                                    CrashManager.shared.addLog(message: "Add button tapped (user haven't purchase pro)")
+                                   
                                 } label: {
                                     GeometryReader { proxy in
                                         SmallButton(title: "Add")
@@ -122,12 +122,11 @@ struct ReviewVocView: View {
                                     }
                                     .frame(height: 44)
                                 }
-                                .onTapGesture {
-                                    CrashManager.shared.addLog(message: "Add button tapped")
-                                }
+                                
                                 
                             }
                             
+                        
             
                             Spacer()
                             //MARK: Brain Challenge button
@@ -140,9 +139,7 @@ struct ReviewVocView: View {
                                
                                 .frame(height: 44)
                             }
-                            .onTapGesture {
-                                CrashManager.shared.addLog(message: "Challenge button tapped")
-                            }
+                            
                             
                             Spacer()
                         }
@@ -150,9 +147,7 @@ struct ReviewVocView: View {
                         Spacer()
                     }
                 }
-                .onAppear(perform: {
-                    CrashManager.shared.addLog(message: "ReviewVocView appeared on user's screen")
-                    })
+               
                 .navigationBarBackButtonHidden(true)
                 .padding(.bottom,30)
                 .padding(.leading, 2)
@@ -170,9 +165,7 @@ struct ReviewVocView: View {
                                 .foregroundColor(vocabs.isEmpty ? Color.gray : Color(UIColor.label))
                         }
                         .disabled(vocabs.isEmpty)
-                        .onTapGesture {
-                            CrashManager.shared.addLog(message: "Profile icon tapped")
-                        }
+                        
                     }
                     
                 }
@@ -186,7 +179,7 @@ struct ReviewVocView: View {
                             //MARK: All Vocab
                            
                             Button("All") {
-                                CrashManager.shared.addLog(message: "All vocab button tapped")
+                               
                                 // action: sort Vocab by recently added
                                 //isShowAll.toggle()
                                 vocabs.nsPredicate = isShowAll ? NSPredicate(value: true) : NSPredicate(value: true)
@@ -195,7 +188,7 @@ struct ReviewVocView: View {
                            
                             //MARK: Filter favourite
                             Button("Favorites") {
-                                CrashManager.shared.addLog(message: "Favorite vocab button tapped")
+                               
                                 // action: fetch favourite vocabulary
                                 isShowFavourite = true
                                 // isShowAll = true : is work around for fixing bug happened when delete last favorite code data detect it as empty storage
@@ -212,9 +205,7 @@ struct ReviewVocView: View {
                             Image(systemName: "line.3.horizontal")
                                 .foregroundColor(Color(UIColor.label))
                         }
-                        .onTapGesture {
-                            CrashManager.shared.addLog(message: "3 lines icon tapped")
-                        }
+                       
                         
                     
                     }

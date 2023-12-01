@@ -27,6 +27,7 @@ struct AppReviewLinkView: View {
                 }
            
         }
+       
     }
 }
 

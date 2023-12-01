@@ -50,6 +50,7 @@ struct AddVocView: View {
                         ForEach(PartOfSpeechType.types) { item in
                             HStack{
                                 Button {
+                                    
                                     withAnimation(.spring()) {
                                         partOfSpeech = item
                                     }
@@ -85,6 +86,7 @@ struct AddVocView: View {
                     
                     //MARK: Save button
                     Button {
+                       
                         //trim vocab to uniform String with no space and "" from predictive keyboard
                         let trimmedString = TrimString.trimString(input: vocab)
                         
