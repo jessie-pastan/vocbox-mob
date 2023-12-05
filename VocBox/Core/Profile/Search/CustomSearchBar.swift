@@ -28,6 +28,7 @@ struct CustomSearchBar: View {
                         
                         if isEditing {
                             Button(action: {
+                                CrashManager.shared.addLog(message: "tapped x on search bar")
                                 self.text = ""
                             }, label: {
                                 Image(systemName: "multiply.circle.fill")
@@ -39,12 +40,14 @@ struct CustomSearchBar: View {
                 })
                 .padding(.horizontal, 10)
                 .onTapGesture {
+                    CrashManager.shared.addLog(message: "tapped on search bar")
                     self.isEditing = true
                 }
             
             if isEditing {
                 withAnimation {
                     Button(action: {
+                        CrashManager.shared.addLog(message: "tapped on cancel search")
                         self.isEditing = false
                         self.text = ""
                         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)

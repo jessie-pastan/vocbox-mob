@@ -96,6 +96,9 @@ struct ProUpgradeView: View {
                             .frame(maxWidth: .infinity)
                             .frame(height: 60)
                         }
+                        .onTapGesture {
+                            CrashManager.shared.addLog(message: "tapped on start 3 days free trial button")
+                        }
                         .padding()
                         
                         //MARK: privacy policy / terms of use / restore subscribtion
@@ -147,6 +150,9 @@ struct ProUpgradeView: View {
                 }
             }.foregroundColor(colorScheme == .light ? Color.black : Color.white)
            
+        }
+        .onAppear{
+            CrashManager.shared.addLog(message: "pro upgrade view appeared on user's screen")
         }
         .background(Color(.background))
       

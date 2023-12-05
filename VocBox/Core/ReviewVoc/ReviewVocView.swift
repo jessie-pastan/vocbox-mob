@@ -99,6 +99,7 @@ struct ReviewVocView: View {
                             
                             if (allVocab.count == 20 || vocabs.count == 20) && storeViewModel.purchasedSubsriptions.isEmpty {
                                 Button {
+                                    CrashManager.shared.addLog(message: "User tapped on Add button (user haven't subscribed")
                                     isShowUpgradeView = true
                                    
                                 } label: {
@@ -122,6 +123,9 @@ struct ReviewVocView: View {
                                     }
                                     .frame(height: 44)
                                 }
+                                .onTapGesture {
+                                   CrashManager.shared.addLog(message: "User tapped on Add button")
+                               }
                                 
                                 
                             }
@@ -136,10 +140,11 @@ struct ReviewVocView: View {
                                 GeometryReader { proxy in
                                     SmallButton(title: "Challenge")
                                 }
-                               
                                 .frame(height: 44)
                             }
-                            
+                            .onTapGesture {
+                                CrashManager.shared.addLog(message: "User tapped on Challenge button")
+                          }
                             
                             Spacer()
                         }
@@ -147,7 +152,9 @@ struct ReviewVocView: View {
                         Spacer()
                     }
                 }
-               
+           .onAppear{
+               CrashManager.shared.addLog(message: "Review voc view appeared on user's screen")
+           }
                 .navigationBarBackButtonHidden(true)
                 .padding(.bottom,30)
                 .padding(.leading, 2)
@@ -164,8 +171,11 @@ struct ReviewVocView: View {
                             Image(systemName: "person.crop.circle")
                                 .foregroundColor(vocabs.isEmpty ? Color.gray : Color(UIColor.label))
                         }
+                        .onTapGesture {
+                          CrashManager.shared.addLog(message: "User tapped on Profile icon")
+                       }
                         .disabled(vocabs.isEmpty)
-                        
+                       
                     }
                     
                 }
@@ -179,7 +189,7 @@ struct ReviewVocView: View {
                             //MARK: All Vocab
                            
                             Button("All") {
-                               
+                                CrashManager.shared.addLog(message: "User tapped on All button to display all cards")
                                 // action: sort Vocab by recently added
                                 //isShowAll.toggle()
                                 vocabs.nsPredicate = isShowAll ? NSPredicate(value: true) : NSPredicate(value: true)
@@ -188,7 +198,7 @@ struct ReviewVocView: View {
                            
                             //MARK: Filter favourite
                             Button("Favorites") {
-                               
+                                CrashManager.shared.addLog(message: "User tapped on favorite button to display favorite cards")
                                 // action: fetch favourite vocabulary
                                 isShowFavourite = true
                                 // isShowAll = true : is work around for fixing bug happened when delete last favorite code data detect it as empty storage
@@ -205,6 +215,9 @@ struct ReviewVocView: View {
                             Image(systemName: "line.3.horizontal")
                                 .foregroundColor(Color(UIColor.label))
                         }
+                        .onTapGesture {
+                            CrashManager.shared.addLog(message: "User tapped on 3lines icon")
+                       }
                        
                         
                     

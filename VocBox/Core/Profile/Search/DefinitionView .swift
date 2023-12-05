@@ -24,6 +24,7 @@ struct DefinitionView: View {
                 HStack{
                     Spacer()
                     Button {
+                        CrashManager.shared.addLog(message: "tapped x of definition card")
                         dismiss()
                     } label: {
                         Image(systemName: "x.circle.fill")

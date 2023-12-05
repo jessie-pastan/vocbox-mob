@@ -51,7 +51,6 @@ struct ProfileView: View {
                     } label: {
                         Text("Statistics")
                     }
-                    //.id(UUID())
                     .foregroundColor(Color.text)
                     .listRowBackground(Color.card)
                     
@@ -62,7 +61,6 @@ struct ProfileView: View {
                     } label: {
                         Text("Search")
                     }
-                    //.id(UUID())
                     .foregroundColor(Color.text)
                     .listRowBackground(Color.card)
                     
@@ -72,7 +70,6 @@ struct ProfileView: View {
                     } label: {
                         Text("Widget")
                     }
-                    //.id(UUID())
                     .foregroundColor(Color.text)
                     .listRowBackground(Color.card)
                     
@@ -83,7 +80,6 @@ struct ProfileView: View {
                     } label: {
                         Text("Daily Reminder")
                     }
-                    //.id(UUID())
                     .foregroundColor(Color.text)
                     .listRowBackground(Color.card)
                     
@@ -97,7 +93,6 @@ struct ProfileView: View {
                             Text("Leave Review")
                         }
                     }
-                    //.id(UUID())
                     .foregroundColor(Color.text)
                     .listRowBackground(Color.card)
                     
@@ -109,7 +104,6 @@ struct ProfileView: View {
                             Text("Share App")
                         }
                     }
-                    //.id(UUID())
                     .foregroundColor(Color.text)
                     .listRowBackground(Color.card)
                     
@@ -122,7 +116,7 @@ struct ProfileView: View {
                             } label: {
                                 Text("Pro Upgrade")
                             }
-                            //.id(UUID())
+                            
                             
                             
                         }else {
@@ -147,6 +141,7 @@ struct ProfileView: View {
                                     Text("Delete all score records")
                                 }
                             }
+                            
                         }
                         .foregroundColor(Color.text)
                         .listRowBackground(Color.card)
@@ -155,6 +150,7 @@ struct ProfileView: View {
                     //MARK: Privacy policy
                     VStack {
                         Button {
+                            CrashManager.shared.addLog(message: "tapped on privacy policy button")
                             //open link url
                             if let link  =  AppConstants.privacyPolicyLink {
                                 openURL(link)
@@ -170,6 +166,7 @@ struct ProfileView: View {
                     //MARK: Terms of use
                     VStack {
                         Button {
+                            CrashManager.shared.addLog(message: "tapped on term of use button")
                             //open link url
                             if let link  =  AppConstants.termsOfUseLink {
                                 openURL(link)
@@ -185,6 +182,7 @@ struct ProfileView: View {
                     //MARK: Send Email to support
                     VStack{
                         Button(action: {
+                            CrashManager.shared.addLog(message: "tapped on contact us button")
                             EmailController.shared.sendEmail(subject: "", body: "", to: "vocbox.contact@gmail.com")
                         }) {
                             Text("Contact us")
@@ -202,6 +200,9 @@ struct ProfileView: View {
                     Toggle(isOn: $isDarkMode) {
                         Text("Dark Mode")
                     }
+                    .onTapGesture {
+                        CrashManager.shared.addLog(message: "toggled darkmode")
+                    }
                     .tint(Color(.button))
                     .listRowBackground(Color.card)
                 }
@@ -213,6 +214,9 @@ struct ProfileView: View {
         
             
         }
+        .onAppear(perform: {
+            CrashManager.shared.addLog(message: "profile view appeared on user's screen")
+        })
         .background(Color.background)
         
         

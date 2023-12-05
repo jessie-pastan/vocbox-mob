@@ -85,6 +85,8 @@ struct StatisticView: View {
                         .padding(.bottom, 70)
                     }
                 }
+        }.onAppear{
+            CrashManager.shared.addLog(message: "statistic view appeared on user's screen")
         }
     }
 }

@@ -27,7 +27,7 @@ struct AddVocView: View {
     
     var body: some View {
         
-       
+       VStack{
             GeometryReader { proxy in
                 VStack(alignment: .leading) {
                     Text("Add New Voc")
@@ -37,20 +37,23 @@ struct AddVocView: View {
                         TextField("Word", text: $vocab)
                             .frame(width: proxy.size.width / 1.08)
                     }
-                        .frame(height: 20)
-                        .padding(10)
-                        .padding(.top, -5)
-                        .background(Color.textField)
-                        .cornerRadius(10)
-                        
-                        
-
+                    .onTapGesture {
+                        CrashManager.shared.addLog(message: "tapped on word textfield")
+                    }
+                    .frame(height: 20)
+                    .padding(10)
+                    .padding(.top, -5)
+                    .background(Color.textField)
+                    .cornerRadius(10)
+                    
+                    
+                    
                     //MARK: PartOfSpeech buttons
                     LazyVGrid(columns: colums) {
                         ForEach(PartOfSpeechType.types) { item in
                             HStack{
                                 Button {
-                                    
+                                    CrashManager.shared.addLog(message: "tapped on part of speech: \(item.title)")
                                     withAnimation(.spring()) {
                                         partOfSpeech = item
                                     }
@@ -72,21 +75,24 @@ struct AddVocView: View {
                     GeometryReader { proxy in
                         TextField("Definition / e.g.", text: $definition, axis: .vertical)
                             .frame(width: proxy.size.width / 1.08)
-                            
+                        
                     }
-                        .frame(height: 40)
-                        .padding(10)
-                        .padding(.top, 15)
-                        .multilineTextAlignment(.leading)
-                        .background(Color.textField)
-                        .cornerRadius(10)
-                        .padding(.top, 5)// padding between textfield elements
-                        
-                        
+                    .onTapGesture {
+                        CrashManager.shared.addLog(message: "tapped on definition textfield")
+                    }
+                    .frame(height: 40)
+                    .padding(10)
+                    .padding(.top, 15)
+                    .multilineTextAlignment(.leading)
+                    .background(Color.textField)
+                    .cornerRadius(10)
+                    .padding(.top, 5)// padding between textfield elements
+                    
+                    
                     
                     //MARK: Save button
                     Button {
-                       
+                        CrashManager.shared.addLog(message: "tapped on save button to add new word")
                         //trim vocab to uniform String with no space and "" from predictive keyboard
                         let trimmedString = TrimString.trimString(input: vocab)
                         
@@ -105,20 +111,23 @@ struct AddVocView: View {
                         GeometryReader { proxy in
                             LongButton(title: "Save", width: proxy.size.width )
                         }
-                      
+                        
                         .frame(height: 30)
                         
                     }
                     .disabled(vocab.isEmpty)
-    
-                        
+                    
+                    
                 }
                 .fontWeight(.bold)
                 .padding()
                 
             }
             .background(Color.background)
-            .tint(Color(UIColor.label))
+       }
+       .onAppear {
+           CrashManager.shared.addLog(message: "Addvoc view appeared on user's screen")
+       }
     }
 }
 

@@ -40,6 +40,7 @@ struct ReminderView: View {
                         .foregroundColor(Color.text)
                         .listRowBackground(Color.card)
                         .onTapGesture {
+                            CrashManager.shared.addLog(message: "toggled daily reminder")
                             if localNotificationManager.isGranted == false {
                                 //display alert to open phone setting
                                 isShowingAlert = true
@@ -64,6 +65,7 @@ struct ReminderView: View {
                                isPresented: $isShowingAlert) {
                             HStack{
                                 Button{
+                                    CrashManager.shared.addLog(message: "tapped setting device")
                                     //Navigate to phone setting
                                     localNotificationManager.openPhoneSetting()
                                     
@@ -84,7 +86,9 @@ struct ReminderView: View {
                     if isEnabledNotification {
                         
                         DatePicker("Selected time", selection: $selectedTime, displayedComponents: .hourAndMinute)
-                            
+                            .onTapGesture {
+                                CrashManager.shared.addLog(message: "selected time for reminder")
+                            }
                         .foregroundColor(Color.text)
                         .listRowBackground(Color.card)
                         
@@ -105,7 +109,7 @@ struct ReminderView: View {
         .scrollContentBackground(.hidden)
         .onAppear{
             isEnabledNotification = ReminderSetting.notificationsEnabled
-            
+            CrashManager.shared.addLog(message: "reminder view appeared on user's screen")
          }
         .task{
             try? await localNotificationManager.requestAuthotization()
@@ -120,6 +124,7 @@ struct ReminderView: View {
         
         .toolbar {
             Button {
+                CrashManager.shared.addLog(message: "tapped on save button")
                 if ReminderSetting.notificationsEnabled == false {
                     dismiss()
                 }else {

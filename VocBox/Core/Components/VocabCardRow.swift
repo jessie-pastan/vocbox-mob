@@ -55,6 +55,9 @@ struct VocabCardRow: View {
                                     Image(systemName: "pencil")
                                 }
                             }
+                            .onTapGesture {
+                                CrashManager.shared.addLog(message: "tapped on Edit(pencil icon)")
+                            }
                             
                             .onDisappear {
                                 moc.refreshAllObjects()
@@ -77,6 +80,9 @@ struct VocabCardRow: View {
                             Image(systemName: "eraser")
         
                         }
+                        .onTapGesture {
+                            CrashManager.shared.addLog(message: "tapped on eraser icon")
+                        }
                         
                         
                         
@@ -85,7 +91,7 @@ struct VocabCardRow: View {
                     //This function is not working on simulator iOS17 at 11/2/23
                     //MARK: Pronunciation speaker
                         Button {
-                            CrashManager.shared.addLog(message: "Stereo button tapped")
+                            CrashManager.shared.addLog(message: "tapped stereo button")
                             // pronounce word when user tap stereo button
                             ReadWord.speakWord(vocabPronunciation: vocab.viewVocab, speechSynthesizer: synthesizer)
                         } label: {
@@ -97,7 +103,7 @@ struct VocabCardRow: View {
                         
                         //MARK: Favourite word
                         Button {
-                            
+                            CrashManager.shared.addLog(message: "tapped heart button")
                             trigger += 1
                             isfavourite = vocab.favourite
                             isfavourite.toggle()

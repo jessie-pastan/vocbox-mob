@@ -20,7 +20,7 @@ struct HintCard: View {
             VStack {
                 HStack{
                     Button {
-                      
+                        CrashManager.shared.addLog(message: "tapped on x on hint card")
                         useAnimation = false
                         showCard = false
                       

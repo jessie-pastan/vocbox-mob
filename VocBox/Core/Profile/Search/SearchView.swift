@@ -101,6 +101,7 @@ struct SearchView: View {
                     List{
                         ForEach(searchResults.indices, id: \.self) { index in
                             Button {
+                                CrashManager.shared.addLog(message: "tapped on vocabulary")
                                 selectedVocab = searchResults[index]
                                 isShowDefinition.toggle()
                             } label: {
@@ -117,7 +118,9 @@ struct SearchView: View {
                 
                 
             }
-            
+            .onAppear{
+                CrashManager.shared.addLog(message: "search view appeared on user's screen")
+            }
             .scrollContentBackground(.hidden)
             .background(Color.background)
             

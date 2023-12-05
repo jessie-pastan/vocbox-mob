@@ -9,12 +9,12 @@ import SwiftUI
 
 struct ShareAppView: View {
     
-    let image = Image("shareVocBox1")
+    let image = Image("ShareMockupVocBox")
     
     var body: some View {
         
         VStack {
-            Color(.gray)
+            Color(.background)
                 .edgesIgnoringSafeArea(.all)
                 .overlay {
                     VStack {
@@ -33,8 +33,10 @@ struct ShareAppView: View {
                         //After get App launch on App Store use URL form app store here 
                         //ShareLink("Share App's URL" , item: URL(string: "vocbox.ituneApp")!, subject: Text("Vocabulary storage app"), message: Text("Check this app out!"))
                     }
-                    .background(Color(.gray))
+                    .background(Color(.background))
                 }
+        }.onAppear {
+            CrashManager.shared.addLog(message: "share app view appeared on user's screen")
         }
     }
 }
