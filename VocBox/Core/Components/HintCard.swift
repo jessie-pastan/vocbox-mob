@@ -37,9 +37,9 @@ struct HintCard: View {
             }
             .padding()
             .frame(height: 170)
-            .background(RoundedRectangle(cornerRadius: 18).fill(Color(.background)))
+            .background(RoundedRectangle(cornerRadius: 17).fill(Color(.background)))
             .overlay(content: {
-                RoundedRectangle(cornerRadius: 18)
+                RoundedRectangle(cornerRadius: 17)
                                  .stroke(Color.textField, lineWidth: 2)
             })
             .padding(.horizontal)

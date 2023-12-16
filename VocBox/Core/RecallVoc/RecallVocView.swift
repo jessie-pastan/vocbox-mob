@@ -56,24 +56,28 @@ struct RecallVocView: View {
                     }
                     .font(.title)
                     
-                    Text("Try to recall as much vocab as you can")
+                    Text("Try to recall as much vocab as you can").font(.callout)
                     Spacer()
                     
                     //MARK: Progress bar
+                    Spacer()
                     VStack{
                         //MARK: Confetti
                         HStack{
                             Text("")
                             ConfettiCannon(counter: $counter)
                         }
+                        
                         GeometryReader { proxy in
                             RecallProgressView(width: proxy.size.width, progress: progress)
                                 .padding(.top, proxy.size.height)
                         }
                         
+                        
                     }
                     .padding()
-                    
+                   
+                    Spacer()
                     
                     //MARK: Current Score
                     VStack(alignment: .center){
@@ -86,7 +90,7 @@ struct RecallVocView: View {
                         
                     }.frame(maxWidth: .infinity)
                     
-                    Spacer()
+                   // Spacer()
                     GeometryReader { proxy in
                         TextField("Type a word you remember!", text: $text)
                             .frame(width: proxy.size.width / 1.10)

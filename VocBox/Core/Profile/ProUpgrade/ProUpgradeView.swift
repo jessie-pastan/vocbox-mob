@@ -60,19 +60,18 @@ struct ProUpgradeView: View {
                         Text("Reinforce more vocabulary memory with the fun challenge")
                             .fixedSize(horizontal: false, vertical: true)
                     }
-                    /*
+                    
                     HStack(alignment: .firstTextBaseline){
                         Image(systemName: "checkmark.square")
-                        Text("Set reminder for your daily vocabulary study time")
+                        Text("Only $0.83/month, billed annually")
                             .fixedSize(horizontal: false, vertical: true)
                     }
                     
                     HStack(alignment: .firstTextBaseline) {
                             Image(systemName: "checkmark.square")
-                            Text("Quick vocabulary glance on the widget screen")
-                            .fixedSize(horizontal: false, vertical: true)
+                            Text("3 days free trial, then $9.99/ year")
                         }
-                      */
+                      
                 }
                 .padding(.horizontal)
                 .padding(.top, 5)
@@ -91,7 +90,7 @@ struct ProUpgradeView: View {
                         } label: {
                             
                             GeometryReader { proxy in
-                                SubScriptionButton(title: "Start 3 days free trial", subtitle: "then $9.99 / year")
+                                SubScriptionButton(title: "Start free trial", subtitle: "then $9.99 / year")
                             }
                             .frame(maxWidth: .infinity)
                             .frame(height: 60)

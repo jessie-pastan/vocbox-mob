@@ -26,13 +26,13 @@ class AppReviewManager : ObservableObject {
        guard let currentVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String else {
             fatalError("Expected to find a bundle version in the info dictionary")
         }
-        //modify this function after user get 100% scrore and Verify if user hit 5th, 15th, 25th saved vocab in storage
-        let reachedThreshold = thresholdSet.contains(userVocab)
-
+        // Show prompt after user get 100% scrore and Verify if user have > 4 vocab in storage
+        //let reachedThreshold = thresholdSet.contains(userVocab)
+      
         //Verify version is user's latest version
         let isNewVersion = currentVersion != mostRecentReviewed
         
-        guard reachedThreshold && isNewVersion else {
+        guard (userVocab > 4) && isNewVersion else {
             //if it's not reach threshold and if it's not new app  or if it's not hit score limit and not new app version return false
             return false
         }
@@ -48,13 +48,12 @@ class AppReviewManager : ObservableObject {
         guard let currentVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String else {
             fatalError("Expected to find a bundle version in the info dictionary")
         }
-        //modify this function after user get 100% scrore and Verify if user hit 5th, 15th, 25th saved vocab in storage
-        let scoreLimitHit =  savedScore.isMultiple(of: limit)
-    
+        //modify this function after user have their score > 20
+       // let scoreLimitHit =  savedScore.isMultiple(of: limit)
        
         let isNewVersion = currentVersion != mostRecentReviewed
         
-        guard scoreLimitHit && isNewVersion else {
+        guard (savedScore > 20) && isNewVersion else {
             //if it's not reach threshold and if it's not new app  or if it's not hit score limit and not new app version return false
             return false
         }

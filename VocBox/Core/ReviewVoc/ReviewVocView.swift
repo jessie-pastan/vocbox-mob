@@ -191,7 +191,9 @@ struct ReviewVocView: View {
                             Button("All") {
                                 CrashManager.shared.addLog(message: "User tapped on All button to display all cards")
                                 // action: sort Vocab by recently added
-                                //isShowAll.toggle()
+                                //need isShowAll.toggle() to prevent bug 
+                                isShowAll.toggle()
+                                
                                 vocabs.nsPredicate = isShowAll ? NSPredicate(value: true) : NSPredicate(value: true)
                             }
                             

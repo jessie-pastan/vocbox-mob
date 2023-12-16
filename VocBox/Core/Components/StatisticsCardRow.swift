@@ -30,8 +30,8 @@ struct StatisticsCardRow: View {
                 Text("🏆 Highest Score")
                     .font(.custom(.playfairBold, size: 17))
                 HStack{
-                    Text("\(heighestDate)")
-                    Spacer()
+                    Text("\(heighestDate)  ")
+                    
                     Text("\(heighestPercentage)%")
                     Spacer()
                     Text("\(heighestScore)/\(heighestScoreVocabAmount)")
@@ -42,8 +42,8 @@ struct StatisticsCardRow: View {
                     .font(.custom(.playfairBold, size: 17))
                 HStack{
                     
-                    Text("\(lastestDate)")
-                    Spacer()
+                    Text("\(lastestDate)  ")
+                    
                     Text("\(lastestPercentage)%")
                     Spacer()
                     Text("\(lastestScore)/\(lastestScoreVocabAmount)")
